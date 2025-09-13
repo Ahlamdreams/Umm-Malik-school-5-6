@@ -23,7 +23,7 @@
         
         /* Advanced Animated Background */
         body {
-            background: linear-gradient(-45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff, #5f27cd, #00d2d3, #ff9f43, #10ac84, #ee5a24);
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe, #a8edea, #fed6e3, #d299c2, #fef9d7, #ebc0fd, #d6ecd2);
             background-size: 400% 400%;
             animation: gradientShift 12s ease infinite;
             min-height: 100vh;
@@ -104,25 +104,56 @@
             animation-delay: 8s; animation-duration: 20s;
         }
         
-        /* Sparkling Particles */
+        /* Sparkling Stars */
         .sparkle {
             position: absolute;
-            width: 3px;
-            height: 3px;
+            width: 4px;
+            height: 4px;
             background: white;
             border-radius: 50%;
-            animation: sparkleMove 25s infinite linear;
-            box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+            animation: sparkleMove 30s infinite linear;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
         }
         
         .sparkle:nth-child(6) { left: 15%; animation-delay: 0s; }
-        .sparkle:nth-child(7) { left: 25%; animation-delay: 3s; }
-        .sparkle:nth-child(8) { left: 35%; animation-delay: 6s; }
-        .sparkle:nth-child(9) { left: 45%; animation-delay: 9s; }
-        .sparkle:nth-child(10) { left: 55%; animation-delay: 12s; }
-        .sparkle:nth-child(11) { left: 65%; animation-delay: 15s; }
-        .sparkle:nth-child(12) { left: 75%; animation-delay: 18s; }
-        .sparkle:nth-child(13) { left: 85%; animation-delay: 21s; }
+        .sparkle:nth-child(7) { left: 25%; animation-delay: 4s; }
+        .sparkle:nth-child(8) { left: 35%; animation-delay: 8s; }
+        .sparkle:nth-child(9) { left: 45%; animation-delay: 12s; }
+        .sparkle:nth-child(10) { left: 55%; animation-delay: 16s; }
+        .sparkle:nth-child(11) { left: 65%; animation-delay: 20s; }
+        .sparkle:nth-child(12) { left: 75%; animation-delay: 24s; }
+        .sparkle:nth-child(13) { left: 85%; animation-delay: 28s; }
+        
+        /* Floating Stars */
+        .floating-star {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            animation: starFloat 20s infinite ease-in-out;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+        
+        .floating-star:nth-child(14) { left: 10%; top: 15%; animation-delay: 0s; }
+        .floating-star:nth-child(15) { left: 30%; top: 25%; animation-delay: 3s; }
+        .floating-star:nth-child(16) { left: 50%; top: 10%; animation-delay: 6s; }
+        .floating-star:nth-child(17) { left: 70%; top: 30%; animation-delay: 9s; }
+        .floating-star:nth-child(18) { left: 90%; top: 20%; animation-delay: 12s; }
+        .floating-star:nth-child(19) { left: 20%; top: 60%; animation-delay: 15s; }
+        .floating-star:nth-child(20) { left: 80%; top: 70%; animation-delay: 18s; }
+        
+        /* Floating Icons */
+        .floating-icon-bg {
+            position: absolute;
+            font-size: 20px;
+            opacity: 0.3;
+            animation: iconFloat 25s infinite ease-in-out;
+        }
+        
+        .floating-icon-bg:nth-child(21) { left: 5%; top: 40%; animation-delay: 0s; }
+        .floating-icon-bg:nth-child(22) { left: 95%; top: 45%; animation-delay: 5s; }
+        .floating-icon-bg:nth-child(23) { left: 15%; top: 80%; animation-delay: 10s; }
+        .floating-icon-bg:nth-child(24) { left: 85%; top: 85%; animation-delay: 15s; }
+        .floating-icon-bg:nth-child(25) { left: 45%; top: 75%; animation-delay: 20s; }
         
         /* Geometric Shapes */
         .geometric-shape {
@@ -194,6 +225,40 @@
             10% { opacity: 1; }
             90% { opacity: 1; }
             100% { transform: translateY(-100px) translateX(50px) rotate(360deg); opacity: 0; }
+        }
+        
+        @keyframes starFloat {
+            0%, 100% { 
+                transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); 
+                opacity: 0.6; 
+            }
+            25% { 
+                transform: translateY(-20px) translateX(15px) rotate(90deg) scale(1.2); 
+                opacity: 1; 
+            }
+            50% { 
+                transform: translateY(-10px) translateX(-10px) rotate(180deg) scale(0.8); 
+                opacity: 0.8; 
+            }
+            75% { 
+                transform: translateY(-30px) translateX(20px) rotate(270deg) scale(1.1); 
+                opacity: 0.9; 
+            }
+        }
+        
+        @keyframes iconFloat {
+            0%, 100% { 
+                transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); 
+                opacity: 0.2; 
+            }
+            33% { 
+                transform: translateY(-40px) translateX(25px) rotate(120deg) scale(1.3); 
+                opacity: 0.4; 
+            }
+            66% { 
+                transform: translateY(-15px) translateX(-20px) rotate(240deg) scale(0.7); 
+                opacity: 0.3; 
+            }
         }
         
         @keyframes geometricFloat {
@@ -597,6 +662,449 @@
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
+
+        /* Enhanced Mobile Responsiveness */
+        @media (max-width: 1024px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .text-7xl {
+                font-size: 3rem;
+            }
+            
+            .text-5xl {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            
+            .enhanced-card:hover {
+                transform: translateY(-2px) scale(1.01);
+            }
+            
+            .floating-icon {
+                animation-duration: 2s;
+            }
+            
+            .mouse-trail {
+                width: 10px;
+                height: 10px;
+            }
+            
+            .click-ripple {
+                animation-duration: 0.6s;
+            }
+            
+            /* Header adjustments */
+            header {
+                padding: 2rem 0;
+            }
+            
+            .text-7xl {
+                font-size: 2.5rem;
+            }
+            
+            .text-5xl {
+                font-size: 2rem;
+            }
+            
+            .text-4xl {
+                font-size: 1.8rem;
+            }
+            
+            .text-3xl {
+                font-size: 1.5rem;
+            }
+            
+            .text-2xl {
+                font-size: 1.25rem;
+            }
+            
+            /* Navigation improvements */
+            nav {
+                padding: 0.5rem 0;
+            }
+            
+            .nav-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+                margin: 0.25rem;
+            }
+            
+            /* Grid adjustments */
+            .grid {
+                gap: 1rem;
+            }
+            
+            .grid-cols-1 {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+            
+            .md\:grid-cols-2 {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+            
+            .md\:grid-cols-3 {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+            
+            .md\:grid-cols-4 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+            
+            .xl\:grid-cols-4 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            
+            /* Card improvements */
+            .glass-card {
+                padding: 1rem;
+                margin: 0.5rem 0;
+            }
+            
+            /* Modal improvements */
+            .modal > div {
+                margin: 1rem;
+                max-width: calc(100vw - 2rem);
+            }
+            
+            /* Table responsiveness */
+            table {
+                font-size: 0.75rem;
+            }
+            
+            th, td {
+                padding: 0.25rem;
+            }
+            
+            /* Form improvements */
+            input, select, button {
+                font-size: 1rem;
+                padding: 0.75rem;
+            }
+            
+            /* Certificate adjustments */
+            .certificate {
+                padding: 1.5rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .enhanced-card:hover {
+                transform: translateY(-1px);
+            }
+            
+            .glass-card {
+                backdrop-filter: blur(8px);
+                padding: 0.75rem;
+            }
+            
+            .floating-particles {
+                display: none;
+            }
+            
+            /* Ultra-mobile adjustments */
+            .text-7xl {
+                font-size: 2rem;
+            }
+            
+            .text-5xl {
+                font-size: 1.75rem;
+            }
+            
+            .text-4xl {
+                font-size: 1.5rem;
+            }
+            
+            .text-3xl {
+                font-size: 1.25rem;
+            }
+            
+            .text-2xl {
+                font-size: 1.125rem;
+            }
+            
+            .text-xl {
+                font-size: 1rem;
+            }
+            
+            .text-lg {
+                font-size: 0.875rem;
+            }
+            
+            /* Navigation for small screens */
+            nav .flex {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+                padding: 0.75rem;
+            }
+            
+            /* Statistics cards */
+            .md\:grid-cols-4 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            
+            /* Admin tabs */
+            .admin-tab-btn {
+                width: 100%;
+                margin: 0.25rem 0;
+                font-size: 0.875rem;
+            }
+            
+            /* Form elements */
+            .grid.grid-cols-1.md\:grid-cols-2 {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+            
+            /* Header logos */
+            .w-32.h-32 {
+                width: 4rem;
+                height: 4rem;
+            }
+            
+            .w-24.h-24 {
+                width: 3rem;
+                height: 3rem;
+            }
+            
+            /* Certificate modal */
+            .certificate {
+                padding: 1rem;
+                font-size: 0.75rem;
+            }
+            
+            .certificate .text-4xl {
+                font-size: 1.5rem;
+            }
+            
+            .certificate .text-3xl {
+                font-size: 1.25rem;
+            }
+            
+            .certificate .text-2xl {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Extra small screens */
+            body {
+                font-size: 12px;
+            }
+            
+            .container {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+            
+            header {
+                padding: 1.5rem 0;
+            }
+            
+            .glass-card {
+                padding: 0.5rem;
+                margin: 0.25rem 0;
+            }
+            
+            /* Minimum touch targets */
+            button {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            /* Single column layout */
+            .grid {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+                gap: 0.5rem;
+            }
+            
+            /* Navigation stack */
+            nav .flex {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+            
+            /* Header adjustments */
+            .text-7xl {
+                font-size: 1.75rem;
+            }
+            
+            .text-5xl {
+                font-size: 1.5rem;
+            }
+            
+            .text-4xl {
+                font-size: 1.25rem;
+            }
+            
+            .text-3xl {
+                font-size: 1.125rem;
+            }
+            
+            .text-2xl {
+                font-size: 1rem;
+            }
+            
+            .text-xl {
+                font-size: 0.875rem;
+            }
+            
+            .text-lg {
+                font-size: 0.75rem;
+            }
+            
+            /* Logo sizes */
+            .w-32.h-32 {
+                width: 3rem;
+                height: 3rem;
+            }
+            
+            .w-24.h-24 {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            
+            .w-20.h-20 {
+                width: 2rem;
+                height: 2rem;
+            }
+            
+            .w-16.h-16 {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            
+            /* Modal full screen */
+            .modal > div {
+                margin: 0.5rem;
+                max-width: calc(100vw - 1rem);
+                max-height: calc(100vh - 1rem);
+                overflow-y: auto;
+            }
+            
+            /* Table scroll */
+            table {
+                font-size: 0.625rem;
+                min-width: 100%;
+            }
+            
+            .table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .enhanced-card:hover {
+                transform: none;
+            }
+            
+            .card-hover:hover {
+                transform: none;
+            }
+            
+            .glow-on-hover:hover {
+                box-shadow: none;
+                transform: none;
+            }
+            
+            /* Remove hover effects on touch devices */
+            .nav-btn:hover::after {
+                width: 0;
+            }
+            
+            .modern-button:hover::after {
+                width: 0;
+                height: 0;
+            }
+            
+            .stat-card:hover::before {
+                left: -100%;
+            }
+            
+            /* Ensure touch targets are large enough */
+            button, .nav-btn, .admin-tab-btn {
+                min-height: 44px;
+                padding: 0.75rem 1rem;
+            }
+            
+            /* Disable complex animations on touch devices */
+            .floating-icon {
+                animation: none;
+            }
+            
+            .icon-bounce, .icon-rotate, .icon-pulse {
+                animation: none;
+            }
+        }
+
+        /* Landscape orientation adjustments */
+        @media (max-width: 768px) and (orientation: landscape) {
+            header {
+                padding: 1rem 0;
+            }
+            
+            .text-7xl {
+                font-size: 2rem;
+            }
+            
+            .text-5xl {
+                font-size: 1.75rem;
+            }
+            
+            .grid-cols-1.md\:grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+            
+            .grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .glass-card {
+                backdrop-filter: blur(15px);
+            }
+            
+            .mouse-trail {
+                filter: blur(0.25px);
+            }
+        }
+
+        /* Reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .floating-particles {
+                display: none;
+            }
+            
+            .mouse-trail, .click-ripple {
+                display: none;
+            }
+        }
         
         /* Interactive buttons */
         .btn-interactive {
@@ -762,6 +1270,22 @@
         <div class="sparkle"></div>
         <div class="sparkle"></div>
         
+        <!-- Floating Stars -->
+        <div class="floating-star">⭐</div>
+        <div class="floating-star">✨</div>
+        <div class="floating-star">🌟</div>
+        <div class="floating-star">⭐</div>
+        <div class="floating-star">✨</div>
+        <div class="floating-star">🌟</div>
+        <div class="floating-star">⭐</div>
+        
+        <!-- Floating Icons -->
+        <div class="floating-icon-bg">📚</div>
+        <div class="floating-icon-bg">🎓</div>
+        <div class="floating-icon-bg">📝</div>
+        <div class="floating-icon-bg">🏫</div>
+        <div class="floating-icon-bg">👩‍🏫</div>
+        
         <!-- Geometric Shapes -->
         <div class="geometric-shape triangle"></div>
         <div class="geometric-shape square"></div>
@@ -769,22 +1293,79 @@
     </div>
 
     <!-- Header -->
-    <header class="gradient-bg text-white py-20 shadow-2xl relative overflow-hidden">
-        <!-- Decorative geometric patterns -->
-        <div class="absolute top-0 left-0 w-full h-full">
-            <div class="absolute top-8 left-8 w-40 h-40 border-2 border-white opacity-10 rounded-full"></div>
-            <div class="absolute top-16 right-16 w-28 h-28 border-2 border-white opacity-15 rounded-lg rotate-45"></div>
-            <div class="absolute bottom-12 left-1/4 w-20 h-20 border-2 border-white opacity-10 rounded-full"></div>
-            <div class="absolute bottom-16 right-1/3 w-24 h-24 border-2 border-white opacity-12 rounded-lg rotate-12"></div>
-            <div class="absolute top-1/2 left-12 w-6 h-6 bg-white opacity-20 rounded-full"></div>
-            <div class="absolute top-1/3 right-12 w-8 h-8 bg-white opacity-15 rounded-full"></div>
+    <header class="gradient-bg text-gray-800 py-20 shadow-2xl relative overflow-hidden" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 20%, #f093fb 40%, #a8edea 60%, #d6ecd2 80%, #fef9d7 100%); background-size: 400% 400%; animation: gradientShift 15s ease infinite;">
+        <!-- Enhanced Decorative Elements with Better Integration -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+            <!-- Background Geometric Patterns -->
+            <div class="absolute top-8 left-8 w-32 h-32 border-2 border-white opacity-15 rounded-full animate-pulse"></div>
+            <div class="absolute top-12 right-12 w-24 h-24 border-2 border-yellow-300 opacity-20 rounded-lg rotate-45 animate-spin" style="animation-duration: 20s;"></div>
+            <div class="absolute bottom-16 left-1/4 w-20 h-20 border-2 border-pink-300 opacity-15 rounded-full animate-bounce"></div>
+            <div class="absolute bottom-20 right-1/3 w-28 h-28 border-2 border-blue-300 opacity-18 rounded-lg rotate-12 animate-pulse"></div>
+            
+            <!-- Integrated Floating Stars - Positioned around content -->
+            <div class="absolute top-16 left-16 text-2xl text-yellow-400 opacity-95 floating-star">⭐</div>
+            <div class="absolute top-20 right-24 text-xl text-yellow-300 opacity-90 floating-star" style="animation-delay: 1s;">✨</div>
+            <div class="absolute top-32 left-1/2 transform -translate-x-1/2 text-3xl text-yellow-400 opacity-95 floating-star" style="animation-delay: 2s;">🌟</div>
+            <div class="absolute top-24 left-1/3 text-xl text-yellow-300 opacity-90 floating-star" style="animation-delay: 3s;">⭐</div>
+            <div class="absolute top-28 right-1/3 text-2xl text-yellow-400 opacity-95 floating-star" style="animation-delay: 4s;">✨</div>
+            
+            <!-- Stars around logos area -->
+            <div class="absolute top-40 left-40 text-lg text-yellow-300 opacity-90 floating-star" style="animation-delay: 5s;">🌟</div>
+            <div class="absolute top-40 right-40 text-lg text-yellow-400 opacity-95 floating-star" style="animation-delay: 6s;">⭐</div>
+            
+            <!-- Stars around bottom section -->
+            <div class="absolute bottom-32 left-20 text-xl text-yellow-300 opacity-90 floating-star" style="animation-delay: 7s;">✨</div>
+            <div class="absolute bottom-28 right-20 text-2xl text-yellow-400 opacity-95 floating-star" style="animation-delay: 8s;">🌟</div>
+            <div class="absolute bottom-36 left-1/2 transform -translate-x-1/2 text-lg text-yellow-400 opacity-95 floating-star" style="animation-delay: 9s;">⭐</div>
+            
+            <!-- Educational Icons - Strategically placed -->
+            <div class="absolute top-44 left-1/4 text-xl text-blue-200 opacity-50 floating-icon-bg" style="animation-delay: 1s;">📚</div>
+            <div class="absolute top-48 right-1/4 text-2xl text-green-200 opacity-60 floating-icon-bg" style="animation-delay: 2s;">🎓</div>
+            <div class="absolute bottom-44 left-1/3 text-xl text-purple-200 opacity-55 floating-icon-bg" style="animation-delay: 3s;">📝</div>
+            <div class="absolute bottom-40 right-1/3 text-2xl text-yellow-200 opacity-65 floating-icon-bg" style="animation-delay: 4s;">🏫</div>
+            <div class="absolute top-1/2 left-20 text-lg text-pink-200 opacity-50 floating-icon-bg" style="animation-delay: 5s;">👩‍🏫</div>
+            <div class="absolute top-1/2 right-20 text-lg text-blue-300 opacity-60 floating-icon-bg" style="animation-delay: 6s;">📖</div>
+            
+            <!-- Subtle Geometric Accents -->
+            <div class="absolute top-20 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white opacity-30 rotate-45 animate-spin" style="animation-duration: 8s;"></div>
+            <div class="absolute top-52 right-1/4 w-4 h-4 bg-yellow-300 opacity-40 rounded-full animate-bounce" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-24 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-pink-300 opacity-35 rotate-12 animate-pulse" style="animation-delay: 3s;"></div>
+            <div class="absolute top-1/3 left-12 w-2 h-2 bg-blue-300 opacity-40 rounded-full animate-ping" style="animation-delay: 4s;"></div>
+            <div class="absolute bottom-1/3 right-12 w-3 h-3 bg-purple-300 opacity-30 rotate-45 animate-spin" style="animation-duration: 12s; animation-delay: 1s;"></div>
+            
+            <!-- Corner Accent Stars -->
+            <div class="absolute top-8 left-8 text-sm text-yellow-400 opacity-85 floating-star" style="animation-delay: 10s;">⭐</div>
+            <div class="absolute top-8 right-8 text-sm text-yellow-300 opacity-80 floating-star" style="animation-delay: 11s;">✨</div>
+            <div class="absolute bottom-8 left-8 text-sm text-yellow-400 opacity-85 floating-star" style="animation-delay: 12s;">🌟</div>
+            <div class="absolute bottom-8 right-8 text-sm text-yellow-300 opacity-80 floating-star" style="animation-delay: 13s;">⭐</div>
         </div>
         
         <div class="container mx-auto px-6 relative z-10">
             <!-- Top section with logos -->
-            <div class="flex justify-between items-start mb-12">
-                <!-- Left Logo -->
-                <div class="w-32 h-32 bg-white bg-opacity-15 rounded-2xl flex items-center justify-center floating-icon glow-on-hover interactive-element border-2 border-white border-opacity-30 backdrop-filter backdrop-blur-lg">
+            <div class="flex flex-col lg:flex-row justify-between items-center lg:items-start mb-8 lg:mb-12 space-y-6 lg:space-y-0">
+                <!-- Logos Container for Mobile -->
+                <div class="flex justify-center space-x-8 space-x-reverse lg:hidden w-full">
+                    <!-- Left Logo Mobile -->
+                    <div class="w-24 h-24 bg-white bg-opacity-15 rounded-2xl flex items-center justify-center floating-icon glow-on-hover interactive-element border-2 border-white border-opacity-30 backdrop-filter backdrop-blur-lg">
+                        <img id="left-logo-mobile" src="" alt="الشعار الأيسر" class="w-16 h-16 object-contain rounded-xl" style="display: none;">
+                        <div id="left-logo-placeholder-mobile" class="text-center">
+                            <div class="text-2xl mb-1">🏫</div>
+                            <div class="text-xs opacity-75">الشعار الأيسر</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Logo Mobile -->
+                    <div class="w-24 h-24 bg-white bg-opacity-15 rounded-2xl flex items-center justify-center floating-icon glow-on-hover interactive-element border-2 border-white border-opacity-30 backdrop-filter backdrop-blur-lg" style="animation-delay: 0.5s;">
+                        <img id="right-logo-mobile" src="" alt="الشعار الأيمن" class="w-16 h-16 object-contain rounded-xl" style="display: none;">
+                        <div id="right-logo-placeholder-mobile" class="text-center">
+                            <div class="text-2xl mb-1">🎓</div>
+                            <div class="text-xs opacity-75">الشعار الأيمن</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Left Logo Desktop -->
+                <div class="hidden lg:block w-32 h-32 bg-white bg-opacity-15 rounded-2xl flex items-center justify-center floating-icon glow-on-hover interactive-element border-2 border-white border-opacity-30 backdrop-filter backdrop-blur-lg">
                     <img id="left-logo" src="" alt="الشعار الأيسر" class="w-24 h-24 object-contain rounded-xl" style="display: none;">
                     <div id="left-logo-placeholder" class="text-center">
                         <div class="text-3xl mb-2">🏫</div>
@@ -793,25 +1374,25 @@
                 </div>
                 
                 <!-- Center Title -->
-                <div class="text-center flex-1 mx-8">
-                    <div class="mb-6">
-                        <div class="inline-block bg-white bg-opacity-10 px-8 py-3 rounded-full border border-white border-opacity-30 backdrop-filter backdrop-blur-lg mb-4">
-                            <span class="text-lg font-semibold opacity-90">نظام إدارة الطابور المدرسي</span>
+                <div class="text-center flex-1 lg:mx-8">
+                    <div class="mb-4 lg:mb-6">
+                        <div class="inline-block bg-white bg-opacity-10 px-4 lg:px-8 py-2 lg:py-3 rounded-full border border-white border-opacity-30 backdrop-filter backdrop-blur-lg mb-3 lg:mb-4">
+                            <span class="text-sm lg:text-lg font-semibold opacity-90">نظام إدارة الطابور المدرسي</span>
                         </div>
                     </div>
-                    <h1 class="text-7xl font-black mb-6 tracking-wider text-shadow-lg">الطابور المدرسي</h1>
-                    <div class="flex justify-center items-center mb-6">
-                        <div class="w-16 h-1 bg-white rounded-full opacity-60"></div>
-                        <div class="w-4 h-4 bg-white rounded-full mx-4 opacity-80"></div>
-                        <div class="w-16 h-1 bg-white rounded-full opacity-60"></div>
+                    <h1 class="text-4xl md:text-5xl lg:text-7xl font-black mb-4 lg:mb-6 tracking-wider text-shadow-lg">الطابور المدرسي</h1>
+                    <div class="flex justify-center items-center mb-4 lg:mb-6">
+                        <div class="w-12 lg:w-16 h-0.5 lg:h-1 bg-white rounded-full opacity-60"></div>
+                        <div class="w-3 lg:w-4 h-3 lg:h-4 bg-white rounded-full mx-3 lg:mx-4 opacity-80"></div>
+                        <div class="w-12 lg:w-16 h-0.5 lg:h-1 bg-white rounded-full opacity-60"></div>
                     </div>
-                    <p class="text-2xl font-light opacity-95 max-w-4xl mx-auto leading-relaxed">
+                    <p class="text-lg md:text-xl lg:text-2xl font-light opacity-95 max-w-4xl mx-auto leading-relaxed px-4">
                         انضباط يعكس وعيًا ونظام يصنع الأجيال
                     </p>
                 </div>
                 
-                <!-- Right Logo -->
-                <div class="w-32 h-32 bg-white bg-opacity-15 rounded-2xl flex items-center justify-center floating-icon glow-on-hover interactive-element border-2 border-white border-opacity-30 backdrop-filter backdrop-blur-lg" style="animation-delay: 0.5s;">
+                <!-- Right Logo Desktop -->
+                <div class="hidden lg:block w-32 h-32 bg-white bg-opacity-15 rounded-2xl flex items-center justify-center floating-icon glow-on-hover interactive-element border-2 border-white border-opacity-30 backdrop-filter backdrop-blur-lg" style="animation-delay: 0.5s;">
                     <img id="right-logo" src="" alt="الشعار الأيمن" class="w-24 h-24 object-contain rounded-xl" style="display: none;">
                     <div id="right-logo-placeholder" class="text-center">
                         <div class="text-3xl mb-2">🎓</div>
@@ -820,38 +1401,71 @@
                 </div>
             </div>
             
-            <!-- Bottom section with creator info -->
-            <div class="bg-white bg-opacity-10 rounded-3xl p-8 backdrop-filter backdrop-blur-lg border border-white border-opacity-20">
-                <div class="flex justify-between items-center">
-                    <div class="flex items-center space-x-6 space-x-reverse">
-                        <div class="w-20 h-20 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center">
-                            <span class="text-3xl icon-rotate">⚙️</span>
+            <!-- Principal Info Section -->
+            <div class="mb-4 lg:mb-6">
+                <div class="bg-gradient-to-r from-purple-600/30 via-pink-500/30 to-indigo-600/30 rounded-3xl p-4 lg:p-6 backdrop-filter backdrop-blur-xl border-2 border-white border-opacity-40 text-center max-w-2xl mx-auto shadow-2xl">
+                    <div class="flex items-center justify-center mb-2">
+                        <div class="w-12 h-12 bg-white bg-opacity-25 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                            <span class="text-2xl">👑</span>
                         </div>
                         <div>
-                            <div class="text-xl font-bold opacity-95">نظام إدارة متكامل</div>
-                            <div class="text-base opacity-80">للطابور المدرسي الحديث</div>
-                            <div class="text-sm opacity-70 mt-1">تقنية متطورة لإدارة فعالة</div>
+                            <div class="text-lg font-bold text-white opacity-95 mb-1">مديرة المدرسة</div>
+                            <div id="principal-display" class="text-2xl font-black text-white drop-shadow-lg">${settings.principalName}</div>
                         </div>
                     </div>
-                    
-                    <div class="text-center">
-                        <div class="bg-white bg-opacity-15 rounded-2xl p-6 backdrop-filter backdrop-blur-lg">
-                            <h2 class="text-3xl font-black mb-2">أ. أحلام بنت علي الحمدانية</h2>
-                            <p class="text-lg opacity-90">صاحبة الفكرة والإعداد والتصميم</p>
-                            <div class="w-24 h-1 bg-white mx-auto mt-3 rounded-full opacity-60"></div>
+                </div>
+            </div>
+            
+            <!-- Date Time Section -->
+            <div class="mb-6 lg:mb-8">
+                <div class="bg-white bg-opacity-15 rounded-2xl p-3 lg:p-4 backdrop-filter backdrop-blur-lg border border-white border-opacity-25 text-center max-w-md mx-auto">
+                    <div class="flex items-center justify-center">
+                        <span class="text-xl mr-3">🕐</span>
+                        <div>
+                            <div class="text-sm font-semibold opacity-90 mb-1">التاريخ والوقت</div>
+                            <div id="current-datetime" class="text-lg font-bold opacity-95">جاري التحميل...</div>
                         </div>
                     </div>
-                    
-                    <div class="flex items-center space-x-6 space-x-reverse">
-                        <div class="text-right">
-                            <div class="text-xl font-bold opacity-95">التاريخ الهجري</div>
-                            <div class="text-base opacity-80" id="hijri-date">1445/12/15</div>
-                            <div class="text-sm opacity-70 mt-1">العام الدراسي الحالي</div>
-                        </div>
-                        <div class="w-20 h-20 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center">
-                            <span class="text-3xl icon-bounce">📅</span>
-                        </div>
+                </div>
+            </div>
+            
+            <!-- Bottom section with stars display -->
+            <div class="flex flex-wrap justify-center gap-4 lg:gap-6">
+                <!-- Stars Display - Enhanced -->
+                <div class="bg-gradient-to-br from-yellow-400/30 via-amber-300/25 to-orange-400/30 rounded-3xl p-4 lg:p-5 backdrop-filter backdrop-blur-xl border-2 border-yellow-300 border-opacity-40 text-center min-w-[180px] shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card">
+                    <div class="flex items-center justify-center mb-2">
+                        <span class="text-2xl lg:text-3xl icon-rotate mr-2 drop-shadow-lg">⭐</span>
+                        <h3 class="text-sm lg:text-base font-black text-white drop-shadow-md">🌟 نجمة اليوم 🌟</h3>
                     </div>
+                    <div id="star-of-day-header" class="text-sm lg:text-base star-glow font-bold text-white drop-shadow-lg bg-black bg-opacity-20 rounded-xl px-3 py-2 mb-2">لم يتم اختيار نجمة اليوم بعد</div>
+                    <div class="text-xs lg:text-sm text-white opacity-90 font-semibold">المعلمة المتميزة اليوم</div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-500/30 via-indigo-400/25 to-purple-500/30 rounded-3xl p-4 lg:p-5 backdrop-filter backdrop-blur-xl border-2 border-blue-300 border-opacity-40 text-center min-w-[180px] shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card">
+                    <div class="flex items-center justify-center mb-2">
+                        <span class="text-2xl lg:text-3xl icon-bounce mr-2 drop-shadow-lg">🏆</span>
+                        <h3 class="text-sm lg:text-base font-black text-white drop-shadow-md">🏆 نجم الطابور 🏆</h3>
+                    </div>
+                    <div id="star-of-queue-header" class="text-sm lg:text-base star-glow font-bold text-white drop-shadow-lg bg-black bg-opacity-20 rounded-xl px-3 py-2 mb-2">لم يتم اختيار نجم الطابور بعد</div>
+                    <div class="text-xs lg:text-sm text-white opacity-90 font-semibold">الصف الأكثر انضباطاً</div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-pink-500/30 via-rose-400/25 to-red-500/30 rounded-3xl p-4 lg:p-5 backdrop-filter backdrop-blur-xl border-2 border-pink-300 border-opacity-40 text-center min-w-[180px] shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card">
+                    <div class="flex items-center justify-center mb-2">
+                        <span class="text-2xl lg:text-3xl icon-pulse mr-2 drop-shadow-lg">👑</span>
+                        <h3 class="text-sm lg:text-base font-black text-white drop-shadow-md">👑 نجمة الشهر 👑</h3>
+                    </div>
+                    <div id="star-of-month-teacher-header" class="text-sm lg:text-base star-glow font-bold text-white drop-shadow-lg bg-black bg-opacity-20 rounded-xl px-3 py-2 mb-2">لم يتم الاختيار</div>
+                    <div class="text-xs lg:text-sm text-white opacity-90 font-semibold">المعلمة المثالية للشهر</div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-500/30 via-emerald-400/25 to-teal-500/30 rounded-3xl p-4 lg:p-5 backdrop-filter backdrop-blur-xl border-2 border-green-300 border-opacity-40 text-center min-w-[180px] shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card">
+                    <div class="flex items-center justify-center mb-2">
+                        <span class="text-2xl lg:text-3xl icon-rotate mr-2 drop-shadow-lg">🎖️</span>
+                        <h3 class="text-sm lg:text-base font-black text-white drop-shadow-md">🎖️ نجم الطابور للشهر 🎖️</h3>
+                    </div>
+                    <div id="star-of-queue-month-header" class="text-sm lg:text-base star-glow font-bold text-white drop-shadow-lg bg-black bg-opacity-20 rounded-xl px-3 py-2 mb-2">لم يتم الاختيار</div>
+                    <div class="text-xs lg:text-sm text-white opacity-90 font-semibold">الصف المتميز للشهر</div>
                 </div>
             </div>
         </div>
@@ -885,46 +1499,29 @@
     <section id="attendance-section" class="container mx-auto px-4 py-8">
         <!-- Statistics -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.8), rgba(5, 150, 105, 0.8), rgba(34, 197, 94, 0.8));">
+            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(52, 211, 153, 0.9), rgba(16, 185, 129, 0.9), rgba(6, 182, 212, 0.9));">
                 <div class="text-4xl mb-2 floating-icon">✅</div>
                 <div class="text-3xl font-bold" id="present-count">0</div>
                 <div class="text-sm">الحاضرات</div>
             </div>
-            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.8), rgba(220, 38, 38, 0.8), rgba(248, 113, 113, 0.8));">
+            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(251, 113, 133, 0.9), rgba(244, 63, 94, 0.9), rgba(236, 72, 153, 0.9));">
                 <div class="text-4xl mb-2 floating-icon" style="animation-delay: 0.2s;">❌</div>
                 <div class="text-3xl font-bold" id="absent-count">0</div>
                 <div class="text-sm">الغائبات</div>
             </div>
-            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(107, 114, 128, 0.8), rgba(75, 85, 99, 0.8), rgba(156, 163, 175, 0.8));">
+            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.9), rgba(124, 58, 237, 0.9), rgba(168, 85, 247, 0.9));">
                 <div class="text-4xl mb-2 floating-icon" style="animation-delay: 0.4s;">⏳</div>
                 <div class="text-3xl font-bold" id="pending-count">0</div>
                 <div class="text-sm">لم يتم التسجيل</div>
             </div>
-            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.8), rgba(96, 165, 250, 0.8));">
+            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(37, 99, 235, 0.9), rgba(79, 70, 229, 0.9));">
                 <div class="text-4xl mb-2 floating-icon" style="animation-delay: 0.6s;">📊</div>
                 <div class="text-3xl font-bold" id="total-count">0</div>
                 <div class="text-sm">الإجمالي</div>
             </div>
         </div>
 
-        <!-- Stars Display -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div class="glass-card text-white p-6 rounded-lg text-center card-hover" style="background: linear-gradient(135deg, rgba(251, 191, 36, 0.8), rgba(245, 158, 11, 0.8));">
-                <div class="text-4xl mb-3 icon-rotate">⭐</div>
-                <h3 class="text-2xl font-bold mb-2">نجمة اليوم</h3>
-                <div id="star-of-day" class="text-xl star-glow">خامس-1</div>
-            </div>
-            <div class="glass-card text-white p-6 rounded-lg text-center card-hover" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(147, 51, 234, 0.8));">
-                <div class="text-4xl mb-3 icon-bounce">🏆</div>
-                <h3 class="text-2xl font-bold mb-2">نجم الطابور</h3>
-                <div id="star-of-queue" class="text-xl star-glow">خامس-2 (2 نقطة)</div>
-            </div>
-            <div class="glass-card text-white p-6 rounded-lg text-center card-hover" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.8), rgba(20, 184, 166, 0.8));">
-                <div class="text-4xl mb-3 icon-pulse">🌟</div>
-                <h3 class="text-2xl font-bold mb-2">نجمة الصف</h3>
-                <div id="star-of-class" class="text-xl star-glow">لا يوجد صف متميز اليوم</div>
-            </div>
-        </div>
+
 
         <!-- Daily Attendance Log -->
         <div class="glass-card rounded-lg shadow-lg p-6 mb-8">
@@ -1232,8 +1829,8 @@
         let currentCertificateType = null;
 
         // Initialize System
-        function initSystem() {
-            loadData();
+        async function initSystem() {
+            await loadData();
             checkNewDay();
             loadTeachers();
             loadClasses();
@@ -1243,32 +1840,206 @@
 
         // Data Management
         function saveData() {
-            localStorage.setItem('schoolQueue_teachers', JSON.stringify(teachers));
-            localStorage.setItem('schoolQueue_classes', JSON.stringify(classes));
-            localStorage.setItem('schoolQueue_attendance', JSON.stringify(attendance));
-            localStorage.setItem('schoolQueue_classPoints', JSON.stringify(classPoints));
-            localStorage.setItem('schoolQueue_settings', JSON.stringify(settings));
-            localStorage.setItem('schoolQueue_stars', JSON.stringify(stars));
-            localStorage.setItem('schoolQueue_lastDate', new Date().toDateString());
+            try {
+                // Create comprehensive data object with timestamp
+                const dataToSave = {
+                    teachers: teachers,
+                    classes: classes,
+                    attendance: attendance,
+                    classPoints: classPoints,
+                    settings: settings,
+                    stars: stars,
+                    lastSaved: Date.now(),
+                    version: '1.0'
+                };
+                
+                // Save to localStorage with enhanced persistence
+                localStorage.setItem('schoolQueue_data', JSON.stringify(dataToSave));
+                localStorage.setItem('schoolQueue_teachers', JSON.stringify(teachers));
+                localStorage.setItem('schoolQueue_classes', JSON.stringify(classes));
+                localStorage.setItem('schoolQueue_attendance', JSON.stringify(attendance));
+                localStorage.setItem('schoolQueue_classPoints', JSON.stringify(classPoints));
+                localStorage.setItem('schoolQueue_settings', JSON.stringify(settings));
+                localStorage.setItem('schoolQueue_stars', JSON.stringify(stars));
+                localStorage.setItem('schoolQueue_lastDate', new Date().toDateString());
+                
+                // Enhanced sessionStorage backup
+                sessionStorage.setItem('schoolQueue_data', JSON.stringify(dataToSave));
+                sessionStorage.setItem('schoolQueue_teachers', JSON.stringify(teachers));
+                sessionStorage.setItem('schoolQueue_classes', JSON.stringify(classes));
+                sessionStorage.setItem('schoolQueue_attendance', JSON.stringify(attendance));
+                sessionStorage.setItem('schoolQueue_classPoints', JSON.stringify(classPoints));
+                sessionStorage.setItem('schoolQueue_settings', JSON.stringify(settings));
+                sessionStorage.setItem('schoolQueue_stars', JSON.stringify(stars));
+                
+                // Enhanced browser cache with multiple keys for redundancy
+                if ('caches' in window) {
+                    caches.open('schoolQueue-v1').then(cache => {
+                        const response = new Response(JSON.stringify(dataToSave));
+                        cache.put('/schoolQueue-data', response);
+                        cache.put('/schoolQueue-backup', response);
+                        cache.put('/schoolQueue-persistent', response);
+                    });
+                }
+                
+                // Additional IndexedDB storage for maximum persistence
+                if ('indexedDB' in window) {
+                    const request = indexedDB.open('schoolQueueDB', 1);
+                    request.onupgradeneeded = function(e) {
+                        const db = e.target.result;
+                        if (!db.objectStoreNames.contains('data')) {
+                            db.createObjectStore('data', { keyPath: 'id' });
+                        }
+                    };
+                    request.onsuccess = function(e) {
+                        const db = e.target.result;
+                        const transaction = db.transaction(['data'], 'readwrite');
+                        const store = transaction.objectStore('data');
+                        store.put({ id: 'main', data: dataToSave });
+                    };
+                }
+            } catch (error) {
+                console.error('Error saving data:', error);
+            }
         }
 
-        function loadData() {
-            const savedTeachers = localStorage.getItem('schoolQueue_teachers');
-            const savedClasses = localStorage.getItem('schoolQueue_classes');
-            const savedAttendance = localStorage.getItem('schoolQueue_attendance');
-            const savedClassPoints = localStorage.getItem('schoolQueue_classPoints');
-            const savedSettings = localStorage.getItem('schoolQueue_settings');
-            const savedStars = localStorage.getItem('schoolQueue_stars');
+        async function loadData() {
+            try {
+                let dataLoaded = false;
+                let loadedData = null;
+                
+                // Try IndexedDB first (most persistent)
+                if ('indexedDB' in window) {
+                    try {
+                        const dbRequest = indexedDB.open('schoolQueueDB', 1);
+                        const db = await new Promise((resolve, reject) => {
+                            dbRequest.onsuccess = () => resolve(dbRequest.result);
+                            dbRequest.onerror = () => reject(dbRequest.error);
+                            dbRequest.onupgradeneeded = (e) => {
+                                const db = e.target.result;
+                                if (!db.objectStoreNames.contains('data')) {
+                                    db.createObjectStore('data', { keyPath: 'id' });
+                                }
+                            };
+                        });
+                        
+                        const transaction = db.transaction(['data'], 'readonly');
+                        const store = transaction.objectStore('data');
+                        const request = store.get('main');
+                        
+                        const result = await new Promise((resolve, reject) => {
+                            request.onsuccess = () => resolve(request.result);
+                            request.onerror = () => reject(request.error);
+                        });
+                        
+                        if (result && result.data) {
+                            loadedData = result.data;
+                            dataLoaded = true;
+                        }
+                    } catch (e) {
+                        console.log('IndexedDB not available or error:', e);
+                    }
+                }
+                
+                // Try comprehensive localStorage data
+                if (!dataLoaded) {
+                    const savedData = localStorage.getItem('schoolQueue_data');
+                    if (savedData) {
+                        try {
+                            loadedData = JSON.parse(savedData);
+                            dataLoaded = true;
+                        } catch (e) {
+                            console.log('Error parsing comprehensive localStorage data');
+                        }
+                    }
+                }
+                
+                // Try cache storage
+                if (!dataLoaded && 'caches' in window) {
+                    try {
+                        const cache = await caches.open('schoolQueue-v1');
+                        const cacheKeys = ['/schoolQueue-data', '/schoolQueue-backup', '/schoolQueue-persistent'];
+                        
+                        for (const key of cacheKeys) {
+                            const response = await cache.match(key);
+                            if (response) {
+                                const cachedData = await response.json();
+                                if (cachedData && (cachedData.teachers || cachedData.data)) {
+                                    loadedData = cachedData.data || cachedData;
+                                    dataLoaded = true;
+                                    break;
+                                }
+                            }
+                        }
+                    } catch (e) {
+                        console.log('Cache not available');
+                    }
+                }
+                
+                // Try individual localStorage items
+                if (!dataLoaded) {
+                    const savedTeachers = localStorage.getItem('schoolQueue_teachers');
+                    const savedClasses = localStorage.getItem('schoolQueue_classes');
+                    const savedAttendance = localStorage.getItem('schoolQueue_attendance');
+                    const savedClassPoints = localStorage.getItem('schoolQueue_classPoints');
+                    const savedSettings = localStorage.getItem('schoolQueue_settings');
+                    const savedStars = localStorage.getItem('schoolQueue_stars');
 
-            if (savedTeachers) teachers = JSON.parse(savedTeachers);
-            if (savedClasses) classes = JSON.parse(savedClasses);
-            if (savedAttendance) attendance = JSON.parse(savedAttendance);
-            if (savedClassPoints) classPoints = JSON.parse(savedClassPoints);
-            if (savedSettings) settings = { ...settings, ...JSON.parse(savedSettings) };
-            if (savedStars) stars = { ...stars, ...JSON.parse(savedStars) };
+                    if (savedTeachers) {
+                        loadedData = {
+                            teachers: JSON.parse(savedTeachers),
+                            classes: savedClasses ? JSON.parse(savedClasses) : [],
+                            attendance: savedAttendance ? JSON.parse(savedAttendance) : {},
+                            classPoints: savedClassPoints ? JSON.parse(savedClassPoints) : {},
+                            settings: savedSettings ? JSON.parse(savedSettings) : {},
+                            stars: savedStars ? JSON.parse(savedStars) : {}
+                        };
+                        dataLoaded = true;
+                    }
+                }
+                
+                // Try sessionStorage as last resort
+                if (!dataLoaded) {
+                    const sessionData = sessionStorage.getItem('schoolQueue_data');
+                    if (sessionData) {
+                        try {
+                            loadedData = JSON.parse(sessionData);
+                            dataLoaded = true;
+                        } catch (e) {
+                            const sessionTeachers = sessionStorage.getItem('schoolQueue_teachers');
+                            if (sessionTeachers) {
+                                loadedData = {
+                                    teachers: JSON.parse(sessionTeachers),
+                                    classes: sessionStorage.getItem('schoolQueue_classes') ? JSON.parse(sessionStorage.getItem('schoolQueue_classes')) : [],
+                                    attendance: sessionStorage.getItem('schoolQueue_attendance') ? JSON.parse(sessionStorage.getItem('schoolQueue_attendance')) : {},
+                                    classPoints: sessionStorage.getItem('schoolQueue_classPoints') ? JSON.parse(sessionStorage.getItem('schoolQueue_classPoints')) : {},
+                                    settings: sessionStorage.getItem('schoolQueue_settings') ? JSON.parse(sessionStorage.getItem('schoolQueue_settings')) : {},
+                                    stars: sessionStorage.getItem('schoolQueue_stars') ? JSON.parse(sessionStorage.getItem('schoolQueue_stars')) : {}
+                                };
+                                dataLoaded = true;
+                            }
+                        }
+                    }
+                }
 
-            // Initialize with default data if empty
-            if (teachers.length === 0) {
+                // Apply loaded data
+                if (dataLoaded && loadedData) {
+                    teachers = loadedData.teachers || [];
+                    classes = loadedData.classes || [];
+                    attendance = loadedData.attendance || {};
+                    classPoints = loadedData.classPoints || {};
+                    settings = { ...settings, ...loadedData.settings };
+                    stars = { ...stars, ...loadedData.stars };
+                } else {
+                    // Initialize with default data if nothing found
+                    initializeDefaultData();
+                }
+                
+                // Always save data after loading to ensure all storage methods are updated
+                saveData();
+                
+            } catch (error) {
+                console.error('Error loading data:', error);
                 initializeDefaultData();
             }
         }
@@ -1483,6 +2254,7 @@
                 const teacher = teachers.find(t => t.id === teacherId);
                 stars.dayTeacher = teacher.name;
                 document.getElementById('star-of-day').textContent = teacher.name;
+                document.getElementById('star-of-day-header').textContent = teacher.name;
             }
 
             saveData();
@@ -1497,6 +2269,7 @@
             if (stars.dayTeacher === teacher.name) {
                 stars.dayTeacher = null;
                 document.getElementById('star-of-day').textContent = 'لم يتم اختيار نجمة اليوم بعد';
+                document.getElementById('star-of-day-header').textContent = 'لم يتم اختيار نجمة اليوم بعد';
             }
 
             saveData();
@@ -1546,6 +2319,7 @@
 
             // Update star displays
             document.getElementById('star-of-day').textContent = stars.dayTeacher || 'لم يتم اختيار نجمة اليوم بعد';
+            document.getElementById('star-of-day-header').textContent = stars.dayTeacher || 'لم يتم اختيار نجمة اليوم بعد';
             
             // Find the class with highest total points for queue star (automatic)
             let topClass = null;
@@ -1569,15 +2343,13 @@
             // Update queue star display
             const queueStarText = stars.queueClass || 'لم يتم اختيار نجم الطابور بعد';
             document.getElementById('star-of-queue').textContent = queueStarText;
+            document.getElementById('star-of-queue-header').textContent = queueStarText;
             
-            // Update class star display based on attendance
-            const classStarText = bestClass ? `${bestClass} (${Math.round(bestAttendanceRate * 100)}% حضور)` : 'لا يوجد صف متميز اليوم';
-            
-            // Update class star element
-            const classStarElement = document.getElementById('star-of-class');
-            if (classStarElement) {
-                classStarElement.textContent = classStarText;
-            }
+            // Update monthly stars display
+            document.getElementById('star-of-month-teacher').textContent = stars.monthTeacher || 'لم يتم الاختيار';
+            document.getElementById('star-of-month-teacher-header').textContent = stars.monthTeacher || 'لم يتم الاختيار';
+            document.getElementById('star-of-month-class').textContent = stars.monthClass || 'لم يتم الاختيار';
+            document.getElementById('star-of-queue-month-header').textContent = stars.monthClass || 'لم يتم الاختيار';
         }
 
         // Classes Management
@@ -1822,6 +2594,9 @@
                     loadTeachersList();
                     loadStarSelections();
                     
+                    // Show attendance section automatically after import
+                    showSection('attendance');
+                    
                     alert(`تم استبدال البيانات وإضافة ${addedCount} معلمة بنجاح`);
                     fileInput.value = '';
                 } catch (error) {
@@ -1888,6 +2663,9 @@
                     
                     alert(`تم إضافة ${addedCount} صف بنجاح`);
                     fileInput.value = '';
+                    
+                    // Show stars section automatically after import
+                    showSection('stars');
                 } catch (error) {
                     console.error('Error reading Excel file:', error);
                     alert('خطأ في قراءة الملف. تأكد من أن الملف يحتوي على عمود واحد بأسماء الصفوف');
@@ -1926,30 +2704,91 @@
         }
 
         function loadStarSelections() {
-            // Load teachers into dropdowns
+            // Load teachers into dropdowns - only show teachers who are present or late
             const teacherSelects = ['star-week-teacher', 'star-month-teacher'];
             teacherSelects.forEach(selectId => {
                 const select = document.getElementById(selectId);
                 select.innerHTML = '<option value="">اختر المعلمة</option>';
-                teachers.forEach(teacher => {
+                
+                // Filter teachers based on attendance status
+                const presentTeachers = teachers.filter(teacher => {
+                    const status = attendance[teacher.id]?.status || 'pending';
+                    return status === 'present' || status === 'late';
+                });
+                
+                presentTeachers.forEach(teacher => {
                     const option = document.createElement('option');
                     option.value = teacher.name;
-                    option.textContent = teacher.name;
+                    const status = attendance[teacher.id]?.status;
+                    const statusText = status === 'late' ? ' (متأخرة)' : ' (حاضرة)';
+                    option.textContent = teacher.name + statusText;
                     select.appendChild(option);
                 });
             });
             
-            // Load classes into dropdowns
-            const classSelects = ['star-queue-class', 'star-week-class', 'star-month-class'];
+            // Load classes into dropdowns - calculate attendance rate for each class
+            const classSelects = ['star-week-class', 'star-month-class'];
             classSelects.forEach(selectId => {
                 const select = document.getElementById(selectId);
                 select.innerHTML = '<option value="">اختر الصف</option>';
+                
+                // Calculate attendance rate for each class
+                const classAttendanceRates = {};
                 classes.forEach(cls => {
-                    const option = document.createElement('option');
-                    option.value = cls.name;
-                    option.textContent = cls.name;
-                    select.appendChild(option);
+                    const classTeachers = teachers.filter(teacher => teacher.class === cls.name);
+                    if (classTeachers.length > 0) {
+                        const presentCount = classTeachers.filter(teacher => {
+                            const status = attendance[teacher.id]?.status || 'pending';
+                            return status === 'present' || status === 'late';
+                        }).length;
+                        
+                        const attendanceRate = Math.round((presentCount / classTeachers.length) * 100);
+                        classAttendanceRates[cls.name] = {
+                            rate: attendanceRate,
+                            present: presentCount,
+                            total: classTeachers.length
+                        };
+                    }
                 });
+                
+                // Sort classes by attendance rate (highest first)
+                const sortedClasses = classes.sort((a, b) => {
+                    const rateA = classAttendanceRates[a.name]?.rate || 0;
+                    const rateB = classAttendanceRates[b.name]?.rate || 0;
+                    return rateB - rateA;
+                });
+                
+                sortedClasses.forEach(cls => {
+                    const attendanceInfo = classAttendanceRates[cls.name];
+                    if (attendanceInfo) {
+                        const option = document.createElement('option');
+                        option.value = cls.name;
+                        option.textContent = `${cls.name} (${attendanceInfo.rate}% - ${attendanceInfo.present}/${attendanceInfo.total})`;
+                        select.appendChild(option);
+                    }
+                });
+            });
+            
+            // Load queue class dropdown - show classes with their total points
+            const queueSelect = document.getElementById('star-queue-class');
+            queueSelect.innerHTML = '<option value="">اختر الصف</option>';
+            
+            // Sort classes by total points (highest first)
+            const sortedClassesByPoints = classes.sort((a, b) => {
+                const pointsA = classPoints[a.id] || { speed: 0, quiet: 0, cleanliness: 0 };
+                const pointsB = classPoints[b.id] || { speed: 0, quiet: 0, cleanliness: 0 };
+                const totalA = pointsA.speed + pointsA.quiet + pointsA.cleanliness;
+                const totalB = pointsB.speed + pointsB.quiet + pointsB.cleanliness;
+                return totalB - totalA;
+            });
+            
+            sortedClassesByPoints.forEach(cls => {
+                const points = classPoints[cls.id] || { speed: 0, quiet: 0, cleanliness: 0 };
+                const totalPoints = points.speed + points.quiet + points.cleanliness;
+                const option = document.createElement('option');
+                option.value = cls.name;
+                option.textContent = `${cls.name} (${totalPoints} نقطة)`;
+                queueSelect.appendChild(option);
             });
             
             // Set current values
@@ -1969,6 +2808,8 @@
             
             // Update display
             document.getElementById('star-of-queue').textContent = stars.queueClass || 'لم يتم اختيار نجم الطابور بعد';
+            document.getElementById('star-of-queue-header').textContent = stars.queueClass || 'لم يتم اختيار نجم الطابور بعد';
+            document.getElementById('star-of-month-teacher-header').textContent = stars.monthTeacher || 'لم يتم الاختيار';
             
             // Force save to localStorage
             localStorage.setItem('schoolQueue_stars', JSON.stringify(stars));
@@ -2120,30 +2961,64 @@
         }
 
         function updateLogosDisplay() {
-            // Update left logo
+            // Update left logo (desktop)
             const leftLogo = document.getElementById('left-logo');
             const leftPlaceholder = document.getElementById('left-logo-placeholder');
             
-            if (settings.leftLogo) {
-                leftLogo.src = settings.leftLogo;
-                leftLogo.style.display = 'block';
-                leftPlaceholder.style.display = 'none';
-            } else {
-                leftLogo.style.display = 'none';
-                leftPlaceholder.style.display = 'block';
+            if (leftLogo && leftPlaceholder) {
+                if (settings.leftLogo) {
+                    leftLogo.src = settings.leftLogo;
+                    leftLogo.style.display = 'block';
+                    leftPlaceholder.style.display = 'none';
+                } else {
+                    leftLogo.style.display = 'none';
+                    leftPlaceholder.style.display = 'block';
+                }
             }
             
-            // Update right logo
+            // Update left logo (mobile)
+            const leftLogoMobile = document.getElementById('left-logo-mobile');
+            const leftPlaceholderMobile = document.getElementById('left-logo-placeholder-mobile');
+            
+            if (leftLogoMobile && leftPlaceholderMobile) {
+                if (settings.leftLogo) {
+                    leftLogoMobile.src = settings.leftLogo;
+                    leftLogoMobile.style.display = 'block';
+                    leftPlaceholderMobile.style.display = 'none';
+                } else {
+                    leftLogoMobile.style.display = 'none';
+                    leftPlaceholderMobile.style.display = 'block';
+                }
+            }
+            
+            // Update right logo (desktop)
             const rightLogo = document.getElementById('right-logo');
             const rightPlaceholder = document.getElementById('right-logo-placeholder');
             
-            if (settings.rightLogo) {
-                rightLogo.src = settings.rightLogo;
-                rightLogo.style.display = 'block';
-                rightPlaceholder.style.display = 'none';
-            } else {
-                rightLogo.style.display = 'none';
-                rightPlaceholder.style.display = 'block';
+            if (rightLogo && rightPlaceholder) {
+                if (settings.rightLogo) {
+                    rightLogo.src = settings.rightLogo;
+                    rightLogo.style.display = 'block';
+                    rightPlaceholder.style.display = 'none';
+                } else {
+                    rightLogo.style.display = 'none';
+                    rightPlaceholder.style.display = 'block';
+                }
+            }
+            
+            // Update right logo (mobile)
+            const rightLogoMobile = document.getElementById('right-logo-mobile');
+            const rightPlaceholderMobile = document.getElementById('right-logo-placeholder-mobile');
+            
+            if (rightLogoMobile && rightPlaceholderMobile) {
+                if (settings.rightLogo) {
+                    rightLogoMobile.src = settings.rightLogo;
+                    rightLogoMobile.style.display = 'block';
+                    rightPlaceholderMobile.style.display = 'none';
+                } else {
+                    rightLogoMobile.style.display = 'none';
+                    rightPlaceholderMobile.style.display = 'block';
+                }
             }
         }
 
@@ -2152,7 +3027,11 @@
             const principalName = document.getElementById('principal-name').value.trim();
             
             if (schoolName) settings.schoolName = schoolName;
-            if (principalName) settings.principalName = principalName;
+            if (principalName) {
+                settings.principalName = principalName;
+                // Update display immediately
+                document.getElementById('principal-display').textContent = principalName;
+            }
             
             saveData();
             alert('تم حفظ بيانات المدرسة بنجاح');
@@ -2212,30 +3091,32 @@
                 
                 <div>
                     <h3 class="text-xl font-bold mb-4">تفاصيل الحضور</h3>
-                    <table class="w-full border-collapse border border-gray-300">
-                        <thead>
-                            <tr class="bg-gray-100">
-                                <th class="border border-gray-300 p-2">اسم المعلمة</th>
-                                <th class="border border-gray-300 p-2">الصف</th>
-                                <th class="border border-gray-300 p-2">الحالة</th>
-                                <th class="border border-gray-300 p-2">الوقت</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${teachers.map(teacher => {
-                                const status = attendance[teacher.id]?.status || 'pending';
-                                const time = attendance[teacher.id]?.time || '-';
-                                return `
-                                    <tr>
-                                        <td class="border border-gray-300 p-2">${teacher.name}</td>
-                                        <td class="border border-gray-300 p-2">${teacher.class}</td>
-                                        <td class="border border-gray-300 p-2">${getStatusText(status)}</td>
-                                        <td class="border border-gray-300 p-2">${time}</td>
-                                    </tr>
-                                `;
-                            }).join('')}
-                        </tbody>
-                    </table>
+                    <div class="table-container">
+                        <table class="w-full border-collapse border border-gray-300">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border border-gray-300 p-2">اسم المعلمة</th>
+                                    <th class="border border-gray-300 p-2">الصف</th>
+                                    <th class="border border-gray-300 p-2">الحالة</th>
+                                    <th class="border border-gray-300 p-2">الوقت</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${teachers.map(teacher => {
+                                    const status = attendance[teacher.id]?.status || 'pending';
+                                    const time = attendance[teacher.id]?.time || '-';
+                                    return `
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">${teacher.name}</td>
+                                            <td class="border border-gray-300 p-2">${teacher.class}</td>
+                                            <td class="border border-gray-300 p-2">${getStatusText(status)}</td>
+                                            <td class="border border-gray-300 p-2">${time}</td>
+                                        </tr>
+                                    `;
+                                }).join('')}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             `;
             
@@ -2354,32 +3235,34 @@
                 
                 <div>
                     <h3 class="text-xl font-bold mb-4">نقاط الصفوف</h3>
-                    <table class="w-full border-collapse border border-gray-300">
-                        <thead>
-                            <tr class="bg-gray-100">
-                                <th class="border border-gray-300 p-2">الصف</th>
-                                <th class="border border-gray-300 p-2">سرعة الاصطفاف</th>
-                                <th class="border border-gray-300 p-2">الهدوء والنظام</th>
-                                <th class="border border-gray-300 p-2">النظافة الشخصية</th>
-                                <th class="border border-gray-300 p-2">المجموع</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${classes.map(cls => {
-                                const points = classPoints[cls.id] || { speed: 0, quiet: 0, cleanliness: 0 };
-                                const total = points.speed + points.quiet + points.cleanliness;
-                                return `
-                                    <tr>
-                                        <td class="border border-gray-300 p-2">${cls.name}</td>
-                                        <td class="border border-gray-300 p-2 text-center">${points.speed}</td>
-                                        <td class="border border-gray-300 p-2 text-center">${points.quiet}</td>
-                                        <td class="border border-gray-300 p-2 text-center">${points.cleanliness}</td>
-                                        <td class="border border-gray-300 p-2 text-center font-bold">${total}</td>
-                                    </tr>
-                                `;
-                            }).join('')}
-                        </tbody>
-                    </table>
+                    <div class="table-container">
+                        <table class="w-full border-collapse border border-gray-300">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border border-gray-300 p-2">الصف</th>
+                                    <th class="border border-gray-300 p-2">سرعة الاصطفاف</th>
+                                    <th class="border border-gray-300 p-2">الهدوء والنظام</th>
+                                    <th class="border border-gray-300 p-2">النظافة الشخصية</th>
+                                    <th class="border border-gray-300 p-2">المجموع</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${classes.map(cls => {
+                                    const points = classPoints[cls.id] || { speed: 0, quiet: 0, cleanliness: 0 };
+                                    const total = points.speed + points.quiet + points.cleanliness;
+                                    return `
+                                        <tr>
+                                            <td class="border border-gray-300 p-2">${cls.name}</td>
+                                            <td class="border border-gray-300 p-2 text-center">${points.speed}</td>
+                                            <td class="border border-gray-300 p-2 text-center">${points.quiet}</td>
+                                            <td class="border border-gray-300 p-2 text-center">${points.cleanliness}</td>
+                                            <td class="border border-gray-300 p-2 text-center font-bold">${total}</td>
+                                        </tr>
+                                    `;
+                                }).join('')}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             `;
             
@@ -2660,15 +3543,76 @@
             }
         });
 
+        // Update date and time
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+            
+            const dateTimeString = now.toLocaleDateString('ar-SA', options);
+            
+            const dateTimeElement = document.getElementById('current-datetime');
+            if (dateTimeElement) {
+                dateTimeElement.textContent = dateTimeString;
+            }
+        }
+
         // Initialize system when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            initSystem();
+        document.addEventListener('DOMContentLoaded', async function() {
+            await initSystem();
             updateLogosDisplay();
+            updatePrincipalDisplay();
+            
+            // Start updating time immediately and every second
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+            
+            // Auto-save data every 30 seconds
+            setInterval(function() {
+                saveData();
+            }, 30000);
+            
+            // Save data when page is about to unload
+            window.addEventListener('beforeunload', function() {
+                saveData();
+            });
+            
+            // Save data when page becomes hidden (mobile/tab switching)
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    saveData();
+                }
+            });
+            
+            // Save data on any user interaction
+            document.addEventListener('click', function() {
+                setTimeout(saveData, 100);
+            });
+            
+            document.addEventListener('input', function() {
+                setTimeout(saveData, 500);
+            });
             
             // Set default values for settings inputs
             document.getElementById('school-name').value = settings.schoolName;
             document.getElementById('principal-name').value = settings.principalName;
         });
+        
+        // Update principal display
+        function updatePrincipalDisplay() {
+            const principalDisplay = document.getElementById('principal-display');
+            if (principalDisplay && settings.principalName) {
+                principalDisplay.textContent = settings.principalName;
+            }
+        }
 
         // Close modals when clicking outside
         document.addEventListener('click', function(e) {
@@ -2677,5 +3621,5 @@
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97e22d4803344e98',t:'MTc1NzcwOTE3NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97e9124b1399127c',t:'MTc1Nzc4MTQ3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
