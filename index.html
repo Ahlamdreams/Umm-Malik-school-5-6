@@ -21,11 +21,24 @@
             font-family: 'Cairo', sans-serif;
         }
         
-        /* Advanced Animated Background */
+        /* Enhanced Animated Background with Beautiful Gradients */
         body {
-            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe, #a8edea, #fed6e3, #d299c2, #fef9d7, #ebc0fd, #d6ecd2);
-            background-size: 400% 400%;
-            animation: gradientShift 12s ease infinite;
+            background: linear-gradient(-45deg, 
+                #667eea, #764ba2, #f093fb, #f5576c, 
+                #4facfe, #00f2fe, #a8edea, #fed6e3, 
+                #d299c2, #fef9d7, #ebc0fd, #d6ecd2,
+                #ff9a9e, #fecfef, #fecfef, #fad0c4,
+                #a8edea, #fed6e3, #ffecd2, #fcb69f,
+                #667eea, #f093fb, #4facfe, #00f2fe,
+                #ff6b6b, #4ecdc4, #45b7d1, #96ceb4,
+                #feca57, #ff9ff3, #54a0ff, #5f27cd,
+                #00d2d3, #ff9ff3, #54a0ff, #5f27cd,
+                #ff6b9d, #c44569, #f8b500, #78e08f,
+                #60a3bc, #e55039, #4a69bd, #f39c12,
+                #9c88ff, #fbc531, #44bd32, #e84393
+            );
+            background-size: 1200% 1200%;
+            animation: gradientShift 15s ease infinite;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
@@ -38,19 +51,37 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.3) 0%, transparent 50%);
+            background: radial-gradient(circle at 25% 75%, rgba(139, 92, 246, 0.4) 0%, transparent 60%),
+                        radial-gradient(circle at 75% 25%, rgba(236, 72, 153, 0.4) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 70%),
+                        radial-gradient(circle at 10% 90%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.3) 0%, transparent 50%);
             pointer-events: none;
             z-index: 1;
-            animation: backgroundPulse 8s ease-in-out infinite;
+            animation: backgroundPulse 10s ease-in-out infinite;
         }
         
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
-            25% { background-position: 100% 50%; }
+            5% { background-position: 15% 25%; }
+            10% { background-position: 30% 40%; }
+            15% { background-position: 50% 60%; }
+            20% { background-position: 80% 70%; }
+            25% { background-position: 100% 20%; }
+            30% { background-position: 85% 35%; }
+            35% { background-position: 70% 90%; }
+            40% { background-position: 40% 75%; }
+            45% { background-position: 60% 15%; }
             50% { background-position: 100% 100%; }
-            75% { background-position: 0% 100%; }
+            55% { background-position: 75% 85%; }
+            60% { background-position: 30% 80%; }
+            65% { background-position: 10% 45%; }
+            70% { background-position: 0% 60%; }
+            75% { background-position: 25% 30%; }
+            80% { background-position: 60% 10%; }
+            85% { background-position: 90% 55%; }
+            90% { background-position: 20% 80%; }
+            95% { background-position: 5% 65%; }
             100% { background-position: 0% 50%; }
         }
         
@@ -127,19 +158,29 @@
         /* Floating Stars */
         .floating-star {
             position: absolute;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 16px;
-            animation: starFloat 20s infinite ease-in-out;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            animation: starFloat 12s infinite ease-in-out;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 215, 0, 0.6);
         }
         
-        .floating-star:nth-child(14) { left: 10%; top: 15%; animation-delay: 0s; }
-        .floating-star:nth-child(15) { left: 30%; top: 25%; animation-delay: 3s; }
-        .floating-star:nth-child(16) { left: 50%; top: 10%; animation-delay: 6s; }
-        .floating-star:nth-child(17) { left: 70%; top: 30%; animation-delay: 9s; }
-        .floating-star:nth-child(18) { left: 90%; top: 20%; animation-delay: 12s; }
-        .floating-star:nth-child(19) { left: 20%; top: 60%; animation-delay: 15s; }
-        .floating-star:nth-child(20) { left: 80%; top: 70%; animation-delay: 18s; }
+        .floating-star:nth-child(14) { left: 10%; top: 15%; animation-delay: 0s; font-size: 20px; }
+        .floating-star:nth-child(15) { left: 30%; top: 25%; animation-delay: 2s; font-size: 16px; }
+        .floating-star:nth-child(16) { left: 50%; top: 10%; animation-delay: 4s; font-size: 22px; }
+        .floating-star:nth-child(17) { left: 70%; top: 30%; animation-delay: 6s; font-size: 18px; }
+        .floating-star:nth-child(18) { left: 90%; top: 20%; animation-delay: 8s; font-size: 24px; }
+        .floating-star:nth-child(19) { left: 20%; top: 60%; animation-delay: 10s; font-size: 16px; }
+        .floating-star:nth-child(20) { left: 80%; top: 70%; animation-delay: 1s; font-size: 20px; }
+        .floating-star:nth-child(21) { left: 5%; top: 40%; animation-delay: 3s; font-size: 14px; }
+        .floating-star:nth-child(22) { left: 95%; top: 45%; animation-delay: 5s; font-size: 26px; }
+        .floating-star:nth-child(23) { left: 15%; top: 80%; animation-delay: 7s; font-size: 18px; }
+        .floating-star:nth-child(24) { left: 85%; top: 85%; animation-delay: 9s; font-size: 22px; }
+        .floating-star:nth-child(25) { left: 45%; top: 75%; animation-delay: 11s; font-size: 16px; }
+        .floating-star:nth-child(26) { left: 25%; top: 5%; animation-delay: 1.5s; font-size: 20px; }
+        .floating-star:nth-child(27) { left: 75%; top: 8%; animation-delay: 3.5s; font-size: 24px; }
+        .floating-star:nth-child(28) { left: 35%; top: 50%; animation-delay: 5.5s; font-size: 18px; }
+        .floating-star:nth-child(29) { left: 65%; top: 55%; animation-delay: 7.5s; font-size: 16px; }
+        .floating-star:nth-child(30) { left: 55%; top: 35%; animation-delay: 9.5s; font-size: 22px; }
         
         /* Floating Icons */
         .floating-icon-bg {
@@ -212,6 +253,459 @@
             border-right: 8px solid transparent;
             border-top: 7px solid rgba(69, 183, 209, 0.3);
         }
+
+        /* Beautiful Moving Paths and Trails */
+        .moving-paths {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        /* Curved Path Lines */
+        .path-line {
+            position: absolute;
+            width: 2px;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.4), transparent);
+            border-radius: 2px;
+            animation: pathMove 15s infinite linear;
+        }
+
+        .path-line:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+            background: linear-gradient(to bottom, transparent, rgba(255, 107, 107, 0.5), transparent);
+            animation-duration: 12s;
+        }
+
+        .path-line:nth-child(2) {
+            left: 25%;
+            animation-delay: 3s;
+            background: linear-gradient(to bottom, transparent, rgba(78, 205, 196, 0.5), transparent);
+            animation-duration: 18s;
+        }
+
+        .path-line:nth-child(3) {
+            left: 40%;
+            animation-delay: 6s;
+            background: linear-gradient(to bottom, transparent, rgba(69, 183, 209, 0.5), transparent);
+            animation-duration: 14s;
+        }
+
+        .path-line:nth-child(4) {
+            left: 55%;
+            animation-delay: 9s;
+            background: linear-gradient(to bottom, transparent, rgba(254, 202, 87, 0.5), transparent);
+            animation-duration: 16s;
+        }
+
+        .path-line:nth-child(5) {
+            left: 70%;
+            animation-delay: 12s;
+            background: linear-gradient(to bottom, transparent, rgba(255, 159, 243, 0.5), transparent);
+            animation-duration: 20s;
+        }
+
+        .path-line:nth-child(6) {
+            left: 85%;
+            animation-delay: 15s;
+            background: linear-gradient(to bottom, transparent, rgba(139, 92, 246, 0.5), transparent);
+            animation-duration: 13s;
+        }
+
+        /* Diagonal Moving Lines */
+        .diagonal-path {
+            position: absolute;
+            width: 1px;
+            height: 150px;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: diagonalMove 20s infinite linear;
+            transform: rotate(45deg);
+        }
+
+        .diagonal-path:nth-child(7) {
+            left: 15%;
+            top: -150px;
+            animation-delay: 0s;
+            background: linear-gradient(45deg, transparent, rgba(255, 107, 107, 0.4), transparent);
+        }
+
+        .diagonal-path:nth-child(8) {
+            left: 35%;
+            top: -150px;
+            animation-delay: 5s;
+            background: linear-gradient(45deg, transparent, rgba(78, 205, 196, 0.4), transparent);
+        }
+
+        .diagonal-path:nth-child(9) {
+            left: 55%;
+            top: -150px;
+            animation-delay: 10s;
+            background: linear-gradient(45deg, transparent, rgba(69, 183, 209, 0.4), transparent);
+        }
+
+        .diagonal-path:nth-child(10) {
+            left: 75%;
+            top: -150px;
+            animation-delay: 15s;
+            background: linear-gradient(45deg, transparent, rgba(254, 202, 87, 0.4), transparent);
+        }
+
+        /* Curved Wave Paths */
+        .wave-path {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: waveMove 25s infinite ease-in-out;
+        }
+
+        .wave-path:nth-child(11) {
+            top: 20%;
+            animation-delay: 0s;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 107, 0.3), transparent);
+        }
+
+        .wave-path:nth-child(12) {
+            top: 40%;
+            animation-delay: 8s;
+            background: linear-gradient(90deg, transparent, rgba(78, 205, 196, 0.3), transparent);
+        }
+
+        .wave-path:nth-child(13) {
+            top: 60%;
+            animation-delay: 16s;
+            background: linear-gradient(90deg, transparent, rgba(69, 183, 209, 0.3), transparent);
+        }
+
+        .wave-path:nth-child(14) {
+            top: 80%;
+            animation-delay: 24s;
+            background: linear-gradient(90deg, transparent, rgba(254, 202, 87, 0.3), transparent);
+        }
+
+        /* Spiral Paths */
+        .spiral-path {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: spiralMove 30s infinite linear;
+        }
+
+        .spiral-path:nth-child(15) {
+            left: 50%;
+            top: 50%;
+            animation-delay: 0s;
+            background: rgba(255, 107, 107, 0.6);
+        }
+
+        .spiral-path:nth-child(16) {
+            left: 50%;
+            top: 50%;
+            animation-delay: 10s;
+            background: rgba(78, 205, 196, 0.6);
+        }
+
+        .spiral-path:nth-child(17) {
+            left: 50%;
+            top: 50%;
+            animation-delay: 20s;
+            background: rgba(69, 183, 209, 0.6);
+        }
+
+        /* Flowing Particles */
+        .flow-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: flowMove 18s infinite linear;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .flow-particle:nth-child(18) {
+            left: 5%;
+            animation-delay: 0s;
+            background: rgba(255, 107, 107, 0.7);
+            box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+        }
+
+        .flow-particle:nth-child(19) {
+            left: 20%;
+            animation-delay: 3s;
+            background: rgba(78, 205, 196, 0.7);
+            box-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+        }
+
+        .flow-particle:nth-child(20) {
+            left: 35%;
+            animation-delay: 6s;
+            background: rgba(69, 183, 209, 0.7);
+            box-shadow: 0 0 10px rgba(69, 183, 209, 0.5);
+        }
+
+        .flow-particle:nth-child(21) {
+            left: 50%;
+            animation-delay: 9s;
+            background: rgba(254, 202, 87, 0.7);
+            box-shadow: 0 0 10px rgba(254, 202, 87, 0.5);
+        }
+
+        .flow-particle:nth-child(22) {
+            left: 65%;
+            animation-delay: 12s;
+            background: rgba(255, 159, 243, 0.7);
+            box-shadow: 0 0 10px rgba(255, 159, 243, 0.5);
+        }
+
+        .flow-particle:nth-child(23) {
+            left: 80%;
+            animation-delay: 15s;
+            background: rgba(139, 92, 246, 0.7);
+            box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+        }
+
+        .flow-particle:nth-child(24) {
+            left: 95%;
+            animation-delay: 18s;
+            background: rgba(34, 197, 94, 0.7);
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+        }
+
+        /* Path Movement Animations */
+        @keyframes pathMove {
+            0% {
+                transform: translateY(-100px) translateX(0px);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(50vh) translateX(30px);
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(-20px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes diagonalMove {
+            0% {
+                transform: translateY(-200px) translateX(-100px) rotate(45deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(100vw) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes waveMove {
+            0% {
+                transform: translateX(-100%) scaleY(1);
+                opacity: 0;
+            }
+            25% {
+                transform: translateX(25%) scaleY(1.5);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(50%) scaleY(0.8);
+                opacity: 0.8;
+            }
+            75% {
+                transform: translateX(75%) scaleY(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(100%) scaleY(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes spiralMove {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(50px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes flowMove {
+            0% {
+                transform: translateY(100vh) translateX(0px) scale(0.5);
+                opacity: 0;
+            }
+            5% {
+                opacity: 1;
+            }
+            25% {
+                transform: translateY(75vh) translateX(50px) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(50vh) translateX(-30px) scale(1.2);
+                opacity: 0.8;
+            }
+            75% {
+                transform: translateY(25vh) translateX(80px) scale(0.8);
+                opacity: 1;
+            }
+            95% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-50px) translateX(-40px) scale(0.3);
+                opacity: 0;
+            }
+        }
+
+        /* Zigzag Paths */
+        .zigzag-path {
+            position: absolute;
+            width: 2px;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: zigzagMove 22s infinite linear;
+        }
+
+        .zigzag-path:nth-child(25) {
+            left: 12%;
+            animation-delay: 2s;
+            background: linear-gradient(to bottom, transparent, rgba(255, 107, 107, 0.4), transparent);
+        }
+
+        .zigzag-path:nth-child(26) {
+            left: 38%;
+            animation-delay: 7s;
+            background: linear-gradient(to bottom, transparent, rgba(78, 205, 196, 0.4), transparent);
+        }
+
+        .zigzag-path:nth-child(27) {
+            left: 62%;
+            animation-delay: 14s;
+            background: linear-gradient(to bottom, transparent, rgba(69, 183, 209, 0.4), transparent);
+        }
+
+        .zigzag-path:nth-child(28) {
+            left: 88%;
+            animation-delay: 19s;
+            background: linear-gradient(to bottom, transparent, rgba(254, 202, 87, 0.4), transparent);
+        }
+
+        @keyframes zigzagMove {
+            0% {
+                transform: translateY(-100px) translateX(0px);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            20% {
+                transform: translateY(20vh) translateX(40px);
+            }
+            40% {
+                transform: translateY(40vh) translateX(-30px);
+            }
+            60% {
+                transform: translateY(60vh) translateX(50px);
+            }
+            80% {
+                transform: translateY(80vh) translateX(-20px);
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(10px);
+                opacity: 0;
+            }
+        }
+
+        /* Pulsing Dots Trail */
+        .pulse-dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: pulseDotMove 16s infinite ease-in-out;
+        }
+
+        .pulse-dot:nth-child(29) {
+            left: 8%;
+            top: 10%;
+            animation-delay: 0s;
+            background: rgba(255, 107, 107, 0.6);
+        }
+
+        .pulse-dot:nth-child(30) {
+            left: 30%;
+            top: 30%;
+            animation-delay: 4s;
+            background: rgba(78, 205, 196, 0.6);
+        }
+
+        .pulse-dot:nth-child(31) {
+            left: 60%;
+            top: 20%;
+            animation-delay: 8s;
+            background: rgba(69, 183, 209, 0.6);
+        }
+
+        .pulse-dot:nth-child(32) {
+            left: 85%;
+            top: 40%;
+            animation-delay: 12s;
+            background: rgba(254, 202, 87, 0.6);
+        }
+
+        @keyframes pulseDotMove {
+            0%, 100% {
+                transform: scale(0.5) translateY(0px);
+                opacity: 0.3;
+            }
+            25% {
+                transform: scale(1.5) translateY(-30px);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1) translateY(-60px);
+                opacity: 0.7;
+            }
+            75% {
+                transform: scale(1.8) translateY(-40px);
+                opacity: 0.9;
+            }
+        }
         
         @keyframes floatOrb {
             0%, 100% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.7; }
@@ -230,19 +724,43 @@
         @keyframes starFloat {
             0%, 100% { 
                 transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); 
-                opacity: 0.6; 
+                opacity: 0.8; 
+                text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 215, 0, 0.6);
+            }
+            12.5% { 
+                transform: translateY(-25px) translateX(20px) rotate(45deg) scale(1.3); 
+                opacity: 1; 
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 35px rgba(255, 215, 0, 0.8);
             }
             25% { 
-                transform: translateY(-20px) translateX(15px) rotate(90deg) scale(1.2); 
+                transform: translateY(-40px) translateX(15px) rotate(90deg) scale(1.1); 
+                opacity: 0.9; 
+                text-shadow: 0 0 18px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 215, 0, 0.7);
+            }
+            37.5% { 
+                transform: translateY(-30px) translateX(-10px) rotate(135deg) scale(1.4); 
                 opacity: 1; 
+                text-shadow: 0 0 25px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 215, 0, 0.9);
             }
             50% { 
-                transform: translateY(-10px) translateX(-10px) rotate(180deg) scale(0.8); 
-                opacity: 0.8; 
+                transform: translateY(-15px) translateX(-25px) rotate(180deg) scale(0.9); 
+                opacity: 0.7; 
+                text-shadow: 0 0 12px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 215, 0, 0.5);
+            }
+            62.5% { 
+                transform: translateY(-35px) translateX(-15px) rotate(225deg) scale(1.2); 
+                opacity: 0.95; 
+                text-shadow: 0 0 22px rgba(255, 255, 255, 0.95), 0 0 32px rgba(255, 215, 0, 0.75);
             }
             75% { 
-                transform: translateY(-30px) translateX(20px) rotate(270deg) scale(1.1); 
-                opacity: 0.9; 
+                transform: translateY(-50px) translateX(25px) rotate(270deg) scale(1.15); 
+                opacity: 0.85; 
+                text-shadow: 0 0 16px rgba(255, 255, 255, 0.85), 0 0 28px rgba(255, 215, 0, 0.65);
+            }
+            87.5% { 
+                transform: translateY(-20px) translateX(30px) rotate(315deg) scale(1.35); 
+                opacity: 1; 
+                text-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 45px rgba(255, 215, 0, 0.95);
             }
         }
         
@@ -557,6 +1075,82 @@
             75% { transform: translateY(-15px) rotate(1deg); }
         }
 
+        /* Enhanced Logo Animations */
+        .logo-pulse-glow {
+            animation: logoPulseGlow 2.5s ease-in-out infinite, logoFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 40px rgba(255, 215, 0, 0.4));
+            transition: all 0.3s ease;
+        }
+
+        .logo-pulse-glow-delayed {
+            animation: logoPulseGlow 3.2s ease-in-out infinite, logoFloat 4.5s ease-in-out infinite;
+            animation-delay: 1s;
+            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 40px rgba(59, 130, 246, 0.4));
+            transition: all 0.3s ease;
+        }
+
+        @keyframes logoPulseGlow {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+                filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 30px rgba(255, 215, 0, 0.3));
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1);
+            }
+            25% {
+                transform: scale(1.05) rotate(1deg);
+                filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 50px rgba(255, 215, 0, 0.5));
+                box-shadow: 0 0 40px rgba(255, 255, 255, 0.5), inset 0 0 30px rgba(255, 255, 255, 0.2);
+            }
+            50% {
+                transform: scale(1.08) rotate(-0.5deg);
+                filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 60px rgba(255, 215, 0, 0.6));
+                box-shadow: 0 0 50px rgba(255, 255, 255, 0.6), inset 0 0 40px rgba(255, 255, 255, 0.25);
+            }
+            75% {
+                transform: scale(1.03) rotate(0.8deg);
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 45px rgba(255, 215, 0, 0.4));
+                box-shadow: 0 0 35px rgba(255, 255, 255, 0.4), inset 0 0 25px rgba(255, 255, 255, 0.15);
+            }
+        }
+
+        @keyframes logoFloat {
+            0%, 100% {
+                transform: translateY(0px) translateX(0px) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-8px) translateX(3px) rotate(1deg);
+            }
+            50% {
+                transform: translateY(-12px) translateX(-2px) rotate(-0.5deg);
+            }
+            75% {
+                transform: translateY(-5px) translateX(4px) rotate(0.8deg);
+            }
+        }
+
+        /* Logo Hover Effects */
+        .logo-container:hover .logo-pulse-glow,
+        .logo-container:hover .logo-pulse-glow-delayed {
+            animation-duration: 1.5s;
+            transform: scale(1.15) rotate(5deg);
+            filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 80px rgba(255, 215, 0, 0.7));
+        }
+
+        /* Logo Breathing Effect */
+        .logo-breathe {
+            animation: logoBreath 3s ease-in-out infinite;
+        }
+
+        @keyframes logoBreath {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.9;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+
         /* Glow Effect on Hover */
         .glow-on-hover {
             transition: all 0.3s ease;
@@ -661,6 +1255,147 @@
         .enhanced-card:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animated Title with Dynamic Colors */
+        .animated-title {
+            background: linear-gradient(-45deg, 
+                #ffffff, #f8fafc, #e2e8f0, #cbd5e1,
+                #ffffff, #fef3c7, #fde68a, #f59e0b,
+                #ffffff, #ddd6fe, #c4b5fd, #8b5cf6,
+                #ffffff, #fecaca, #fca5a5, #ef4444,
+                #ffffff, #bbf7d0, #86efac, #22c55e,
+                #ffffff, #bfdbfe, #93c5fd, #3b82f6,
+                #ffffff, #fce7f3, #f9a8d4, #ec4899,
+                #ffffff, #fed7aa, #fdba74, #f97316,
+                #ffffff, #e0e7ff, #c7d2fe, #6366f1,
+                #ffffff, #dcfce7, #bbf7d0, #16a34a,
+                #ffffff, #fef3c7, #fde047, #eab308,
+                #ffffff, #f3e8ff, #ddd6fe, #9333ea
+            );
+            background-size: 800% 800%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titleColorShift 10s ease infinite, titleFloat 8s ease-in-out infinite;
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.7);
+            position: relative;
+            transform-origin: center;
+        }
+        
+        .animated-title::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(-45deg, 
+                rgba(255, 255, 255, 0.8), 
+                rgba(255, 255, 255, 0.6), 
+                rgba(255, 255, 255, 0.9)
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: -1;
+            filter: blur(2px);
+        }
+        
+        @keyframes titleColorShift {
+            0% { background-position: 0% 50%; }
+            8% { background-position: 25% 25%; }
+            16% { background-position: 100% 30%; }
+            24% { background-position: 75% 75%; }
+            33% { background-position: 50% 100%; }
+            41% { background-position: 20% 60%; }
+            50% { background-position: 100% 70%; }
+            58% { background-position: 60% 20%; }
+            66% { background-position: 0% 100%; }
+            74% { background-position: 40% 40%; }
+            83% { background-position: 70% 0%; }
+            91% { background-position: 30% 80%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes titleFloat {
+            0%, 100% { 
+                transform: translateY(0px) scale(1) rotate(0deg); 
+            }
+            25% { 
+                transform: translateY(-8px) scale(1.02) rotate(0.5deg); 
+            }
+            50% { 
+                transform: translateY(-4px) scale(1.01) rotate(-0.3deg); 
+            }
+            75% { 
+                transform: translateY(-12px) scale(1.03) rotate(0.7deg); 
+            }
+        }
+        
+        /* Header Float Animation */
+        @keyframes headerFloat {
+            0%, 100% { 
+                transform: translateY(0px) scale(1) rotate(0deg); 
+            }
+            25% { 
+                transform: translateY(-5px) scale(1.005) rotate(0.2deg); 
+            }
+            50% { 
+                transform: translateY(-8px) scale(1.008) rotate(-0.1deg); 
+            }
+            75% { 
+                transform: translateY(-3px) scale(1.003) rotate(0.15deg); 
+            }
+        }
+        
+        /* Header Icons Float Animation */
+        @keyframes headerIconFloat {
+            0%, 100% { 
+                transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); 
+                opacity: 0.15;
+            }
+            12.5% { 
+                transform: translateY(-15px) translateX(8px) rotate(5deg) scale(1.1); 
+                opacity: 0.25;
+            }
+            25% { 
+                transform: translateY(-25px) translateX(12px) rotate(10deg) scale(1.2); 
+                opacity: 0.3;
+            }
+            37.5% { 
+                transform: translateY(-20px) translateX(-5px) rotate(-3deg) scale(1.15); 
+                opacity: 0.28;
+            }
+            50% { 
+                transform: translateY(-30px) translateX(-12px) rotate(-8deg) scale(0.9); 
+                opacity: 0.2;
+            }
+            62.5% { 
+                transform: translateY(-18px) translateX(-8px) rotate(12deg) scale(1.05); 
+                opacity: 0.22;
+            }
+            75% { 
+                transform: translateY(-35px) translateX(15px) rotate(7deg) scale(1.25); 
+                opacity: 0.32;
+            }
+            87.5% { 
+                transform: translateY(-12px) translateX(20px) rotate(-5deg) scale(1.08); 
+                opacity: 0.26;
+            }
+        }
+        
+        /* Floating Header Icon Class */
+        .floating-header-icon {
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .floating-header-icon:hover {
+            transform: scale(1.3) rotate(15deg) !important;
+            opacity: 0.4 !important;
+            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
         }
 
         /* Enhanced Mobile Responsiveness */
@@ -1270,14 +2005,24 @@
         <div class="sparkle"></div>
         <div class="sparkle"></div>
         
-        <!-- Floating Stars -->
-        <div class="floating-star">⭐</div>
-        <div class="floating-star">✨</div>
-        <div class="floating-star">🌟</div>
-        <div class="floating-star">⭐</div>
-        <div class="floating-star">✨</div>
-        <div class="floating-star">🌟</div>
-        <div class="floating-star">⭐</div>
+        <!-- Floating Stars - Hidden -->
+        <div class="floating-star" style="display: none;">⭐</div>
+        <div class="floating-star" style="display: none;">✨</div>
+        <div class="floating-star" style="display: none;">🌟</div>
+        <div class="floating-star" style="display: none;">⭐</div>
+        <div class="floating-star" style="display: none;">✨</div>
+        <div class="floating-star" style="display: none;">🌟</div>
+        <div class="floating-star" style="display: none;">⭐</div>
+        <div class="floating-star" style="display: none;">✨</div>
+        <div class="floating-star" style="display: none;">🌟</div>
+        <div class="floating-star" style="display: none;">⭐</div>
+        <div class="floating-star" style="display: none;">✨</div>
+        <div class="floating-star" style="display: none;">🌟</div>
+        <div class="floating-star" style="display: none;">⭐</div>
+        <div class="floating-star" style="display: none;">✨</div>
+        <div class="floating-star" style="display: none;">🌟</div>
+        <div class="floating-star" style="display: none;">⭐</div>
+        <div class="floating-star" style="display: none;">✨</div>
         
         <!-- Floating Icons -->
         <div class="floating-icon-bg">📚</div>
@@ -1292,31 +2037,177 @@
         <div class="geometric-shape hexagon"></div>
     </div>
 
+    <!-- Beautiful Moving Paths -->
+    <div class="moving-paths">
+        <!-- Curved Path Lines -->
+        <div class="path-line"></div>
+        <div class="path-line"></div>
+        <div class="path-line"></div>
+        <div class="path-line"></div>
+        <div class="path-line"></div>
+        <div class="path-line"></div>
+        
+        <!-- Diagonal Moving Lines -->
+        <div class="diagonal-path"></div>
+        <div class="diagonal-path"></div>
+        <div class="diagonal-path"></div>
+        <div class="diagonal-path"></div>
+        
+        <!-- Curved Wave Paths -->
+        <div class="wave-path"></div>
+        <div class="wave-path"></div>
+        <div class="wave-path"></div>
+        <div class="wave-path"></div>
+        
+        <!-- Spiral Paths -->
+        <div class="spiral-path"></div>
+        <div class="spiral-path"></div>
+        <div class="spiral-path"></div>
+        
+        <!-- Flowing Particles -->
+        <div class="flow-particle"></div>
+        <div class="flow-particle"></div>
+        <div class="flow-particle"></div>
+        <div class="flow-particle"></div>
+        <div class="flow-particle"></div>
+        <div class="flow-particle"></div>
+        <div class="flow-particle"></div>
+        
+        <!-- Zigzag Paths -->
+        <div class="zigzag-path"></div>
+        <div class="zigzag-path"></div>
+        <div class="zigzag-path"></div>
+        <div class="zigzag-path"></div>
+        
+        <!-- Pulsing Dots Trail -->
+        <div class="pulse-dot"></div>
+        <div class="pulse-dot"></div>
+        <div class="pulse-dot"></div>
+        <div class="pulse-dot"></div>
+    </div>
+
     <!-- Header -->
-    <header class="gradient-bg text-gray-800 py-20 shadow-2xl relative overflow-hidden" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 20%, #f093fb 40%, #a8edea 60%, #d6ecd2 80%, #fef9d7 100%); background-size: 400% 400%; animation: gradientShift 15s ease infinite;">
+    <header class="gradient-bg text-white py-24 shadow-2xl relative overflow-hidden" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 8%, #f093fb 16%, #f5576c 24%, #4facfe 32%, #00f2fe 40%, #a8edea 48%, #fed6e3 56%, #d299c2 64%, #fef9d7 72%, #ebc0fd 80%, #d6ecd2 88%, #ff9a9e 96%, #fecfef 100%); background-size: 800% 800%; animation: gradientShift 12s ease infinite, headerFloat 6s ease-in-out infinite; transform-origin: center; will-change: transform; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 100px rgba(102, 126, 234, 0.4);">
+        
+        <!-- Header Moving Paths -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+            <!-- Curved Path Lines for Header -->
+            <div class="path-line" style="left: 8%; animation-delay: 1s; background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.3), transparent); animation-duration: 14s;"></div>
+            <div class="path-line" style="left: 22%; animation-delay: 4s; background: linear-gradient(to bottom, transparent, rgba(255, 215, 0, 0.4), transparent); animation-duration: 16s;"></div>
+            <div class="path-line" style="left: 36%; animation-delay: 7s; background: linear-gradient(to bottom, transparent, rgba(255, 182, 193, 0.4), transparent); animation-duration: 12s;"></div>
+            <div class="path-line" style="left: 50%; animation-delay: 10s; background: linear-gradient(to bottom, transparent, rgba(173, 216, 230, 0.4), transparent); animation-duration: 18s;"></div>
+            <div class="path-line" style="left: 64%; animation-delay: 13s; background: linear-gradient(to bottom, transparent, rgba(144, 238, 144, 0.4), transparent); animation-duration: 15s;"></div>
+            <div class="path-line" style="left: 78%; animation-delay: 16s; background: linear-gradient(to bottom, transparent, rgba(221, 160, 221, 0.4), transparent); animation-duration: 13s;"></div>
+            <div class="path-line" style="left: 92%; animation-delay: 19s; background: linear-gradient(to bottom, transparent, rgba(255, 165, 0, 0.4), transparent); animation-duration: 17s;"></div>
+            
+            <!-- Diagonal Moving Lines for Header -->
+            <div class="diagonal-path" style="left: 12%; top: -150px; animation-delay: 2s; background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.25), transparent);"></div>
+            <div class="diagonal-path" style="left: 28%; top: -150px; animation-delay: 8s; background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.3), transparent);"></div>
+            <div class="diagonal-path" style="left: 44%; top: -150px; animation-delay: 14s; background: linear-gradient(45deg, transparent, rgba(255, 182, 193, 0.3), transparent);"></div>
+            <div class="diagonal-path" style="left: 60%; top: -150px; animation-delay: 20s; background: linear-gradient(45deg, transparent, rgba(173, 216, 230, 0.3), transparent);"></div>
+            <div class="diagonal-path" style="left: 76%; top: -150px; animation-delay: 26s; background: linear-gradient(45deg, transparent, rgba(144, 238, 144, 0.3), transparent);"></div>
+            
+            <!-- Curved Wave Paths for Header -->
+            <div class="wave-path" style="top: 15%; animation-delay: 3s; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);"></div>
+            <div class="wave-path" style="top: 35%; animation-delay: 12s; background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.25), transparent);"></div>
+            <div class="wave-path" style="top: 55%; animation-delay: 21s; background: linear-gradient(90deg, transparent, rgba(255, 182, 193, 0.25), transparent);"></div>
+            <div class="wave-path" style="top: 75%; animation-delay: 30s; background: linear-gradient(90deg, transparent, rgba(173, 216, 230, 0.25), transparent);"></div>
+            
+            <!-- Spiral Paths for Header -->
+            <div class="spiral-path" style="left: 25%; top: 25%; animation-delay: 5s; background: rgba(255, 255, 255, 0.4);"></div>
+            <div class="spiral-path" style="left: 75%; top: 75%; animation-delay: 15s; background: rgba(255, 215, 0, 0.5);"></div>
+            <div class="spiral-path" style="left: 75%; top: 25%; animation-delay: 25s; background: rgba(255, 182, 193, 0.5);"></div>
+            
+            <!-- Flowing Particles for Header -->
+            <div class="flow-particle" style="left: 3%; animation-delay: 1s; background: rgba(255, 255, 255, 0.6); box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);"></div>
+            <div class="flow-particle" style="left: 15%; animation-delay: 6s; background: rgba(255, 215, 0, 0.6); box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);"></div>
+            <div class="flow-particle" style="left: 27%; animation-delay: 11s; background: rgba(255, 182, 193, 0.6); box-shadow: 0 0 8px rgba(255, 182, 193, 0.4);"></div>
+            <div class="flow-particle" style="left: 39%; animation-delay: 16s; background: rgba(173, 216, 230, 0.6); box-shadow: 0 0 8px rgba(173, 216, 230, 0.4);"></div>
+            <div class="flow-particle" style="left: 51%; animation-delay: 21s; background: rgba(144, 238, 144, 0.6); box-shadow: 0 0 8px rgba(144, 238, 144, 0.4);"></div>
+            <div class="flow-particle" style="left: 63%; animation-delay: 26s; background: rgba(221, 160, 221, 0.6); box-shadow: 0 0 8px rgba(221, 160, 221, 0.4);"></div>
+            <div class="flow-particle" style="left: 75%; animation-delay: 31s; background: rgba(255, 165, 0, 0.6); box-shadow: 0 0 8px rgba(255, 165, 0, 0.4);"></div>
+            <div class="flow-particle" style="left: 87%; animation-delay: 36s; background: rgba(255, 20, 147, 0.6); box-shadow: 0 0 8px rgba(255, 20, 147, 0.4);"></div>
+            
+            <!-- Zigzag Paths for Header -->
+            <div class="zigzag-path" style="left: 10%; animation-delay: 4s; background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.3), transparent);"></div>
+            <div class="zigzag-path" style="left: 30%; animation-delay: 12s; background: linear-gradient(to bottom, transparent, rgba(255, 215, 0, 0.35), transparent);"></div>
+            <div class="zigzag-path" style="left: 50%; animation-delay: 20s; background: linear-gradient(to bottom, transparent, rgba(255, 182, 193, 0.35), transparent);"></div>
+            <div class="zigzag-path" style="left: 70%; animation-delay: 28s; background: linear-gradient(to bottom, transparent, rgba(173, 216, 230, 0.35), transparent);"></div>
+            <div class="zigzag-path" style="left: 90%; animation-delay: 36s; background: linear-gradient(to bottom, transparent, rgba(144, 238, 144, 0.35), transparent);"></div>
+            
+            <!-- Pulsing Dots Trail for Header -->
+            <div class="pulse-dot" style="left: 6%; top: 20%; animation-delay: 2s; background: rgba(255, 255, 255, 0.5);"></div>
+            <div class="pulse-dot" style="left: 18%; top: 40%; animation-delay: 8s; background: rgba(255, 215, 0, 0.5);"></div>
+            <div class="pulse-dot" style="left: 30%; top: 60%; animation-delay: 14s; background: rgba(255, 182, 193, 0.5);"></div>
+            <div class="pulse-dot" style="left: 42%; top: 80%; animation-delay: 20s; background: rgba(173, 216, 230, 0.5);"></div>
+            <div class="pulse-dot" style="left: 54%; top: 30%; animation-delay: 26s; background: rgba(144, 238, 144, 0.5);"></div>
+            <div class="pulse-dot" style="left: 66%; top: 50%; animation-delay: 32s; background: rgba(221, 160, 221, 0.5);"></div>
+            <div class="pulse-dot" style="left: 78%; top: 70%; animation-delay: 38s; background: rgba(255, 165, 0, 0.5);"></div>
+            <div class="pulse-dot" style="left: 90%; top: 90%; animation-delay: 44s; background: rgba(255, 20, 147, 0.5);"></div>
+            
+            <!-- Additional Floating Elements for Header -->
+            <div class="glowing-orb" style="width: 15px; height: 15px; left: 5%; top: 15%; background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent); animation-delay: 3s; animation-duration: 16s;"></div>
+            <div class="glowing-orb" style="width: 12px; height: 12px; left: 25%; top: 85%; background: radial-gradient(circle, rgba(255, 215, 0, 0.6), transparent); animation-delay: 9s; animation-duration: 20s;"></div>
+            <div class="glowing-orb" style="width: 18px; height: 18px; left: 45%; top: 25%; background: radial-gradient(circle, rgba(255, 182, 193, 0.6), transparent); animation-delay: 15s; animation-duration: 14s;"></div>
+            <div class="glowing-orb" style="width: 14px; height: 14px; left: 65%; top: 75%; background: radial-gradient(circle, rgba(173, 216, 230, 0.6), transparent); animation-delay: 21s; animation-duration: 18s;"></div>
+            <div class="glowing-orb" style="width: 16px; height: 16px; left: 85%; top: 35%; background: radial-gradient(circle, rgba(144, 238, 144, 0.6), transparent); animation-delay: 27s; animation-duration: 22s;"></div>
+        </div>
+        
         <!-- Enhanced Decorative Elements with Better Integration -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+            <!-- Beautiful Glowing Orbs in Header -->
+            <div class="absolute top-16 left-20 w-8 h-8 bg-gradient-to-br from-blue-200 via-blue-300 to-blue-400 rounded-full opacity-80 animate-pulse shadow-lg" style="box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4); animation-duration: 3s;"></div>
+            <div class="absolute top-24 right-32 w-6 h-6 bg-gradient-to-br from-cyan-200 via-cyan-300 to-cyan-400 rounded-full opacity-75 animate-bounce shadow-lg" style="box-shadow: 0 0 15px rgba(34, 211, 238, 0.7), 0 0 30px rgba(34, 211, 238, 0.3); animation-delay: 1s;"></div>
+            <div class="absolute top-32 left-1/3 w-10 h-10 bg-gradient-to-br from-sky-200 via-sky-300 to-sky-400 rounded-full opacity-85 animate-pulse shadow-lg" style="box-shadow: 0 0 25px rgba(14, 165, 233, 0.9), 0 0 50px rgba(14, 165, 233, 0.5); animation-duration: 4s; animation-delay: 2s;"></div>
+            <div class="absolute top-20 right-1/4 w-7 h-7 bg-gradient-to-br from-teal-200 via-teal-300 to-teal-400 rounded-full opacity-70 animate-bounce shadow-lg" style="box-shadow: 0 0 18px rgba(20, 184, 166, 0.8), 0 0 35px rgba(20, 184, 166, 0.4); animation-delay: 3s;"></div>
+            <div class="absolute top-40 left-16 w-9 h-9 bg-gradient-to-br from-indigo-200 via-indigo-300 to-indigo-400 rounded-full opacity-80 animate-pulse shadow-lg" style="box-shadow: 0 0 22px rgba(99, 102, 241, 0.85), 0 0 45px rgba(99, 102, 241, 0.45); animation-duration: 5s;"></div>
+            <div class="absolute top-28 right-20 w-5 h-5 bg-gradient-to-br from-slate-200 via-slate-300 to-slate-400 rounded-full opacity-75 animate-bounce shadow-lg" style="box-shadow: 0 0 12px rgba(148, 163, 184, 0.7), 0 0 25px rgba(148, 163, 184, 0.3); animation-delay: 4s;"></div>
+            <div class="absolute bottom-32 left-24 w-8 h-8 bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500 rounded-full opacity-85 animate-pulse shadow-lg" style="box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4); animation-duration: 3.5s; animation-delay: 1.5s;"></div>
+            <div class="absolute bottom-28 right-28 w-6 h-6 bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 rounded-full opacity-70 animate-bounce shadow-lg" style="box-shadow: 0 0 15px rgba(156, 163, 175, 0.75), 0 0 30px rgba(156, 163, 175, 0.35); animation-delay: 2.5s;"></div>
+            <div class="absolute bottom-40 left-1/2 w-7 h-7 bg-gradient-to-br from-cyan-300 via-cyan-400 to-cyan-500 rounded-full opacity-80 animate-pulse shadow-lg" style="box-shadow: 0 0 18px rgba(34, 211, 238, 0.8), 0 0 36px rgba(34, 211, 238, 0.4); animation-duration: 4.5s; animation-delay: 3.5s;"></div>
+            <div class="absolute top-1/2 left-12 w-9 h-9 bg-gradient-to-br from-sky-300 via-sky-400 to-sky-500 rounded-full opacity-75 animate-bounce shadow-lg" style="box-shadow: 0 0 22px rgba(14, 165, 233, 0.85), 0 0 44px rgba(14, 165, 233, 0.45); animation-delay: 5s;"></div>
+            <div class="absolute top-1/2 right-16 w-8 h-8 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-full opacity-80 animate-pulse shadow-lg" style="box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4); animation-duration: 6s;"></div>
+            <div class="absolute bottom-1/3 left-1/3 w-6 h-6 bg-gradient-to-br from-slate-300 via-slate-400 to-slate-500 rounded-full opacity-70 animate-bounce shadow-lg" style="box-shadow: 0 0 15px rgba(148, 163, 184, 0.75), 0 0 30px rgba(148, 163, 184, 0.35); animation-delay: 6s;"></div>
+            
             <!-- Background Geometric Patterns -->
-            <div class="absolute top-8 left-8 w-32 h-32 border-2 border-white opacity-15 rounded-full animate-pulse"></div>
-            <div class="absolute top-12 right-12 w-24 h-24 border-2 border-yellow-300 opacity-20 rounded-lg rotate-45 animate-spin" style="animation-duration: 20s;"></div>
-            <div class="absolute bottom-16 left-1/4 w-20 h-20 border-2 border-pink-300 opacity-15 rounded-full animate-bounce"></div>
-            <div class="absolute bottom-20 right-1/3 w-28 h-28 border-2 border-blue-300 opacity-18 rounded-lg rotate-12 animate-pulse"></div>
+            <div class="absolute top-8 left-8 w-32 h-32 border-2 border-blue-200 opacity-20 rounded-full animate-pulse"></div>
+            <div class="absolute top-12 right-12 w-24 h-24 border-2 border-cyan-200 opacity-25 rounded-lg rotate-45 animate-spin" style="animation-duration: 20s;"></div>
+            <div class="absolute bottom-16 left-1/4 w-20 h-20 border-2 border-sky-200 opacity-20 rounded-full animate-bounce"></div>
+            <div class="absolute bottom-20 right-1/3 w-28 h-28 border-2 border-slate-200 opacity-22 rounded-lg rotate-12 animate-pulse"></div>
             
-            <!-- Integrated Floating Stars - Positioned around content -->
-            <div class="absolute top-16 left-16 text-2xl text-yellow-400 opacity-95 floating-star">⭐</div>
-            <div class="absolute top-20 right-24 text-xl text-yellow-300 opacity-90 floating-star" style="animation-delay: 1s;">✨</div>
-            <div class="absolute top-32 left-1/2 transform -translate-x-1/2 text-3xl text-yellow-400 opacity-95 floating-star" style="animation-delay: 2s;">🌟</div>
-            <div class="absolute top-24 left-1/3 text-xl text-yellow-300 opacity-90 floating-star" style="animation-delay: 3s;">⭐</div>
-            <div class="absolute top-28 right-1/3 text-2xl text-yellow-400 opacity-95 floating-star" style="animation-delay: 4s;">✨</div>
+            <!-- Beautiful Floating Transparent Icons -->
+            <div class="absolute top-16 left-16 text-4xl opacity-25 text-blue-100 floating-header-icon" style="animation: headerIconFloat 8s ease-in-out infinite;">📚</div>
+            <div class="absolute top-24 right-20 text-3xl opacity-20 text-cyan-100 floating-header-icon" style="animation: headerIconFloat 10s ease-in-out infinite; animation-delay: 1s;">🎓</div>
+            <div class="absolute top-32 left-1/3 text-5xl opacity-30 text-sky-100 floating-header-icon" style="animation: headerIconFloat 12s ease-in-out infinite; animation-delay: 2s;">🏫</div>
+            <div class="absolute top-20 right-1/3 text-3xl opacity-22 text-slate-100 floating-header-icon" style="animation: headerIconFloat 9s ease-in-out infinite; animation-delay: 3s;">📝</div>
+            <div class="absolute top-40 left-1/2 transform -translate-x-1/2 text-4xl opacity-27 text-blue-50 floating-header-icon" style="animation: headerIconFloat 11s ease-in-out infinite; animation-delay: 4s;">👩‍🏫</div>
+            <div class="absolute bottom-32 left-20 text-3xl opacity-21 text-indigo-100 floating-header-icon" style="animation: headerIconFloat 13s ease-in-out infinite; animation-delay: 5s;">📖</div>
+            <div class="absolute bottom-28 right-24 text-4xl opacity-25 text-teal-100 floating-header-icon" style="animation: headerIconFloat 7s ease-in-out infinite; animation-delay: 6s;">✏️</div>
+            <div class="absolute bottom-36 left-1/2 transform -translate-x-1/2 text-3xl opacity-22 text-cyan-50 floating-header-icon" style="animation: headerIconFloat 14s ease-in-out infinite; animation-delay: 7s;">🎒</div>
+            <div class="absolute top-1/2 left-12 text-5xl opacity-28 text-blue-200 floating-header-icon" style="animation: headerIconFloat 10s ease-in-out infinite; animation-delay: 8s;">🌟</div>
+            <div class="absolute top-1/2 right-16 text-3xl opacity-24 text-sky-200 floating-header-icon" style="animation: headerIconFloat 9s ease-in-out infinite; animation-delay: 9s;">🏆</div>
+            <div class="absolute bottom-1/2 left-1/4 text-4xl opacity-26 text-slate-50 floating-header-icon" style="animation: headerIconFloat 15s ease-in-out infinite; animation-delay: 10s;">📐</div>
+            <div class="absolute bottom-1/2 right-1/4 text-3xl opacity-23 text-gray-100 floating-header-icon" style="animation: headerIconFloat 8s ease-in-out infinite; animation-delay: 11s;">🖊️</div>
+            <div class="absolute top-1/3 left-1/5 text-4xl opacity-29 text-blue-100 floating-header-icon" style="animation: headerIconFloat 12s ease-in-out infinite; animation-delay: 12s;">📊</div>
+            <div class="absolute bottom-1/3 right-1/5 text-3xl opacity-21 text-cyan-200 floating-header-icon" style="animation: headerIconFloat 11s ease-in-out infinite; animation-delay: 13s;">🎯</div>
+            <div class="absolute top-2/3 left-1/6 text-5xl opacity-27 text-indigo-50 floating-header-icon" style="animation: headerIconFloat 13s ease-in-out infinite; animation-delay: 14s;">📋</div>
+            <div class="absolute top-2/3 right-1/6 text-3xl opacity-25 text-teal-50 floating-header-icon" style="animation: headerIconFloat 9s ease-in-out infinite; animation-delay: 15s;">🔔</div>
             
-            <!-- Stars around logos area -->
-            <div class="absolute top-40 left-40 text-lg text-yellow-300 opacity-90 floating-star" style="animation-delay: 5s;">🌟</div>
-            <div class="absolute top-40 right-40 text-lg text-yellow-400 opacity-95 floating-star" style="animation-delay: 6s;">⭐</div>
+            <!-- Enhanced Integrated Floating Stars - Hidden -->
+            <div class="absolute top-16 left-16 text-2xl text-yellow-400 opacity-95 floating-star" style="display: none; animation: starFloat 8s ease-in-out infinite, starGlow 4s ease-in-out infinite alternate;">⭐</div>
+            <div class="absolute top-20 right-24 text-xl text-yellow-300 opacity-90 floating-star" style="display: none; animation: starFloat 6s ease-in-out infinite, starGlow 3s ease-in-out infinite alternate; animation-delay: 1s;">✨</div>
+            <div class="absolute top-32 left-1/2 transform -translate-x-1/2 text-3xl text-yellow-400 opacity-95 floating-star" style="display: none; animation: starFloat 10s ease-in-out infinite, starGlow 5s ease-in-out infinite alternate; animation-delay: 2s;">🌟</div>
+            <div class="absolute top-24 left-1/3 text-xl text-yellow-300 opacity-90 floating-star" style="display: none; animation: starFloat 7s ease-in-out infinite, starGlow 3.5s ease-in-out infinite alternate; animation-delay: 3s;">⭐</div>
+            <div class="absolute top-28 right-1/3 text-2xl text-yellow-400 opacity-95 floating-star" style="display: none; animation: starFloat 9s ease-in-out infinite, starGlow 4.5s ease-in-out infinite alternate; animation-delay: 4s;">✨</div>
             
-            <!-- Stars around bottom section -->
-            <div class="absolute bottom-32 left-20 text-xl text-yellow-300 opacity-90 floating-star" style="animation-delay: 7s;">✨</div>
-            <div class="absolute bottom-28 right-20 text-2xl text-yellow-400 opacity-95 floating-star" style="animation-delay: 8s;">🌟</div>
-            <div class="absolute bottom-36 left-1/2 transform -translate-x-1/2 text-lg text-yellow-400 opacity-95 floating-star" style="animation-delay: 9s;">⭐</div>
+            <!-- Enhanced Moving Stars around logos area - Hidden -->
+            <div class="absolute top-40 left-40 text-lg text-yellow-300 opacity-90 floating-star" style="display: none; animation: starFloat 6s ease-in-out infinite, starGlow 3s ease-in-out infinite alternate; animation-delay: 5s;">🌟</div>
+            <div class="absolute top-40 right-40 text-lg text-yellow-400 opacity-95 floating-star" style="display: none; animation: starFloat 8s ease-in-out infinite, starGlow 4s ease-in-out infinite alternate; animation-delay: 6s;">⭐</div>
+            
+            <!-- Enhanced Moving Stars around bottom section - Hidden -->
+            <div class="absolute bottom-32 left-20 text-xl text-yellow-300 opacity-90 floating-star" style="display: none; animation: starFloat 7s ease-in-out infinite, starGlow 3.5s ease-in-out infinite alternate; animation-delay: 7s;">✨</div>
+            <div class="absolute bottom-28 right-20 text-2xl text-yellow-400 opacity-95 floating-star" style="display: none; animation: starFloat 9s ease-in-out infinite, starGlow 2.5s ease-in-out infinite alternate; animation-delay: 8s;">🌟</div>
+            <div class="absolute bottom-36 left-1/2 transform -translate-x-1/2 text-lg text-yellow-400 opacity-95 floating-star" style="display: none; animation: starFloat 5s ease-in-out infinite, starGlow 4.5s ease-in-out infinite alternate; animation-delay: 9s;">⭐</div>
             
             <!-- Educational Icons - Strategically placed -->
             <div class="absolute top-44 left-1/4 text-xl text-blue-200 opacity-50 floating-icon-bg" style="animation-delay: 1s;">📚</div>
@@ -1327,49 +2218,49 @@
             <div class="absolute top-1/2 right-20 text-lg text-blue-300 opacity-60 floating-icon-bg" style="animation-delay: 6s;">📖</div>
             
             <!-- Subtle Geometric Accents -->
-            <div class="absolute top-20 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white opacity-30 rotate-45 animate-spin" style="animation-duration: 8s;"></div>
-            <div class="absolute top-52 right-1/4 w-4 h-4 bg-yellow-300 opacity-40 rounded-full animate-bounce" style="animation-delay: 2s;"></div>
-            <div class="absolute bottom-24 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-pink-300 opacity-35 rotate-12 animate-pulse" style="animation-delay: 3s;"></div>
-            <div class="absolute top-1/3 left-12 w-2 h-2 bg-blue-300 opacity-40 rounded-full animate-ping" style="animation-delay: 4s;"></div>
-            <div class="absolute bottom-1/3 right-12 w-3 h-3 bg-purple-300 opacity-30 rotate-45 animate-spin" style="animation-duration: 12s; animation-delay: 1s;"></div>
+            <div class="absolute top-20 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-blue-200 opacity-35 rotate-45 animate-spin" style="animation-duration: 8s;"></div>
+            <div class="absolute top-52 right-1/4 w-4 h-4 bg-cyan-200 opacity-45 rounded-full animate-bounce" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-24 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-sky-200 opacity-40 rotate-12 animate-pulse" style="animation-delay: 3s;"></div>
+            <div class="absolute top-1/3 left-12 w-2 h-2 bg-slate-200 opacity-45 rounded-full animate-ping" style="animation-delay: 4s;"></div>
+            <div class="absolute bottom-1/3 right-12 w-3 h-3 bg-indigo-200 opacity-35 rotate-45 animate-spin" style="animation-duration: 12s; animation-delay: 1s;"></div>
             
-            <!-- Corner Accent Stars -->
-            <div class="absolute top-8 left-8 text-sm text-yellow-400 opacity-85 floating-star" style="animation-delay: 10s;">⭐</div>
-            <div class="absolute top-8 right-8 text-sm text-yellow-300 opacity-80 floating-star" style="animation-delay: 11s;">✨</div>
-            <div class="absolute bottom-8 left-8 text-sm text-yellow-400 opacity-85 floating-star" style="animation-delay: 12s;">🌟</div>
-            <div class="absolute bottom-8 right-8 text-sm text-yellow-300 opacity-80 floating-star" style="animation-delay: 13s;">⭐</div>
+            <!-- Enhanced Corner Accent Stars - Hidden -->
+            <div class="absolute top-8 left-8 text-sm text-yellow-400 opacity-85 floating-star" style="display: none; animation: starFloat 4s ease-in-out infinite, starGlow 2s ease-in-out infinite alternate; animation-delay: 10s;">⭐</div>
+            <div class="absolute top-8 right-8 text-sm text-yellow-300 opacity-80 floating-star" style="display: none; animation: starFloat 6s ease-in-out infinite, starGlow 3s ease-in-out infinite alternate; animation-delay: 11s;">✨</div>
+            <div class="absolute bottom-8 left-8 text-sm text-yellow-400 opacity-85 floating-star" style="display: none; animation: starFloat 5s ease-in-out infinite, starGlow 2.5s ease-in-out infinite alternate; animation-delay: 12s;">🌟</div>
+            <div class="absolute bottom-8 right-8 text-sm text-yellow-300 opacity-80 floating-star" style="display: none; animation: starFloat 7s ease-in-out infinite, starGlow 3.5s ease-in-out infinite alternate; animation-delay: 13s;">⭐</div>
         </div>
         
         <div class="container mx-auto px-6 relative z-10">
             <!-- Top section with logos -->
             <div class="flex flex-col lg:flex-row justify-between items-center lg:items-start mb-8 lg:mb-12 space-y-6 lg:space-y-0">
                 <!-- Logos Container for Mobile -->
-                <div class="flex justify-center space-x-8 space-x-reverse lg:hidden w-full">
+                <div class="flex justify-center space-x-10 space-x-reverse lg:hidden w-full">
                     <!-- Left Logo Mobile -->
-                    <div class="w-24 h-24 bg-white bg-opacity-15 rounded-2xl flex items-center justify-center floating-icon glow-on-hover interactive-element border-2 border-white border-opacity-30 backdrop-filter backdrop-blur-lg">
-                        <img id="left-logo-mobile" src="" alt="الشعار الأيسر" class="w-16 h-16 object-contain rounded-xl" style="display: none;">
+                    <div class="logo-container w-28 h-28 bg-gradient-to-br from-white/20 via-white/15 to-white/10 rounded-3xl flex items-center justify-center logo-pulse-glow glow-on-hover interactive-element border-2 border-white/40 backdrop-filter backdrop-blur-xl shadow-2xl">
+                        <img id="left-logo-mobile" src="" alt="الشعار الأيسر" class="w-20 h-20 object-contain rounded-2xl logo-breathe" style="display: none;">
                         <div id="left-logo-placeholder-mobile" class="text-center">
-                            <div class="text-2xl mb-1">🏫</div>
-                            <div class="text-xs opacity-75">الشعار الأيسر</div>
+                            <div class="text-3xl mb-2 logo-breathe">🏫</div>
+                            <div class="text-xs opacity-90 font-semibold">الشعار الأيسر</div>
                         </div>
                     </div>
                     
                     <!-- Right Logo Mobile -->
-                    <div class="w-24 h-24 bg-white bg-opacity-15 rounded-2xl flex items-center justify-center floating-icon glow-on-hover interactive-element border-2 border-white border-opacity-30 backdrop-filter backdrop-blur-lg" style="animation-delay: 0.5s;">
-                        <img id="right-logo-mobile" src="" alt="الشعار الأيمن" class="w-16 h-16 object-contain rounded-xl" style="display: none;">
+                    <div class="logo-container w-28 h-28 bg-gradient-to-br from-white/20 via-white/15 to-white/10 rounded-3xl flex items-center justify-center logo-pulse-glow-delayed glow-on-hover interactive-element border-2 border-white/40 backdrop-filter backdrop-blur-xl shadow-2xl">
+                        <img id="right-logo-mobile" src="" alt="الشعار الأيمن" class="w-20 h-20 object-contain rounded-2xl logo-breathe" style="display: none;">
                         <div id="right-logo-placeholder-mobile" class="text-center">
-                            <div class="text-2xl mb-1">🎓</div>
-                            <div class="text-xs opacity-75">الشعار الأيمن</div>
+                            <div class="text-3xl mb-2 logo-breathe">🎓</div>
+                            <div class="text-xs opacity-90 font-semibold">الشعار الأيمن</div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Left Logo Desktop -->
-                <div class="hidden lg:block w-32 h-32 bg-white bg-opacity-15 rounded-2xl flex items-center justify-center floating-icon glow-on-hover interactive-element border-2 border-white border-opacity-30 backdrop-filter backdrop-blur-lg">
-                    <img id="left-logo" src="" alt="الشعار الأيسر" class="w-24 h-24 object-contain rounded-xl" style="display: none;">
+                <div class="logo-container hidden lg:flex w-36 h-36 bg-gradient-to-br from-white/20 via-white/15 to-white/10 rounded-3xl items-center justify-center logo-pulse-glow glow-on-hover interactive-element border-2 border-white/40 backdrop-filter backdrop-blur-xl shadow-2xl">
+                    <img id="left-logo" src="" alt="الشعار الأيسر" class="w-28 h-28 object-contain rounded-2xl logo-breathe" style="display: none;">
                     <div id="left-logo-placeholder" class="text-center">
-                        <div class="text-3xl mb-2">🏫</div>
-                        <div class="text-xs opacity-75">الشعار الأيسر</div>
+                        <div class="text-4xl mb-3 logo-breathe">🏫</div>
+                        <div class="text-sm opacity-90 font-semibold">الشعار الأيسر</div>
                     </div>
                 </div>
                 
@@ -1380,7 +2271,7 @@
                             <span class="text-sm lg:text-lg font-semibold opacity-90">نظام إدارة الطابور المدرسي</span>
                         </div>
                     </div>
-                    <h1 class="text-4xl md:text-5xl lg:text-7xl font-black mb-4 lg:mb-6 tracking-wider text-shadow-lg">الطابور المدرسي</h1>
+                    <h1 class="text-5xl md:text-6xl lg:text-8xl font-black mb-6 lg:mb-8 tracking-wider animated-title" style="text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 215, 0, 0.6), 0 0 90px rgba(255, 255, 255, 0.4);">الطابور المدرسي</h1>
                     <div class="flex justify-center items-center mb-4 lg:mb-6">
                         <div class="w-12 lg:w-16 h-0.5 lg:h-1 bg-white rounded-full opacity-60"></div>
                         <div class="w-3 lg:w-4 h-3 lg:h-4 bg-white rounded-full mx-3 lg:mx-4 opacity-80"></div>
@@ -1392,80 +2283,109 @@
                 </div>
                 
                 <!-- Right Logo Desktop -->
-                <div class="hidden lg:block w-32 h-32 bg-white bg-opacity-15 rounded-2xl flex items-center justify-center floating-icon glow-on-hover interactive-element border-2 border-white border-opacity-30 backdrop-filter backdrop-blur-lg" style="animation-delay: 0.5s;">
-                    <img id="right-logo" src="" alt="الشعار الأيمن" class="w-24 h-24 object-contain rounded-xl" style="display: none;">
+                <div class="logo-container hidden lg:flex w-36 h-36 bg-gradient-to-br from-white/20 via-white/15 to-white/10 rounded-3xl items-center justify-center logo-pulse-glow-delayed glow-on-hover interactive-element border-2 border-white/40 backdrop-filter backdrop-blur-xl shadow-2xl">
+                    <img id="right-logo" src="" alt="الشعار الأيمن" class="w-28 h-28 object-contain rounded-2xl logo-breathe" style="display: none;">
                     <div id="right-logo-placeholder" class="text-center">
-                        <div class="text-3xl mb-2">🎓</div>
-                        <div class="text-xs opacity-75">الشعار الأيمن</div>
+                        <div class="text-4xl mb-3 logo-breathe">🎓</div>
+                        <div class="text-sm opacity-90 font-semibold">الشعار الأيمن</div>
                     </div>
                 </div>
             </div>
             
             <!-- Principal Info Section -->
-            <div class="mb-4 lg:mb-6">
-                <div class="bg-gradient-to-r from-purple-600/30 via-pink-500/30 to-indigo-600/30 rounded-3xl p-4 lg:p-6 backdrop-filter backdrop-blur-xl border-2 border-white border-opacity-40 text-center max-w-2xl mx-auto shadow-2xl">
-                    <div class="flex items-center justify-center mb-2">
-                        <div class="w-12 h-12 bg-white bg-opacity-25 rounded-full flex items-center justify-center mr-4 shadow-lg">
-                            <span class="text-2xl">👑</span>
+            <div class="mb-6 lg:mb-8">
+                <div class="bg-gradient-to-r from-purple-600/40 via-pink-500/40 to-indigo-600/40 rounded-3xl p-6 lg:p-8 backdrop-filter backdrop-blur-xl border-2 border-white/50 text-center max-w-3xl mx-auto shadow-2xl" style="box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+                    <div class="flex items-center justify-center mb-3">
+                        <div class="w-16 h-16 bg-gradient-to-br from-yellow-400/30 to-yellow-600/30 rounded-full flex items-center justify-center mr-6 shadow-xl border-2 border-yellow-300/50" style="filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));">
+                            <span class="text-3xl" style="filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));">👑</span>
                         </div>
                         <div>
-                            <div class="text-lg font-bold text-white opacity-95 mb-1">مديرة المدرسة</div>
-                            <div id="principal-display" class="text-2xl font-black text-white drop-shadow-lg">${settings.principalName}</div>
+                            <div class="text-xl font-bold text-white opacity-95 mb-2" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">مديرة المدرسة</div>
+                            <div id="principal-display" class="text-3xl font-black text-white" style="text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.3);">${settings.principalName}</div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Date Time Section -->
+            <!-- Enhanced Date Time Section -->
             <div class="mb-6 lg:mb-8">
-                <div class="bg-white bg-opacity-15 rounded-2xl p-3 lg:p-4 backdrop-filter backdrop-blur-lg border border-white border-opacity-25 text-center max-w-md mx-auto">
-                    <div class="flex items-center justify-center">
-                        <span class="text-xl mr-3">🕐</span>
-                        <div>
-                            <div class="text-sm font-semibold opacity-90 mb-1">التاريخ والوقت</div>
-                            <div id="current-datetime" class="text-lg font-bold opacity-95">جاري التحميل...</div>
+                <div class="bg-gradient-to-br from-white/25 via-white/20 to-white/15 rounded-2xl p-4 lg:p-6 backdrop-filter backdrop-blur-xl border-2 border-white/40 text-center max-w-2xl mx-auto shadow-2xl" style="box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+                    <div class="grid grid-cols-3 gap-6">
+                        <!-- Day and Date -->
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-400/30 to-blue-600/30 rounded-full flex items-center justify-center mx-auto mb-2 border border-blue-300/50" style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));">
+                                <span class="text-lg">📅</span>
+                            </div>
+                            <div id="current-day" class="text-sm font-bold text-white mb-1" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">الأحد</div>
+                            <div id="current-date" class="text-xs text-white opacity-90">١٤٤٥/٠٣/١٥</div>
+                        </div>
+                        
+                        <!-- Time -->
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-400/30 to-green-600/30 rounded-full flex items-center justify-center mx-auto mb-2 border border-green-300/50" style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));">
+                                <span class="text-lg">🕐</span>
+                            </div>
+                            <div id="current-time" class="text-sm font-bold text-white bg-black/30 rounded-lg px-3 py-1 mb-1" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">٠٨:٣٠:٤٥</div>
+                            <div id="time-period" class="text-xs text-white opacity-90">صباحاً</div>
+                        </div>
+                        
+                        <!-- Hijri Date -->
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-400/30 to-purple-600/30 rounded-full flex items-center justify-center mx-auto mb-2 border border-purple-300/50" style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));">
+                                <span class="text-lg">🌙</span>
+                            </div>
+                            <div id="hijri-date" class="text-sm font-bold text-white mb-1" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">ربيع الأول ١٤٤٥</div>
+                            <div id="hijri-day" class="text-xs text-white opacity-90">١٥ ربيع الأول</div>
                         </div>
                     </div>
                 </div>
             </div>
             
             <!-- Bottom section with stars display -->
-            <div class="flex flex-wrap justify-center gap-4 lg:gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                 <!-- Stars Display - Enhanced -->
-                <div class="bg-gradient-to-br from-yellow-400/30 via-amber-300/25 to-orange-400/30 rounded-3xl p-4 lg:p-5 backdrop-filter backdrop-blur-xl border-2 border-yellow-300 border-opacity-40 text-center min-w-[180px] shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card">
-                    <div class="flex items-center justify-center mb-2">
-                        <span class="text-2xl lg:text-3xl icon-rotate mr-2 drop-shadow-lg">⭐</span>
-                        <h3 class="text-sm lg:text-base font-black text-white drop-shadow-md">🌟 نجمة اليوم 🌟</h3>
+                <div class="bg-gradient-to-br from-yellow-400/40 via-amber-300/35 to-orange-400/40 rounded-3xl p-6 lg:p-7 backdrop-filter backdrop-blur-xl border-2 border-yellow-300/60 text-center shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card" style="box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+                    <div class="flex items-center justify-center mb-3">
+                        <div class="w-14 h-14 bg-gradient-to-br from-yellow-300/40 to-yellow-500/40 rounded-full flex items-center justify-center mr-3 border-2 border-yellow-200/50" style="filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));">
+                            <span class="text-2xl icon-rotate" style="filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));">⭐</span>
+                        </div>
+                        <h3 class="text-base lg:text-lg font-black text-white" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);">🌟 نجمة اليوم 🌟</h3>
                     </div>
-                    <div id="star-of-day-header" class="text-sm lg:text-base star-glow font-bold text-white drop-shadow-lg bg-black bg-opacity-20 rounded-xl px-3 py-2 mb-2">لم يتم اختيار نجمة اليوم بعد</div>
-                    <div class="text-xs lg:text-sm text-white opacity-90 font-semibold">المعلمة المتميزة اليوم</div>
+                    <div id="star-of-day-header" class="text-base lg:text-lg star-glow font-bold text-white bg-black/30 rounded-xl px-4 py-3 mb-3" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);">لم يتم اختيار نجمة اليوم بعد</div>
+                    <div class="text-sm lg:text-base text-white opacity-95 font-semibold" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);">المعلمة المتميزة اليوم</div>
                 </div>
                 
-                <div class="bg-gradient-to-br from-blue-500/30 via-indigo-400/25 to-purple-500/30 rounded-3xl p-4 lg:p-5 backdrop-filter backdrop-blur-xl border-2 border-blue-300 border-opacity-40 text-center min-w-[180px] shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card">
-                    <div class="flex items-center justify-center mb-2">
-                        <span class="text-2xl lg:text-3xl icon-bounce mr-2 drop-shadow-lg">🏆</span>
-                        <h3 class="text-sm lg:text-base font-black text-white drop-shadow-md">🏆 نجم الطابور 🏆</h3>
+                <div class="bg-gradient-to-br from-blue-500/40 via-indigo-400/35 to-purple-500/40 rounded-3xl p-6 lg:p-7 backdrop-filter backdrop-blur-xl border-2 border-blue-300/60 text-center shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card" style="box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+                    <div class="flex items-center justify-center mb-3">
+                        <div class="w-14 h-14 bg-gradient-to-br from-blue-300/40 to-blue-500/40 rounded-full flex items-center justify-center mr-3 border-2 border-blue-200/50" style="filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));">
+                            <span class="text-2xl icon-bounce" style="filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));">🏆</span>
+                        </div>
+                        <h3 class="text-base lg:text-lg font-black text-white" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);">🏆 نجم الطابور 🏆</h3>
                     </div>
-                    <div id="star-of-queue-header" class="text-sm lg:text-base star-glow font-bold text-white drop-shadow-lg bg-black bg-opacity-20 rounded-xl px-3 py-2 mb-2">لم يتم اختيار نجم الطابور بعد</div>
-                    <div class="text-xs lg:text-sm text-white opacity-90 font-semibold">الصف الأكثر انضباطاً</div>
+                    <div id="star-of-queue-header" class="text-base lg:text-lg star-glow font-bold text-white bg-black/30 rounded-xl px-4 py-3 mb-3" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);">لم يتم اختيار نجم الطابور بعد</div>
+                    <div class="text-sm lg:text-base text-white opacity-95 font-semibold" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);">الصف الأكثر انضباطاً</div>
                 </div>
                 
-                <div class="bg-gradient-to-br from-pink-500/30 via-rose-400/25 to-red-500/30 rounded-3xl p-4 lg:p-5 backdrop-filter backdrop-blur-xl border-2 border-pink-300 border-opacity-40 text-center min-w-[180px] shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card">
-                    <div class="flex items-center justify-center mb-2">
-                        <span class="text-2xl lg:text-3xl icon-pulse mr-2 drop-shadow-lg">👑</span>
-                        <h3 class="text-sm lg:text-base font-black text-white drop-shadow-md">👑 نجمة الشهر 👑</h3>
+                <div class="bg-gradient-to-br from-pink-500/40 via-rose-400/35 to-red-500/40 rounded-3xl p-6 lg:p-7 backdrop-filter backdrop-blur-xl border-2 border-pink-300/60 text-center shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card" style="box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+                    <div class="flex items-center justify-center mb-3">
+                        <div class="w-14 h-14 bg-gradient-to-br from-pink-300/40 to-pink-500/40 rounded-full flex items-center justify-center mr-3 border-2 border-pink-200/50" style="filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));">
+                            <span class="text-2xl icon-pulse" style="filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));">👑</span>
+                        </div>
+                        <h3 class="text-base lg:text-lg font-black text-white" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);">👑 نجمة الشهر 👑</h3>
                     </div>
-                    <div id="star-of-month-teacher-header" class="text-sm lg:text-base star-glow font-bold text-white drop-shadow-lg bg-black bg-opacity-20 rounded-xl px-3 py-2 mb-2">لم يتم الاختيار</div>
-                    <div class="text-xs lg:text-sm text-white opacity-90 font-semibold">المعلمة المثالية للشهر</div>
+                    <div id="star-of-month-teacher-header" class="text-base lg:text-lg star-glow font-bold text-white bg-black/30 rounded-xl px-4 py-3 mb-3" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);">لم يتم الاختيار</div>
+                    <div class="text-sm lg:text-base text-white opacity-95 font-semibold" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);">المعلمة المثالية للشهر</div>
                 </div>
                 
-                <div class="bg-gradient-to-br from-green-500/30 via-emerald-400/25 to-teal-500/30 rounded-3xl p-4 lg:p-5 backdrop-filter backdrop-blur-xl border-2 border-green-300 border-opacity-40 text-center min-w-[180px] shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card">
-                    <div class="flex items-center justify-center mb-2">
-                        <span class="text-2xl lg:text-3xl icon-rotate mr-2 drop-shadow-lg">🎖️</span>
-                        <h3 class="text-sm lg:text-base font-black text-white drop-shadow-md">🎖️ نجم الطابور للشهر 🎖️</h3>
+                <div class="bg-gradient-to-br from-green-500/40 via-emerald-400/35 to-teal-500/40 rounded-3xl p-6 lg:p-7 backdrop-filter backdrop-blur-xl border-2 border-green-300/60 text-center shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card" style="box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+                    <div class="flex items-center justify-center mb-3">
+                        <div class="w-14 h-14 bg-gradient-to-br from-green-300/40 to-green-500/40 rounded-full flex items-center justify-center mr-3 border-2 border-green-200/50" style="filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));">
+                            <span class="text-2xl icon-rotate" style="filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));">🎖️</span>
+                        </div>
+                        <h3 class="text-base lg:text-lg font-black text-white" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);">🎖️ نجم الطابور للشهر 🎖️</h3>
                     </div>
-                    <div id="star-of-queue-month-header" class="text-sm lg:text-base star-glow font-bold text-white drop-shadow-lg bg-black bg-opacity-20 rounded-xl px-3 py-2 mb-2">لم يتم الاختيار</div>
-                    <div class="text-xs lg:text-sm text-white opacity-90 font-semibold">الصف المتميز للشهر</div>
+                    <div id="star-of-queue-month-header" class="text-base lg:text-lg star-glow font-bold text-white bg-black/30 rounded-xl px-4 py-3 mb-3" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);">لم يتم الاختيار</div>
+                    <div class="text-sm lg:text-base text-white opacity-95 font-semibold" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);">الصف المتميز للشهر</div>
                 </div>
             </div>
         </div>
@@ -3543,25 +4463,69 @@
             }
         });
 
-        // Update date and time
+        // Enhanced date and time update function
         function updateDateTime() {
             const now = new Date();
-            const options = {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: true
-            };
             
-            const dateTimeString = now.toLocaleDateString('ar-SA', options);
+            // Arabic day names
+            const arabicDays = ['الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
             
+            // Arabic month names
+            const arabicMonths = [
+                'يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو',
+                'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'
+            ];
+            
+            // Hijri month names
+            const hijriMonths = [
+                'محرم', 'صفر', 'ربيع الأول', 'ربيع الثاني', 'جمادى الأولى', 'جمادى الثانية',
+                'رجب', 'شعبان', 'رمضان', 'شوال', 'ذو القعدة', 'ذو الحجة'
+            ];
+            
+            // Convert numbers to Arabic numerals
+            function toArabicNumerals(num) {
+                const arabicNums = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+                return num.toString().replace(/[0-9]/g, (w) => arabicNums[+w]);
+            }
+            
+            // Get current day
+            const dayName = arabicDays[now.getDay()];
+            
+            // Get formatted date
+            const day = toArabicNumerals(now.getDate());
+            const month = arabicMonths[now.getMonth()];
+            const year = toArabicNumerals(now.getFullYear());
+            
+            // Get formatted time
+            const hours = toArabicNumerals(now.getHours().toString().padStart(2, '0'));
+            const minutes = toArabicNumerals(now.getMinutes().toString().padStart(2, '0'));
+            const seconds = toArabicNumerals(now.getSeconds().toString().padStart(2, '0'));
+            const period = now.getHours() >= 12 ? 'مساءً' : 'صباحاً';
+            
+            // Simple Hijri date approximation (for display purposes)
+            const hijriYear = toArabicNumerals(now.getFullYear() - 579); // Approximate conversion
+            const hijriMonth = hijriMonths[now.getMonth()];
+            const hijriDay = toArabicNumerals(now.getDate());
+            
+            // Update elements
+            const currentDayElement = document.getElementById('current-day');
+            const currentDateElement = document.getElementById('current-date');
+            const currentTimeElement = document.getElementById('current-time');
+            const timePeriodElement = document.getElementById('time-period');
+            const hijriDateElement = document.getElementById('hijri-date');
+            const hijriDayElement = document.getElementById('hijri-day');
+            
+            if (currentDayElement) currentDayElement.textContent = dayName;
+            if (currentDateElement) currentDateElement.textContent = `${day} ${month} ${year}`;
+            if (currentTimeElement) currentTimeElement.textContent = `${hours}:${minutes}:${seconds}`;
+            if (timePeriodElement) timePeriodElement.textContent = period;
+            if (hijriDateElement) hijriDateElement.textContent = `${hijriMonth} ${hijriYear}`;
+            if (hijriDayElement) hijriDayElement.textContent = `${hijriDay} ${hijriMonth}`;
+            
+            // Legacy support for old datetime element
             const dateTimeElement = document.getElementById('current-datetime');
             if (dateTimeElement) {
-                dateTimeElement.textContent = dateTimeString;
+                dateTimeElement.textContent = `${dayName} ${day} ${month} ${year} - ${hours}:${minutes}:${seconds} ${period}`;
             }
         }
 
@@ -3621,5 +4585,5 @@
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97e9124b1399127c',t:'MTc1Nzc4MTQ3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97e95b55c3331276',t:'MTc1Nzc4NDQ2Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
