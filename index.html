@@ -21,24 +21,16 @@
             font-family: 'Cairo', sans-serif;
         }
         
-        /* Enhanced Animated Background with Beautiful Gradients */
+        /* Clean Gradient Background */
         body {
             background: linear-gradient(-45deg, 
-                #667eea, #764ba2, #f093fb, #f5576c, 
-                #4facfe, #00f2fe, #a8edea, #fed6e3, 
-                #d299c2, #fef9d7, #ebc0fd, #d6ecd2,
-                #ff9a9e, #fecfef, #fecfef, #fad0c4,
-                #a8edea, #fed6e3, #ffecd2, #fcb69f,
-                #667eea, #f093fb, #4facfe, #00f2fe,
-                #ff6b6b, #4ecdc4, #45b7d1, #96ceb4,
-                #feca57, #ff9ff3, #54a0ff, #5f27cd,
-                #00d2d3, #ff9ff3, #54a0ff, #5f27cd,
-                #ff6b9d, #c44569, #f8b500, #78e08f,
-                #60a3bc, #e55039, #4a69bd, #f39c12,
-                #9c88ff, #fbc531, #44bd32, #e84393
+                #ff6b6b, #ee5a24, #ff9ff3, #f368e0,
+                #ff3838, #ff4757, #ff6348, #ff7675,
+                #fd79a8, #e84393, #a29bfe, #6c5ce7,
+                #74b9ff, #0984e3, #00b894, #00cec9
             );
-            background-size: 1200% 1200%;
-            animation: gradientShift 15s ease infinite;
+            background-size: 400% 400%;
+            animation: modernGradientFlow 20s ease infinite;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
@@ -51,43 +43,37 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 25% 75%, rgba(139, 92, 246, 0.4) 0%, transparent 60%),
-                        radial-gradient(circle at 75% 25%, rgba(236, 72, 153, 0.4) 0%, transparent 60%),
-                        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 70%),
-                        radial-gradient(circle at 10% 90%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
-                        radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.3) 0%, transparent 50%);
+            background: radial-gradient(circle at 25% 75%, rgba(255, 107, 107, 0.4) 0%, transparent 60%),
+                        radial-gradient(circle at 75% 25%, rgba(255, 56, 56, 0.4) 0%, transparent 60%),
+                        radial-gradient(circle at 50% 50%, rgba(253, 121, 168, 0.3) 0%, transparent 70%),
+                        radial-gradient(circle at 10% 90%, rgba(162, 155, 254, 0.4) 0%, transparent 50%),
+                        radial-gradient(circle at 90% 10%, rgba(116, 185, 255, 0.4) 0%, transparent 50%);
             pointer-events: none;
             z-index: 1;
-            animation: backgroundPulse 10s ease-in-out infinite;
+            animation: modernBackgroundPulse 15s ease-in-out infinite;
         }
         
-        @keyframes gradientShift {
+        @keyframes modernGradientFlow {
             0% { background-position: 0% 50%; }
-            5% { background-position: 15% 25%; }
-            10% { background-position: 30% 40%; }
-            15% { background-position: 50% 60%; }
-            20% { background-position: 80% 70%; }
-            25% { background-position: 100% 20%; }
-            30% { background-position: 85% 35%; }
-            35% { background-position: 70% 90%; }
-            40% { background-position: 40% 75%; }
-            45% { background-position: 60% 15%; }
+            25% { background-position: 100% 50%; }
             50% { background-position: 100% 100%; }
-            55% { background-position: 75% 85%; }
-            60% { background-position: 30% 80%; }
-            65% { background-position: 10% 45%; }
-            70% { background-position: 0% 60%; }
-            75% { background-position: 25% 30%; }
-            80% { background-position: 60% 10%; }
-            85% { background-position: 90% 55%; }
-            90% { background-position: 20% 80%; }
-            95% { background-position: 5% 65%; }
+            75% { background-position: 0% 100%; }
             100% { background-position: 0% 50%; }
         }
         
-        @keyframes backgroundPulse {
-            0%, 100% { opacity: 0.7; }
-            50% { opacity: 1; }
+        @keyframes modernBackgroundPulse {
+            0%, 100% { 
+                opacity: 0.8; 
+                transform: scale(1) rotate(0deg);
+            }
+            33% { 
+                opacity: 1; 
+                transform: scale(1.05) rotate(1deg);
+            }
+            66% { 
+                opacity: 0.9; 
+                transform: scale(0.98) rotate(-0.5deg);
+            }
         }
         
         /* Advanced Floating Elements */
@@ -98,7 +84,7 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: 1;
+            z-index: -1;
         }
         
         /* Glowing Orbs */
@@ -111,27 +97,27 @@
         
         .glowing-orb:nth-child(1) { 
             width: 20px; height: 20px; left: 10%; top: 20%;
-            background: radial-gradient(circle, #ff6b6b, transparent);
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.8), transparent);
             animation-delay: 0s; animation-duration: 12s;
         }
         .glowing-orb:nth-child(2) { 
             width: 15px; height: 15px; left: 80%; top: 10%;
-            background: radial-gradient(circle, #4ecdc4, transparent);
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.8), transparent);
             animation-delay: 2s; animation-duration: 18s;
         }
         .glowing-orb:nth-child(3) { 
             width: 25px; height: 25px; left: 60%; top: 70%;
-            background: radial-gradient(circle, #45b7d1, transparent);
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.8), transparent);
             animation-delay: 4s; animation-duration: 14s;
         }
         .glowing-orb:nth-child(4) { 
             width: 18px; height: 18px; left: 30%; top: 80%;
-            background: radial-gradient(circle, #feca57, transparent);
+            background: radial-gradient(circle, rgba(109, 40, 217, 0.9), transparent);
             animation-delay: 6s; animation-duration: 16s;
         }
         .glowing-orb:nth-child(5) { 
             width: 22px; height: 22px; left: 90%; top: 50%;
-            background: radial-gradient(circle, #ff9ff3, transparent);
+            background: radial-gradient(circle, rgba(91, 33, 182, 0.8), transparent);
             animation-delay: 8s; animation-duration: 20s;
         }
         
@@ -262,7 +248,7 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: 1;
+            z-index: -2;
             overflow: hidden;
         }
 
@@ -279,42 +265,42 @@
         .path-line:nth-child(1) {
             left: 10%;
             animation-delay: 0s;
-            background: linear-gradient(to bottom, transparent, rgba(255, 107, 107, 0.5), transparent);
+            background: linear-gradient(to bottom, transparent, rgba(139, 92, 246, 0.6), transparent);
             animation-duration: 12s;
         }
 
         .path-line:nth-child(2) {
             left: 25%;
             animation-delay: 3s;
-            background: linear-gradient(to bottom, transparent, rgba(78, 205, 196, 0.5), transparent);
+            background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.6), transparent);
             animation-duration: 18s;
         }
 
         .path-line:nth-child(3) {
             left: 40%;
             animation-delay: 6s;
-            background: linear-gradient(to bottom, transparent, rgba(69, 183, 209, 0.5), transparent);
+            background: linear-gradient(to bottom, transparent, rgba(124, 58, 237, 0.6), transparent);
             animation-duration: 14s;
         }
 
         .path-line:nth-child(4) {
             left: 55%;
             animation-delay: 9s;
-            background: linear-gradient(to bottom, transparent, rgba(254, 202, 87, 0.5), transparent);
+            background: linear-gradient(to bottom, transparent, rgba(109, 40, 217, 0.8), transparent);
             animation-duration: 16s;
         }
 
         .path-line:nth-child(5) {
             left: 70%;
             animation-delay: 12s;
-            background: linear-gradient(to bottom, transparent, rgba(255, 159, 243, 0.5), transparent);
+            background: linear-gradient(to bottom, transparent, rgba(91, 33, 182, 0.6), transparent);
             animation-duration: 20s;
         }
 
         .path-line:nth-child(6) {
             left: 85%;
             animation-delay: 15s;
-            background: linear-gradient(to bottom, transparent, rgba(139, 92, 246, 0.5), transparent);
+            background: linear-gradient(to bottom, transparent, rgba(99, 102, 241, 0.5), transparent);
             animation-duration: 13s;
         }
 
@@ -332,28 +318,28 @@
             left: 15%;
             top: -150px;
             animation-delay: 0s;
-            background: linear-gradient(45deg, transparent, rgba(255, 107, 107, 0.4), transparent);
+            background: linear-gradient(45deg, transparent, rgba(139, 92, 246, 0.6), transparent);
         }
 
         .diagonal-path:nth-child(8) {
             left: 35%;
             top: -150px;
             animation-delay: 5s;
-            background: linear-gradient(45deg, transparent, rgba(78, 205, 196, 0.4), transparent);
+            background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.6), transparent);
         }
 
         .diagonal-path:nth-child(9) {
             left: 55%;
             top: -150px;
             animation-delay: 10s;
-            background: linear-gradient(45deg, transparent, rgba(69, 183, 209, 0.4), transparent);
+            background: linear-gradient(45deg, transparent, rgba(124, 58, 237, 0.6), transparent);
         }
 
         .diagonal-path:nth-child(10) {
             left: 75%;
             top: -150px;
             animation-delay: 15s;
-            background: linear-gradient(45deg, transparent, rgba(254, 202, 87, 0.4), transparent);
+            background: linear-gradient(45deg, transparent, rgba(109, 40, 217, 0.6), transparent);
         }
 
         /* Curved Wave Paths */
@@ -368,25 +354,25 @@
         .wave-path:nth-child(11) {
             top: 20%;
             animation-delay: 0s;
-            background: linear-gradient(90deg, transparent, rgba(255, 107, 107, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.5), transparent);
         }
 
         .wave-path:nth-child(12) {
             top: 40%;
             animation-delay: 8s;
-            background: linear-gradient(90deg, transparent, rgba(78, 205, 196, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
         }
 
         .wave-path:nth-child(13) {
             top: 60%;
             animation-delay: 16s;
-            background: linear-gradient(90deg, transparent, rgba(69, 183, 209, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.5), transparent);
         }
 
         .wave-path:nth-child(14) {
             top: 80%;
             animation-delay: 24s;
-            background: linear-gradient(90deg, transparent, rgba(254, 202, 87, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(109, 40, 217, 0.5), transparent);
         }
 
         /* Spiral Paths */
@@ -403,21 +389,21 @@
             left: 50%;
             top: 50%;
             animation-delay: 0s;
-            background: rgba(255, 107, 107, 0.6);
+            background: rgba(139, 92, 246, 0.8);
         }
 
         .spiral-path:nth-child(16) {
             left: 50%;
             top: 50%;
             animation-delay: 10s;
-            background: rgba(78, 205, 196, 0.6);
+            background: rgba(59, 130, 246, 0.8);
         }
 
         .spiral-path:nth-child(17) {
             left: 50%;
             top: 50%;
             animation-delay: 20s;
-            background: rgba(69, 183, 209, 0.6);
+            background: rgba(124, 58, 237, 0.8);
         }
 
         /* Flowing Particles */
@@ -434,50 +420,50 @@
         .flow-particle:nth-child(18) {
             left: 5%;
             animation-delay: 0s;
-            background: rgba(255, 107, 107, 0.7);
-            box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+            background: rgba(139, 92, 246, 0.9);
+            box-shadow: 0 0 10px rgba(139, 92, 246, 0.7);
         }
 
         .flow-particle:nth-child(19) {
             left: 20%;
             animation-delay: 3s;
-            background: rgba(78, 205, 196, 0.7);
-            box-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+            background: rgba(59, 130, 246, 0.9);
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
         }
 
         .flow-particle:nth-child(20) {
             left: 35%;
             animation-delay: 6s;
-            background: rgba(69, 183, 209, 0.7);
-            box-shadow: 0 0 10px rgba(69, 183, 209, 0.5);
+            background: rgba(124, 58, 237, 0.9);
+            box-shadow: 0 0 10px rgba(124, 58, 237, 0.7);
         }
 
         .flow-particle:nth-child(21) {
             left: 50%;
             animation-delay: 9s;
-            background: rgba(254, 202, 87, 0.7);
-            box-shadow: 0 0 10px rgba(254, 202, 87, 0.5);
+            background: rgba(109, 40, 217, 0.9);
+            box-shadow: 0 0 10px rgba(109, 40, 217, 0.7);
         }
 
         .flow-particle:nth-child(22) {
             left: 65%;
             animation-delay: 12s;
-            background: rgba(255, 159, 243, 0.7);
-            box-shadow: 0 0 10px rgba(255, 159, 243, 0.5);
+            background: rgba(91, 33, 182, 0.9);
+            box-shadow: 0 0 10px rgba(91, 33, 182, 0.7);
         }
 
         .flow-particle:nth-child(23) {
             left: 80%;
             animation-delay: 15s;
-            background: rgba(139, 92, 246, 0.7);
-            box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+            background: rgba(99, 102, 241, 0.9);
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.7);
         }
 
         .flow-particle:nth-child(24) {
             left: 95%;
             animation-delay: 18s;
-            background: rgba(34, 197, 94, 0.7);
-            box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+            background: rgba(79, 70, 229, 0.9);
+            box-shadow: 0 0 10px rgba(79, 70, 229, 0.7);
         }
 
         /* Path Movement Animations */
@@ -786,15 +772,490 @@
             75% { transform: translateY(-35px) rotate(270deg); opacity: 0.7; }
         }
         
-        /* Glass morphism effects */
+        /* Enhanced Modern Glass Morphism Effects */
         .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 24px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 
+                        0 4px 16px rgba(102, 126, 234, 0.1),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 2;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            overflow: hidden;
+        }
+        
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent 0deg,
+                rgba(139, 92, 246, 0.1) 60deg,
+                rgba(59, 130, 246, 0.15) 120deg,
+                rgba(124, 58, 237, 0.1) 180deg,
+                rgba(109, 40, 217, 0.12) 240deg,
+                rgba(91, 33, 182, 0.1) 300deg,
+                transparent 360deg
+            );
+            animation: rotateGlow 8s linear infinite;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .glass-card:hover::before {
+            opacity: 1;
+        }
+        
+        @keyframes rotateGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Advanced Interactive Buttons */
+        .modern-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: linear-gradient(135deg, 
+                #ff6b6b 0%, 
+                #ee5a24 25%, 
+                #ff9ff3 50%, 
+                #f368e0 75%, 
+                #fd79a8 100%);
+            background-size: 200% 200%;
+            animation: modernButtonGradient 4s ease infinite;
+            border: none;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5), 
+                        0 4px 12px rgba(238, 90, 36, 0.4),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transform: translateZ(0);
+        }
+        
+        .modern-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.4), 
+                transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .modern-button:hover::before {
+            left: 100%;
+        }
+        
+        .modern-button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, 
+                rgba(255, 255, 255, 0.4) 0%, 
+                rgba(255, 255, 255, 0.2) 50%, 
+                transparent 70%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .modern-button:hover::after {
+            width: 350px;
+            height: 350px;
+        }
+        
+        .modern-button:hover {
+            transform: translateY(-4px) scale(1.05) translateZ(0);
+            box-shadow: 0 20px 45px rgba(139, 92, 246, 0.6), 
+                        0 8px 20px rgba(124, 58, 237, 0.5),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            background-position: 100% 50%;
+        }
+        
+        .modern-button:active {
+            transform: translateY(-2px) scale(1.02) translateZ(0);
+            transition: all 0.1s ease;
+        }
+        
+        /* Enhanced Card Hover Effects */
+        .enhanced-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            transform: translateZ(0);
+        }
+        
+        .enhanced-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.1), 
+                transparent);
+            animation: cardRotate 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .enhanced-card:hover::before {
+            opacity: 1;
+        }
+        
+        @keyframes cardRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .enhanced-card:hover {
+            transform: translateY(-12px) scale(1.03) translateZ(0);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25),
+                        0 10px 30px rgba(139, 92, 246, 0.3);
+        }
+        
+        /* Advanced Notification System */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 16px 24px;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            z-index: 10000;
+            transform: translateX(400px);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification.success {
+            background: linear-gradient(135deg, 
+                rgba(34, 197, 94, 0.9), 
+                rgba(16, 185, 129, 0.9));
+            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.4);
+        }
+        
+        .notification.error {
+            background: linear-gradient(135deg, 
+                rgba(239, 68, 68, 0.9), 
+                rgba(220, 38, 38, 0.9));
+            box-shadow: 0 10px 30px rgba(239, 68, 68, 0.4);
+        }
+        
+        .notification.warning {
+            background: linear-gradient(135deg, 
+                rgba(245, 158, 11, 0.9), 
+                rgba(217, 119, 6, 0.9));
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+        }
+        
+        .notification.info {
+            background: linear-gradient(135deg, 
+                rgba(59, 130, 246, 0.9), 
+                rgba(37, 99, 235, 0.9));
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Advanced Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .loading-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(139, 92, 246, 0.3);
+            border-top: 4px solid #8b5cf6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Enhanced Form Elements */
+        .form-input {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 12px 16px;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .form-input:focus {
+            border-color: rgba(139, 92, 246, 0.8);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* Advanced Statistics Cards */
+        .stat-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
-            z-index: 2;
+            overflow: hidden;
+            transform: translateZ(0);
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.1), 
+                transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .stat-card:hover::before {
+            left: 100%;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-8px) scale(1.02) translateZ(0);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2),
+                        0 8px 25px rgba(139, 92, 246, 0.3);
+        }
+        
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1000;
+            transform: translateZ(0);
+        }
+        
+        .fab:hover {
+            transform: scale(1.1) translateZ(0);
+            box-shadow: 0 12px 35px rgba(139, 92, 246, 0.6);
+        }
+        
+        .fab:active {
+            transform: scale(0.95) translateZ(0);
+        }
+        
+        /* Advanced Modal Effects */
+        .modal {
+            backdrop-filter: blur(15px);
+            animation: modalFadeIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .modal > div {
+            animation: modalSlideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: translateZ(0);
+        }
+        
+        @keyframes modalSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        /* Enhanced Navigation */
+        .nav-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: translateZ(0);
+        }
+        
+        .nav-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                rgba(255, 255, 255, 0.8), 
+                rgba(139, 92, 246, 0.8));
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+        
+        .nav-btn:hover::after {
+            width: 100%;
+        }
+        
+        .nav-btn:hover {
+            transform: translateY(-3px) translateZ(0);
+        }
+        
+        /* Advanced Progress Indicators */
+        .progress-ring {
+            width: 60px;
+            height: 60px;
+            transform: rotate(-90deg);
+        }
+        
+        .progress-ring-circle {
+            fill: none;
+            stroke: rgba(139, 92, 246, 0.3);
+            stroke-width: 4;
+            stroke-dasharray: 188.5;
+            stroke-dashoffset: 188.5;
+            transition: stroke-dashoffset 0.5s ease;
+        }
+        
+        .progress-ring-circle.animate {
+            stroke: #8b5cf6;
+            stroke-dashoffset: 0;
+        }
+        
+        /* Enhanced Tooltips */
+        .tooltip {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .tooltip::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-8px);
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-2px);
+            border: 6px solid transparent;
+            border-top-color: rgba(0, 0, 0, 0.9);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .tooltip:hover::before,
+        .tooltip:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+        
+        /* Advanced Ripple Effect */
+        .ripple-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ripple-effect::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .ripple-effect:active::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        /* Enhanced Gradient Animations */
+        .gradient-animation {
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 100% 50%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+            100% { background-position: 0% 50%; }
         }
         
         .glass-card::before {
@@ -803,8 +1264,23 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            height: 2px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(102, 126, 234, 0.6) 20%, 
+                rgba(240, 147, 251, 0.5) 50%, 
+                rgba(67, 233, 123, 0.6) 80%, 
+                transparent);
+            border-radius: 24px 24px 0 0;
+        }
+        
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.2), 
+                        0 8px 24px rgba(102, 126, 234, 0.15),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px) scale(1.02);
         }
         
         .gradient-bg {
@@ -944,95 +1420,157 @@
             50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.2); }
         }
 
-        /* Enhanced Mouse Trail Effect */
+        /* Enhanced Modern Mouse Trail Effect */
         .mouse-trail {
             position: fixed;
-            width: 25px;
-            height: 25px;
-            background: radial-gradient(circle, rgba(255, 107, 107, 0.8) 0%, rgba(78, 205, 196, 0.6) 30%, rgba(69, 183, 209, 0.4) 60%, transparent 100%);
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, 
+                rgba(26, 26, 46, 0.9) 0%, 
+                rgba(22, 33, 62, 0.7) 25%, 
+                rgba(15, 52, 96, 0.5) 50%, 
+                rgba(83, 52, 131, 0.3) 75%, 
+                transparent 100%);
             border-radius: 50%;
             pointer-events: none;
-            z-index: 9999;
+            z-index: -3;
             mix-blend-mode: screen;
-            animation: trailFade 1.2s ease-out forwards;
-            filter: blur(0.5px);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            animation: modernTrailFade 1.5s ease-out forwards;
+            filter: blur(1px);
+            box-shadow: 0 0 20px rgba(26, 26, 46, 0.8), 0 0 40px rgba(22, 33, 62, 0.5);
         }
 
-        @keyframes trailFade {
+        @keyframes modernTrailFade {
             0% {
                 opacity: 1;
                 transform: scale(1) rotate(0deg);
+                filter: blur(0px);
+            }
+            25% {
+                opacity: 0.9;
+                transform: scale(1.3) rotate(90deg);
+                filter: blur(0.5px);
             }
             50% {
-                opacity: 0.8;
-                transform: scale(1.2) rotate(180deg);
+                opacity: 0.7;
+                transform: scale(1.5) rotate(180deg);
+                filter: blur(1px);
+            }
+            75% {
+                opacity: 0.4;
+                transform: scale(1.2) rotate(270deg);
+                filter: blur(1.5px);
             }
             100% {
                 opacity: 0;
-                transform: scale(0.2) rotate(360deg);
+                transform: scale(0.1) rotate(360deg);
+                filter: blur(2px);
             }
         }
 
-        /* Enhanced Click Ripple Effect */
+        /* Enhanced Modern Click Ripple Effect */
         .click-ripple {
             position: fixed;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 159, 243, 0.7) 0%, rgba(84, 160, 255, 0.5) 20%, rgba(16, 172, 132, 0.3) 40%, transparent 70%);
+            background: radial-gradient(circle, 
+                rgba(26, 26, 46, 0.8) 0%, 
+                rgba(22, 33, 62, 0.6) 15%, 
+                rgba(15, 52, 96, 0.5) 30%, 
+                rgba(83, 52, 131, 0.4) 45%, 
+                rgba(45, 27, 105, 0.3) 60%, 
+                transparent 80%);
             pointer-events: none;
-            z-index: 9998;
-            animation: rippleExpand 1.2s ease-out forwards;
-            filter: blur(1px);
+            z-index: -4;
+            animation: modernRippleExpand 1.8s ease-out forwards;
+            filter: blur(2px);
+            box-shadow: 0 0 30px rgba(26, 26, 46, 0.6), 0 0 60px rgba(22, 33, 62, 0.4);
         }
 
-        @keyframes rippleExpand {
+        @keyframes modernRippleExpand {
             0% {
                 width: 0;
                 height: 0;
                 opacity: 1;
                 transform: scale(0) rotate(0deg);
-            }
-            50% {
-                opacity: 0.8;
-                transform: scale(0.5) rotate(180deg);
-            }
-            100% {
-                width: 400px;
-                height: 400px;
-                opacity: 0;
-                transform: scale(1) rotate(360deg);
-            }
-        }
-
-        /* Interactive Color Change Effect */
-        .color-change-zone {
-            position: fixed;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9997;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: colorPulse 2s ease-in-out infinite;
-            mix-blend-mode: overlay;
-        }
-
-        @keyframes colorPulse {
-            0%, 100% {
-                transform: scale(1);
-                background: radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, transparent 70%);
+                filter: blur(0px);
             }
             25% {
-                transform: scale(1.1);
-                background: radial-gradient(circle, rgba(78, 205, 196, 0.2) 0%, transparent 70%);
+                opacity: 0.9;
+                transform: scale(0.3) rotate(90deg);
+                filter: blur(1px);
             }
             50% {
-                transform: scale(1.2);
-                background: radial-gradient(circle, rgba(69, 183, 209, 0.2) 0%, transparent 70%);
+                opacity: 0.7;
+                transform: scale(0.6) rotate(180deg);
+                filter: blur(2px);
             }
             75% {
-                transform: scale(1.1);
-                background: radial-gradient(circle, rgba(254, 202, 87, 0.2) 0%, transparent 70%);
+                opacity: 0.4;
+                transform: scale(0.8) rotate(270deg);
+                filter: blur(3px);
+            }
+            100% {
+                width: 500px;
+                height: 500px;
+                opacity: 0;
+                transform: scale(1) rotate(360deg);
+                filter: blur(4px);
+            }
+        }
+
+        /* Enhanced Interactive Color Change Effect */
+        .color-change-zone {
+            position: fixed;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -5;
+            background: radial-gradient(circle, 
+                rgba(255, 107, 107, 0.2) 0%, 
+                rgba(78, 205, 196, 0.15) 30%, 
+                rgba(150, 206, 180, 0.1) 60%, 
+                transparent 80%);
+            animation: modernColorPulse 3s ease-in-out infinite;
+            mix-blend-mode: screen;
+            filter: blur(1px);
+        }
+
+        @keyframes modernColorPulse {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+                background: radial-gradient(circle, 
+                    rgba(102, 126, 234, 0.2) 0%, 
+                    rgba(240, 147, 251, 0.15) 30%, 
+                    transparent 70%);
+            }
+            20% {
+                transform: scale(1.1) rotate(72deg);
+                background: radial-gradient(circle, 
+                    rgba(118, 75, 162, 0.25) 0%, 
+                    rgba(67, 233, 123, 0.18) 30%, 
+                    transparent 70%);
+            }
+            40% {
+                transform: scale(1.2) rotate(144deg);
+                background: radial-gradient(circle, 
+                    rgba(240, 147, 251, 0.3) 0%, 
+                    rgba(255, 234, 167, 0.2) 30%, 
+                    transparent 70%);
+            }
+            60% {
+                transform: scale(1.15) rotate(216deg);
+                background: radial-gradient(circle, 
+                    rgba(67, 233, 123, 0.25) 0%, 
+                    rgba(102, 126, 234, 0.18) 30%, 
+                    transparent 70%);
+            }
+            80% {
+                transform: scale(1.05) rotate(288deg);
+                background: radial-gradient(circle, 
+                    rgba(255, 234, 167, 0.2) 0%, 
+                    rgba(118, 75, 162, 0.15) 30%, 
+                    transparent 70%);
             }
         }
 
@@ -1173,12 +1711,28 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Enhanced Button Interactions */
+        /* Enhanced Modern Button Interactions */
         .modern-button {
             position: relative;
             overflow: hidden;
-            transition: all 0.3s ease;
-            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: linear-gradient(135deg, 
+                #8b5cf6 0%, 
+                #7c3aed 25%, 
+                #6d28d9 50%, 
+                #5b21b6 75%, 
+                #4c1d95 100%);
+            background-size: 200% 200%;
+            animation: modernButtonGradient 4s ease infinite;
+            border: none;
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5), 
+                        0 4px 12px rgba(124, 58, 237, 0.4);
+        }
+
+        @keyframes modernButtonGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .modern-button::after {
@@ -1188,33 +1742,46 @@
             left: 50%;
             width: 0;
             height: 0;
-            background: rgba(255, 255, 255, 0.3);
+            background: radial-gradient(circle, 
+                rgba(255, 255, 255, 0.4) 0%, 
+                rgba(255, 255, 255, 0.2) 50%, 
+                transparent 70%);
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            transition: width 0.3s, height 0.3s;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .modern-button:hover::after {
-            width: 300px;
-            height: 300px;
+            width: 350px;
+            height: 350px;
         }
 
         .modern-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 20px 45px rgba(139, 92, 246, 0.6), 
+                        0 8px 20px rgba(124, 58, 237, 0.5);
+            background-position: 100% 50%;
         }
 
-        /* Pulse Animation for Important Elements */
+        /* Enhanced Modern Pulse Animation */
         .pulse-glow {
-            animation: pulseGlow 2s ease-in-out infinite;
+            animation: modernPulseGlow 3s ease-in-out infinite;
         }
 
-        @keyframes pulseGlow {
+        @keyframes modernPulseGlow {
             0%, 100% {
-                box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+                box-shadow: 0 0 8px rgba(139, 92, 246, 0.6),
+                           0 0 16px rgba(124, 58, 237, 0.4);
             }
-            50% {
-                box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+            33% {
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.8),
+                           0 0 35px rgba(109, 40, 217, 0.5),
+                           0 0 50px rgba(139, 92, 246, 0.4);
+            }
+            66% {
+                box-shadow: 0 0 25px rgba(124, 58, 237, 0.9),
+                           0 0 40px rgba(91, 33, 182, 0.6),
+                           0 0 60px rgba(59, 130, 246, 0.5);
             }
         }
 
@@ -1257,30 +1824,26 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
-        /* Animated Title with Dynamic Colors */
+        /* Modern Elegant Animated Title */
         .animated-title {
             background: linear-gradient(-45deg, 
-                #ffffff, #f8fafc, #e2e8f0, #cbd5e1,
-                #ffffff, #fef3c7, #fde68a, #f59e0b,
-                #ffffff, #ddd6fe, #c4b5fd, #8b5cf6,
-                #ffffff, #fecaca, #fca5a5, #ef4444,
-                #ffffff, #bbf7d0, #86efac, #22c55e,
-                #ffffff, #bfdbfe, #93c5fd, #3b82f6,
-                #ffffff, #fce7f3, #f9a8d4, #ec4899,
-                #ffffff, #fed7aa, #fdba74, #f97316,
-                #ffffff, #e0e7ff, #c7d2fe, #6366f1,
-                #ffffff, #dcfce7, #bbf7d0, #16a34a,
-                #ffffff, #fef3c7, #fde047, #eab308,
-                #ffffff, #f3e8ff, #ddd6fe, #9333ea
+                #ff6b6b, #ee5a24, #ff9ff3, #f368e0,
+                #ff3838, #ff4757, #ff6348, #ff7675,
+                #fd79a8, #e84393, #a29bfe, #6c5ce7,
+                #74b9ff, #0984e3, #00b894, #00cec9
             );
-            background-size: 800% 800%;
+            background-size: 600% 600%;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: titleColorShift 10s ease infinite, titleFloat 8s ease-in-out infinite;
-            text-shadow: 0 0 40px rgba(255, 255, 255, 0.7);
+            animation: ultraTitleColorShift 20s ease infinite, ultraTitleFloat 12s ease-in-out infinite;
+            text-shadow: 
+                0 0 30px rgba(255, 107, 107, 0.8),
+                0 0 60px rgba(238, 90, 36, 0.6),
+                0 0 90px rgba(255, 159, 243, 0.4);
             position: relative;
             transform-origin: center;
+            filter: drop-shadow(0 0 15px rgba(243, 104, 224, 0.6));
         }
         
         .animated-title::before {
@@ -1302,34 +1865,68 @@
             filter: blur(2px);
         }
         
-        @keyframes titleColorShift {
-            0% { background-position: 0% 50%; }
-            8% { background-position: 25% 25%; }
-            16% { background-position: 100% 30%; }
-            24% { background-position: 75% 75%; }
-            33% { background-position: 50% 100%; }
-            41% { background-position: 20% 60%; }
-            50% { background-position: 100% 70%; }
-            58% { background-position: 60% 20%; }
-            66% { background-position: 0% 100%; }
-            74% { background-position: 40% 40%; }
-            83% { background-position: 70% 0%; }
-            91% { background-position: 30% 80%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        @keyframes titleFloat {
-            0%, 100% { 
-                transform: translateY(0px) scale(1) rotate(0deg); 
+        @keyframes ultraTitleColorShift {
+            0% { 
+                background-position: 0% 50%; 
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5)) hue-rotate(0deg);
             }
-            25% { 
-                transform: translateY(-8px) scale(1.02) rotate(0.5deg); 
+            10% { 
+                background-position: 25% 25%; 
+                filter: drop-shadow(0 0 30px rgba(255, 23, 68, 0.7)) hue-rotate(36deg);
+            }
+            20% { 
+                background-position: 100% 30%; 
+                filter: drop-shadow(0 0 35px rgba(156, 39, 176, 0.8)) hue-rotate(72deg);
+            }
+            30% { 
+                background-position: 75% 75%; 
+                filter: drop-shadow(0 0 40px rgba(33, 150, 243, 0.9)) hue-rotate(108deg);
+            }
+            40% { 
+                background-position: 50% 100%; 
+                filter: drop-shadow(0 0 45px rgba(0, 150, 136, 0.8)) hue-rotate(144deg);
             }
             50% { 
-                transform: translateY(-4px) scale(1.01) rotate(-0.3deg); 
+                background-position: 20% 60%; 
+                filter: drop-shadow(0 0 50px rgba(76, 175, 80, 0.9)) hue-rotate(180deg);
             }
-            75% { 
-                transform: translateY(-12px) scale(1.03) rotate(0.7deg); 
+            60% { 
+                background-position: 100% 70%; 
+                filter: drop-shadow(0 0 45px rgba(255, 193, 7, 0.8)) hue-rotate(216deg);
+            }
+            70% { 
+                background-position: 60% 20%; 
+                filter: drop-shadow(0 0 40px rgba(255, 152, 0, 0.7)) hue-rotate(252deg);
+            }
+            80% { 
+                background-position: 0% 100%; 
+                filter: drop-shadow(0 0 35px rgba(255, 87, 34, 0.8)) hue-rotate(288deg);
+            }
+            90% { 
+                background-position: 40% 40%; 
+                filter: drop-shadow(0 0 30px rgba(244, 67, 54, 0.7)) hue-rotate(324deg);
+            }
+            100% { 
+                background-position: 0% 50%; 
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5)) hue-rotate(360deg);
+            }
+        }
+        
+        @keyframes ultraTitleFloat {
+            0%, 100% { 
+                transform: translateY(0px) scale(1) rotate(0deg) rotateX(0deg); 
+            }
+            20% { 
+                transform: translateY(-12px) scale(1.03) rotate(1deg) rotateX(2deg); 
+            }
+            40% { 
+                transform: translateY(-8px) scale(1.02) rotate(-0.5deg) rotateX(-1deg); 
+            }
+            60% { 
+                transform: translateY(-15px) scale(1.04) rotate(1.2deg) rotateX(3deg); 
+            }
+            80% { 
+                transform: translateY(-6px) scale(1.01) rotate(-0.8deg) rotateX(-0.5deg); 
             }
         }
         
@@ -1986,111 +2583,15 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Advanced Floating Elements -->
-    <div class="floating-particles">
-        <!-- Glowing Orbs -->
-        <div class="glowing-orb"></div>
-        <div class="glowing-orb"></div>
-        <div class="glowing-orb"></div>
-        <div class="glowing-orb"></div>
-        <div class="glowing-orb"></div>
-        
-        <!-- Sparkling Particles -->
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        <div class="sparkle"></div>
-        
-        <!-- Floating Stars - Hidden -->
-        <div class="floating-star" style="display: none;">⭐</div>
-        <div class="floating-star" style="display: none;">✨</div>
-        <div class="floating-star" style="display: none;">🌟</div>
-        <div class="floating-star" style="display: none;">⭐</div>
-        <div class="floating-star" style="display: none;">✨</div>
-        <div class="floating-star" style="display: none;">🌟</div>
-        <div class="floating-star" style="display: none;">⭐</div>
-        <div class="floating-star" style="display: none;">✨</div>
-        <div class="floating-star" style="display: none;">🌟</div>
-        <div class="floating-star" style="display: none;">⭐</div>
-        <div class="floating-star" style="display: none;">✨</div>
-        <div class="floating-star" style="display: none;">🌟</div>
-        <div class="floating-star" style="display: none;">⭐</div>
-        <div class="floating-star" style="display: none;">✨</div>
-        <div class="floating-star" style="display: none;">🌟</div>
-        <div class="floating-star" style="display: none;">⭐</div>
-        <div class="floating-star" style="display: none;">✨</div>
-        
-        <!-- Floating Icons -->
-        <div class="floating-icon-bg">📚</div>
-        <div class="floating-icon-bg">🎓</div>
-        <div class="floating-icon-bg">📝</div>
-        <div class="floating-icon-bg">🏫</div>
-        <div class="floating-icon-bg">👩‍🏫</div>
-        
-        <!-- Geometric Shapes -->
-        <div class="geometric-shape triangle"></div>
-        <div class="geometric-shape square"></div>
-        <div class="geometric-shape hexagon"></div>
-    </div>
+    <!-- Clean Background - No Floating Elements -->
 
-    <!-- Beautiful Moving Paths -->
-    <div class="moving-paths">
-        <!-- Curved Path Lines -->
-        <div class="path-line"></div>
-        <div class="path-line"></div>
-        <div class="path-line"></div>
-        <div class="path-line"></div>
-        <div class="path-line"></div>
-        <div class="path-line"></div>
-        
-        <!-- Diagonal Moving Lines -->
-        <div class="diagonal-path"></div>
-        <div class="diagonal-path"></div>
-        <div class="diagonal-path"></div>
-        <div class="diagonal-path"></div>
-        
-        <!-- Curved Wave Paths -->
-        <div class="wave-path"></div>
-        <div class="wave-path"></div>
-        <div class="wave-path"></div>
-        <div class="wave-path"></div>
-        
-        <!-- Spiral Paths -->
-        <div class="spiral-path"></div>
-        <div class="spiral-path"></div>
-        <div class="spiral-path"></div>
-        
-        <!-- Flowing Particles -->
-        <div class="flow-particle"></div>
-        <div class="flow-particle"></div>
-        <div class="flow-particle"></div>
-        <div class="flow-particle"></div>
-        <div class="flow-particle"></div>
-        <div class="flow-particle"></div>
-        <div class="flow-particle"></div>
-        
-        <!-- Zigzag Paths -->
-        <div class="zigzag-path"></div>
-        <div class="zigzag-path"></div>
-        <div class="zigzag-path"></div>
-        <div class="zigzag-path"></div>
-        
-        <!-- Pulsing Dots Trail -->
-        <div class="pulse-dot"></div>
-        <div class="pulse-dot"></div>
-        <div class="pulse-dot"></div>
-        <div class="pulse-dot"></div>
-    </div>
+
 
     <!-- Header -->
-    <header class="gradient-bg text-white py-24 shadow-2xl relative overflow-hidden" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 8%, #f093fb 16%, #f5576c 24%, #4facfe 32%, #00f2fe 40%, #a8edea 48%, #fed6e3 56%, #d299c2 64%, #fef9d7 72%, #ebc0fd 80%, #d6ecd2 88%, #ff9a9e 96%, #fecfef 100%); background-size: 800% 800%; animation: gradientShift 12s ease infinite, headerFloat 6s ease-in-out infinite; transform-origin: center; will-change: transform; box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 100px rgba(102, 126, 234, 0.4);">
+    <header class="gradient-bg text-white py-24 shadow-2xl relative overflow-hidden cursor-pointer transition-all duration-700 ease-in-out" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.25); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(102, 126, 234, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3); animation: headerFloat 10s ease-in-out infinite; transform-origin: center; will-change: transform;" onclick="this.style.transform='scale(1.02)'; setTimeout(() => this.style.transform='scale(1)', 300);">
         
         <!-- Header Moving Paths -->
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none" style="z-index: -10;">
             <!-- Curved Path Lines for Header -->
             <div class="path-line" style="left: 8%; animation-delay: 1s; background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.3), transparent); animation-duration: 14s;"></div>
             <div class="path-line" style="left: 22%; animation-delay: 4s; background: linear-gradient(to bottom, transparent, rgba(255, 215, 0, 0.4), transparent); animation-duration: 16s;"></div>
@@ -2153,82 +2654,9 @@
             <div class="glowing-orb" style="width: 16px; height: 16px; left: 85%; top: 35%; background: radial-gradient(circle, rgba(144, 238, 144, 0.6), transparent); animation-delay: 27s; animation-duration: 22s;"></div>
         </div>
         
-        <!-- Enhanced Decorative Elements with Better Integration -->
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
-            <!-- Beautiful Glowing Orbs in Header -->
-            <div class="absolute top-16 left-20 w-8 h-8 bg-gradient-to-br from-blue-200 via-blue-300 to-blue-400 rounded-full opacity-80 animate-pulse shadow-lg" style="box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4); animation-duration: 3s;"></div>
-            <div class="absolute top-24 right-32 w-6 h-6 bg-gradient-to-br from-cyan-200 via-cyan-300 to-cyan-400 rounded-full opacity-75 animate-bounce shadow-lg" style="box-shadow: 0 0 15px rgba(34, 211, 238, 0.7), 0 0 30px rgba(34, 211, 238, 0.3); animation-delay: 1s;"></div>
-            <div class="absolute top-32 left-1/3 w-10 h-10 bg-gradient-to-br from-sky-200 via-sky-300 to-sky-400 rounded-full opacity-85 animate-pulse shadow-lg" style="box-shadow: 0 0 25px rgba(14, 165, 233, 0.9), 0 0 50px rgba(14, 165, 233, 0.5); animation-duration: 4s; animation-delay: 2s;"></div>
-            <div class="absolute top-20 right-1/4 w-7 h-7 bg-gradient-to-br from-teal-200 via-teal-300 to-teal-400 rounded-full opacity-70 animate-bounce shadow-lg" style="box-shadow: 0 0 18px rgba(20, 184, 166, 0.8), 0 0 35px rgba(20, 184, 166, 0.4); animation-delay: 3s;"></div>
-            <div class="absolute top-40 left-16 w-9 h-9 bg-gradient-to-br from-indigo-200 via-indigo-300 to-indigo-400 rounded-full opacity-80 animate-pulse shadow-lg" style="box-shadow: 0 0 22px rgba(99, 102, 241, 0.85), 0 0 45px rgba(99, 102, 241, 0.45); animation-duration: 5s;"></div>
-            <div class="absolute top-28 right-20 w-5 h-5 bg-gradient-to-br from-slate-200 via-slate-300 to-slate-400 rounded-full opacity-75 animate-bounce shadow-lg" style="box-shadow: 0 0 12px rgba(148, 163, 184, 0.7), 0 0 25px rgba(148, 163, 184, 0.3); animation-delay: 4s;"></div>
-            <div class="absolute bottom-32 left-24 w-8 h-8 bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500 rounded-full opacity-85 animate-pulse shadow-lg" style="box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4); animation-duration: 3.5s; animation-delay: 1.5s;"></div>
-            <div class="absolute bottom-28 right-28 w-6 h-6 bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 rounded-full opacity-70 animate-bounce shadow-lg" style="box-shadow: 0 0 15px rgba(156, 163, 175, 0.75), 0 0 30px rgba(156, 163, 175, 0.35); animation-delay: 2.5s;"></div>
-            <div class="absolute bottom-40 left-1/2 w-7 h-7 bg-gradient-to-br from-cyan-300 via-cyan-400 to-cyan-500 rounded-full opacity-80 animate-pulse shadow-lg" style="box-shadow: 0 0 18px rgba(34, 211, 238, 0.8), 0 0 36px rgba(34, 211, 238, 0.4); animation-duration: 4.5s; animation-delay: 3.5s;"></div>
-            <div class="absolute top-1/2 left-12 w-9 h-9 bg-gradient-to-br from-sky-300 via-sky-400 to-sky-500 rounded-full opacity-75 animate-bounce shadow-lg" style="box-shadow: 0 0 22px rgba(14, 165, 233, 0.85), 0 0 44px rgba(14, 165, 233, 0.45); animation-delay: 5s;"></div>
-            <div class="absolute top-1/2 right-16 w-8 h-8 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-full opacity-80 animate-pulse shadow-lg" style="box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4); animation-duration: 6s;"></div>
-            <div class="absolute bottom-1/3 left-1/3 w-6 h-6 bg-gradient-to-br from-slate-300 via-slate-400 to-slate-500 rounded-full opacity-70 animate-bounce shadow-lg" style="box-shadow: 0 0 15px rgba(148, 163, 184, 0.75), 0 0 30px rgba(148, 163, 184, 0.35); animation-delay: 6s;"></div>
-            
-            <!-- Background Geometric Patterns -->
-            <div class="absolute top-8 left-8 w-32 h-32 border-2 border-blue-200 opacity-20 rounded-full animate-pulse"></div>
-            <div class="absolute top-12 right-12 w-24 h-24 border-2 border-cyan-200 opacity-25 rounded-lg rotate-45 animate-spin" style="animation-duration: 20s;"></div>
-            <div class="absolute bottom-16 left-1/4 w-20 h-20 border-2 border-sky-200 opacity-20 rounded-full animate-bounce"></div>
-            <div class="absolute bottom-20 right-1/3 w-28 h-28 border-2 border-slate-200 opacity-22 rounded-lg rotate-12 animate-pulse"></div>
-            
-            <!-- Beautiful Floating Transparent Icons -->
-            <div class="absolute top-16 left-16 text-4xl opacity-25 text-blue-100 floating-header-icon" style="animation: headerIconFloat 8s ease-in-out infinite;">📚</div>
-            <div class="absolute top-24 right-20 text-3xl opacity-20 text-cyan-100 floating-header-icon" style="animation: headerIconFloat 10s ease-in-out infinite; animation-delay: 1s;">🎓</div>
-            <div class="absolute top-32 left-1/3 text-5xl opacity-30 text-sky-100 floating-header-icon" style="animation: headerIconFloat 12s ease-in-out infinite; animation-delay: 2s;">🏫</div>
-            <div class="absolute top-20 right-1/3 text-3xl opacity-22 text-slate-100 floating-header-icon" style="animation: headerIconFloat 9s ease-in-out infinite; animation-delay: 3s;">📝</div>
-            <div class="absolute top-40 left-1/2 transform -translate-x-1/2 text-4xl opacity-27 text-blue-50 floating-header-icon" style="animation: headerIconFloat 11s ease-in-out infinite; animation-delay: 4s;">👩‍🏫</div>
-            <div class="absolute bottom-32 left-20 text-3xl opacity-21 text-indigo-100 floating-header-icon" style="animation: headerIconFloat 13s ease-in-out infinite; animation-delay: 5s;">📖</div>
-            <div class="absolute bottom-28 right-24 text-4xl opacity-25 text-teal-100 floating-header-icon" style="animation: headerIconFloat 7s ease-in-out infinite; animation-delay: 6s;">✏️</div>
-            <div class="absolute bottom-36 left-1/2 transform -translate-x-1/2 text-3xl opacity-22 text-cyan-50 floating-header-icon" style="animation: headerIconFloat 14s ease-in-out infinite; animation-delay: 7s;">🎒</div>
-            <div class="absolute top-1/2 left-12 text-5xl opacity-28 text-blue-200 floating-header-icon" style="animation: headerIconFloat 10s ease-in-out infinite; animation-delay: 8s;">🌟</div>
-            <div class="absolute top-1/2 right-16 text-3xl opacity-24 text-sky-200 floating-header-icon" style="animation: headerIconFloat 9s ease-in-out infinite; animation-delay: 9s;">🏆</div>
-            <div class="absolute bottom-1/2 left-1/4 text-4xl opacity-26 text-slate-50 floating-header-icon" style="animation: headerIconFloat 15s ease-in-out infinite; animation-delay: 10s;">📐</div>
-            <div class="absolute bottom-1/2 right-1/4 text-3xl opacity-23 text-gray-100 floating-header-icon" style="animation: headerIconFloat 8s ease-in-out infinite; animation-delay: 11s;">🖊️</div>
-            <div class="absolute top-1/3 left-1/5 text-4xl opacity-29 text-blue-100 floating-header-icon" style="animation: headerIconFloat 12s ease-in-out infinite; animation-delay: 12s;">📊</div>
-            <div class="absolute bottom-1/3 right-1/5 text-3xl opacity-21 text-cyan-200 floating-header-icon" style="animation: headerIconFloat 11s ease-in-out infinite; animation-delay: 13s;">🎯</div>
-            <div class="absolute top-2/3 left-1/6 text-5xl opacity-27 text-indigo-50 floating-header-icon" style="animation: headerIconFloat 13s ease-in-out infinite; animation-delay: 14s;">📋</div>
-            <div class="absolute top-2/3 right-1/6 text-3xl opacity-25 text-teal-50 floating-header-icon" style="animation: headerIconFloat 9s ease-in-out infinite; animation-delay: 15s;">🔔</div>
-            
-            <!-- Enhanced Integrated Floating Stars - Hidden -->
-            <div class="absolute top-16 left-16 text-2xl text-yellow-400 opacity-95 floating-star" style="display: none; animation: starFloat 8s ease-in-out infinite, starGlow 4s ease-in-out infinite alternate;">⭐</div>
-            <div class="absolute top-20 right-24 text-xl text-yellow-300 opacity-90 floating-star" style="display: none; animation: starFloat 6s ease-in-out infinite, starGlow 3s ease-in-out infinite alternate; animation-delay: 1s;">✨</div>
-            <div class="absolute top-32 left-1/2 transform -translate-x-1/2 text-3xl text-yellow-400 opacity-95 floating-star" style="display: none; animation: starFloat 10s ease-in-out infinite, starGlow 5s ease-in-out infinite alternate; animation-delay: 2s;">🌟</div>
-            <div class="absolute top-24 left-1/3 text-xl text-yellow-300 opacity-90 floating-star" style="display: none; animation: starFloat 7s ease-in-out infinite, starGlow 3.5s ease-in-out infinite alternate; animation-delay: 3s;">⭐</div>
-            <div class="absolute top-28 right-1/3 text-2xl text-yellow-400 opacity-95 floating-star" style="display: none; animation: starFloat 9s ease-in-out infinite, starGlow 4.5s ease-in-out infinite alternate; animation-delay: 4s;">✨</div>
-            
-            <!-- Enhanced Moving Stars around logos area - Hidden -->
-            <div class="absolute top-40 left-40 text-lg text-yellow-300 opacity-90 floating-star" style="display: none; animation: starFloat 6s ease-in-out infinite, starGlow 3s ease-in-out infinite alternate; animation-delay: 5s;">🌟</div>
-            <div class="absolute top-40 right-40 text-lg text-yellow-400 opacity-95 floating-star" style="display: none; animation: starFloat 8s ease-in-out infinite, starGlow 4s ease-in-out infinite alternate; animation-delay: 6s;">⭐</div>
-            
-            <!-- Enhanced Moving Stars around bottom section - Hidden -->
-            <div class="absolute bottom-32 left-20 text-xl text-yellow-300 opacity-90 floating-star" style="display: none; animation: starFloat 7s ease-in-out infinite, starGlow 3.5s ease-in-out infinite alternate; animation-delay: 7s;">✨</div>
-            <div class="absolute bottom-28 right-20 text-2xl text-yellow-400 opacity-95 floating-star" style="display: none; animation: starFloat 9s ease-in-out infinite, starGlow 2.5s ease-in-out infinite alternate; animation-delay: 8s;">🌟</div>
-            <div class="absolute bottom-36 left-1/2 transform -translate-x-1/2 text-lg text-yellow-400 opacity-95 floating-star" style="display: none; animation: starFloat 5s ease-in-out infinite, starGlow 4.5s ease-in-out infinite alternate; animation-delay: 9s;">⭐</div>
-            
-            <!-- Educational Icons - Strategically placed -->
-            <div class="absolute top-44 left-1/4 text-xl text-blue-200 opacity-50 floating-icon-bg" style="animation-delay: 1s;">📚</div>
-            <div class="absolute top-48 right-1/4 text-2xl text-green-200 opacity-60 floating-icon-bg" style="animation-delay: 2s;">🎓</div>
-            <div class="absolute bottom-44 left-1/3 text-xl text-purple-200 opacity-55 floating-icon-bg" style="animation-delay: 3s;">📝</div>
-            <div class="absolute bottom-40 right-1/3 text-2xl text-yellow-200 opacity-65 floating-icon-bg" style="animation-delay: 4s;">🏫</div>
-            <div class="absolute top-1/2 left-20 text-lg text-pink-200 opacity-50 floating-icon-bg" style="animation-delay: 5s;">👩‍🏫</div>
-            <div class="absolute top-1/2 right-20 text-lg text-blue-300 opacity-60 floating-icon-bg" style="animation-delay: 6s;">📖</div>
-            
-            <!-- Subtle Geometric Accents -->
-            <div class="absolute top-20 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-blue-200 opacity-35 rotate-45 animate-spin" style="animation-duration: 8s;"></div>
-            <div class="absolute top-52 right-1/4 w-4 h-4 bg-cyan-200 opacity-45 rounded-full animate-bounce" style="animation-delay: 2s;"></div>
-            <div class="absolute bottom-24 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-sky-200 opacity-40 rotate-12 animate-pulse" style="animation-delay: 3s;"></div>
-            <div class="absolute top-1/3 left-12 w-2 h-2 bg-slate-200 opacity-45 rounded-full animate-ping" style="animation-delay: 4s;"></div>
-            <div class="absolute bottom-1/3 right-12 w-3 h-3 bg-indigo-200 opacity-35 rotate-45 animate-spin" style="animation-duration: 12s; animation-delay: 1s;"></div>
-            
-            <!-- Enhanced Corner Accent Stars - Hidden -->
-            <div class="absolute top-8 left-8 text-sm text-yellow-400 opacity-85 floating-star" style="display: none; animation: starFloat 4s ease-in-out infinite, starGlow 2s ease-in-out infinite alternate; animation-delay: 10s;">⭐</div>
-            <div class="absolute top-8 right-8 text-sm text-yellow-300 opacity-80 floating-star" style="display: none; animation: starFloat 6s ease-in-out infinite, starGlow 3s ease-in-out infinite alternate; animation-delay: 11s;">✨</div>
-            <div class="absolute bottom-8 left-8 text-sm text-yellow-400 opacity-85 floating-star" style="display: none; animation: starFloat 5s ease-in-out infinite, starGlow 2.5s ease-in-out infinite alternate; animation-delay: 12s;">🌟</div>
-            <div class="absolute bottom-8 right-8 text-sm text-yellow-300 opacity-80 floating-star" style="display: none; animation: starFloat 7s ease-in-out infinite, starGlow 3.5s ease-in-out infinite alternate; animation-delay: 13s;">⭐</div>
+        <!-- Clean and Minimal Header Background -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden" style="z-index: -8;">
+            <!-- Subtle gradient overlay only -->
         </div>
         
         <div class="container mx-auto px-6 relative z-10">
@@ -2237,7 +2665,7 @@
                 <!-- Logos Container for Mobile -->
                 <div class="flex justify-center space-x-10 space-x-reverse lg:hidden w-full">
                     <!-- Left Logo Mobile -->
-                    <div class="logo-container w-28 h-28 bg-gradient-to-br from-white/20 via-white/15 to-white/10 rounded-3xl flex items-center justify-center logo-pulse-glow glow-on-hover interactive-element border-2 border-white/40 backdrop-filter backdrop-blur-xl shadow-2xl">
+                    <div class="logo-container w-28 h-28 bg-gradient-to-br from-purple-800/30 via-purple-600/25 to-indigo-500/20 rounded-3xl flex items-center justify-center logo-pulse-glow glow-on-hover interactive-element border-2 border-purple-400/50 backdrop-filter backdrop-blur-xl shadow-2xl" style="box-shadow: 0 15px 30px rgba(139, 92, 246, 0.3), inset 0 1px 0 rgba(124, 58, 237, 0.2);">
                         <img id="left-logo-mobile" src="" alt="الشعار الأيسر" class="w-20 h-20 object-contain rounded-2xl logo-breathe" style="display: none;">
                         <div id="left-logo-placeholder-mobile" class="text-center">
                             <div class="text-3xl mb-2 logo-breathe">🏫</div>
@@ -2246,7 +2674,7 @@
                     </div>
                     
                     <!-- Right Logo Mobile -->
-                    <div class="logo-container w-28 h-28 bg-gradient-to-br from-white/20 via-white/15 to-white/10 rounded-3xl flex items-center justify-center logo-pulse-glow-delayed glow-on-hover interactive-element border-2 border-white/40 backdrop-filter backdrop-blur-xl shadow-2xl">
+                    <div class="logo-container w-28 h-28 bg-gradient-to-br from-blue-800/30 via-blue-600/25 to-indigo-500/20 rounded-3xl flex items-center justify-center logo-pulse-glow-delayed glow-on-hover interactive-element border-2 border-blue-400/50 backdrop-filter backdrop-blur-xl shadow-2xl" style="box-shadow: 0 15px 30px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(99, 102, 241, 0.2);">
                         <img id="right-logo-mobile" src="" alt="الشعار الأيمن" class="w-20 h-20 object-contain rounded-2xl logo-breathe" style="display: none;">
                         <div id="right-logo-placeholder-mobile" class="text-center">
                             <div class="text-3xl mb-2 logo-breathe">🎓</div>
@@ -2256,7 +2684,7 @@
                 </div>
                 
                 <!-- Left Logo Desktop -->
-                <div class="logo-container hidden lg:flex w-36 h-36 bg-gradient-to-br from-white/20 via-white/15 to-white/10 rounded-3xl items-center justify-center logo-pulse-glow glow-on-hover interactive-element border-2 border-white/40 backdrop-filter backdrop-blur-xl shadow-2xl">
+                <div class="logo-container hidden lg:flex w-36 h-36 bg-gradient-to-br from-purple-800/40 via-purple-700/35 to-indigo-600/30 rounded-3xl items-center justify-center logo-pulse-glow glow-on-hover interactive-element border-2 border-purple-500/60 backdrop-filter backdrop-blur-xl shadow-2xl" style="box-shadow: 0 20px 40px rgba(139, 92, 246, 0.5), inset 0 1px 0 rgba(109, 40, 217, 0.4);">
                     <img id="left-logo" src="" alt="الشعار الأيسر" class="w-28 h-28 object-contain rounded-2xl logo-breathe" style="display: none;">
                     <div id="left-logo-placeholder" class="text-center">
                         <div class="text-4xl mb-3 logo-breathe">🏫</div>
@@ -2271,7 +2699,7 @@
                             <span class="text-sm lg:text-lg font-semibold opacity-90">نظام إدارة الطابور المدرسي</span>
                         </div>
                     </div>
-                    <h1 class="text-5xl md:text-6xl lg:text-8xl font-black mb-6 lg:mb-8 tracking-wider animated-title" style="text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 215, 0, 0.6), 0 0 90px rgba(255, 255, 255, 0.4);">الطابور المدرسي</h1>
+                    <h1 class="text-5xl md:text-6xl lg:text-8xl font-black mb-6 lg:mb-8 tracking-wider text-white" style="text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.3);">الطابور المدرسي</h1>
                     <div class="flex justify-center items-center mb-4 lg:mb-6">
                         <div class="w-12 lg:w-16 h-0.5 lg:h-1 bg-white rounded-full opacity-60"></div>
                         <div class="w-3 lg:w-4 h-3 lg:h-4 bg-white rounded-full mx-3 lg:mx-4 opacity-80"></div>
@@ -2283,7 +2711,7 @@
                 </div>
                 
                 <!-- Right Logo Desktop -->
-                <div class="logo-container hidden lg:flex w-36 h-36 bg-gradient-to-br from-white/20 via-white/15 to-white/10 rounded-3xl items-center justify-center logo-pulse-glow-delayed glow-on-hover interactive-element border-2 border-white/40 backdrop-filter backdrop-blur-xl shadow-2xl">
+                <div class="logo-container hidden lg:flex w-36 h-36 bg-gradient-to-br from-blue-800/30 via-blue-600/25 to-indigo-500/20 rounded-3xl items-center justify-center logo-pulse-glow-delayed glow-on-hover interactive-element border-2 border-blue-400/50 backdrop-filter backdrop-blur-xl shadow-2xl" style="box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(99, 102, 241, 0.2);">
                     <img id="right-logo" src="" alt="الشعار الأيمن" class="w-28 h-28 object-contain rounded-2xl logo-breathe" style="display: none;">
                     <div id="right-logo-placeholder" class="text-center">
                         <div class="text-4xl mb-3 logo-breathe">🎓</div>
@@ -2294,9 +2722,9 @@
             
             <!-- Principal Info Section -->
             <div class="mb-6 lg:mb-8">
-                <div class="bg-gradient-to-r from-purple-600/40 via-pink-500/40 to-indigo-600/40 rounded-3xl p-6 lg:p-8 backdrop-filter backdrop-blur-xl border-2 border-white/50 text-center max-w-3xl mx-auto shadow-2xl" style="box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+                <div class="bg-gradient-to-r from-purple-700/40 via-indigo-600/40 to-blue-500/40 rounded-3xl p-6 lg:p-8 backdrop-filter backdrop-blur-xl border-2 border-purple-300/50 text-center max-w-3xl mx-auto shadow-2xl" style="box-shadow: 0 25px 50px rgba(139, 92, 246, 0.4), inset 0 1px 0 rgba(124, 58, 237, 0.3), 0 0 60px rgba(99, 102, 241, 0.2);">
                     <div class="flex items-center justify-center mb-3">
-                        <div class="w-16 h-16 bg-gradient-to-br from-yellow-400/30 to-yellow-600/30 rounded-full flex items-center justify-center mr-6 shadow-xl border-2 border-yellow-300/50" style="filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));">
+                        <div class="w-16 h-16 bg-gradient-to-br from-indigo-400/40 to-purple-600/30 rounded-full flex items-center justify-center mr-6 shadow-xl border-2 border-indigo-300/60" style="filter: drop-shadow(0 10px 20px rgba(139, 92, 246, 0.4)); box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);">
                             <span class="text-3xl" style="filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));">👑</span>
                         </div>
                         <div>
@@ -2309,11 +2737,11 @@
             
             <!-- Enhanced Date Time Section -->
             <div class="mb-6 lg:mb-8">
-                <div class="bg-gradient-to-br from-white/25 via-white/20 to-white/15 rounded-2xl p-4 lg:p-6 backdrop-filter backdrop-blur-xl border-2 border-white/40 text-center max-w-2xl mx-auto shadow-2xl" style="box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+                <div class="bg-gradient-to-br from-green-700/30 via-blue-600/25 to-purple-600/20 rounded-2xl p-4 lg:p-6 backdrop-filter backdrop-blur-xl border-2 border-green-300/50 text-center max-w-2xl mx-auto shadow-2xl" style="box-shadow: 0 20px 40px rgba(0, 128, 0, 0.3), inset 0 1px 0 rgba(255, 215, 0, 0.3), 0 0 40px rgba(65, 105, 225, 0.2);">
                     <div class="grid grid-cols-3 gap-6">
                         <!-- Day and Date -->
                         <div class="text-center">
-                            <div class="w-12 h-12 bg-gradient-to-br from-blue-400/30 to-blue-600/30 rounded-full flex items-center justify-center mx-auto mb-2 border border-blue-300/50" style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));">
+                            <div class="w-12 h-12 bg-gradient-to-br from-red-500/40 to-orange-500/30 rounded-full flex items-center justify-center mx-auto mb-2 border border-red-300/60" style="filter: drop-shadow(0 4px 8px rgba(139, 0, 0, 0.3)); box-shadow: 0 0 20px rgba(255, 69, 0, 0.4);">
                                 <span class="text-lg">📅</span>
                             </div>
                             <div id="current-day" class="text-sm font-bold text-white mb-1" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">الأحد</div>
@@ -2322,7 +2750,7 @@
                         
                         <!-- Time -->
                         <div class="text-center">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-400/30 to-green-600/30 rounded-full flex items-center justify-center mx-auto mb-2 border border-green-300/50" style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500/40 to-blue-500/30 rounded-full flex items-center justify-center mx-auto mb-2 border border-green-300/60" style="filter: drop-shadow(0 4px 8px rgba(0, 128, 0, 0.3)); box-shadow: 0 0 20px rgba(50, 205, 50, 0.4);">
                                 <span class="text-lg">🕐</span>
                             </div>
                             <div id="current-time" class="text-sm font-bold text-white bg-black/30 rounded-lg px-3 py-1 mb-1" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">٠٨:٣٠:٤٥</div>
@@ -2331,7 +2759,7 @@
                         
                         <!-- Hijri Date -->
                         <div class="text-center">
-                            <div class="w-12 h-12 bg-gradient-to-br from-purple-400/30 to-purple-600/30 rounded-full flex items-center justify-center mx-auto mb-2 border border-purple-300/50" style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500/40 to-indigo-600/30 rounded-full flex items-center justify-center mx-auto mb-2 border border-purple-300/60" style="filter: drop-shadow(0 4px 8px rgba(138, 43, 226, 0.3)); box-shadow: 0 0 20px rgba(147, 112, 219, 0.4);">
                                 <span class="text-lg">🌙</span>
                             </div>
                             <div id="hijri-date" class="text-sm font-bold text-white mb-1" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">ربيع الأول ١٤٤٥</div>
@@ -2344,7 +2772,7 @@
             <!-- Bottom section with stars display -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                 <!-- Stars Display - Enhanced -->
-                <div class="bg-gradient-to-br from-yellow-400/40 via-amber-300/35 to-orange-400/40 rounded-3xl p-6 lg:p-7 backdrop-filter backdrop-blur-xl border-2 border-yellow-300/60 text-center shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card" style="box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+                <div class="bg-gradient-to-br from-red-600/40 via-orange-500/35 to-yellow-400/40 rounded-3xl p-6 lg:p-7 backdrop-filter backdrop-blur-xl border-2 border-red-300/60 text-center shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card" style="box-shadow: 0 25px 50px rgba(139, 0, 0, 0.4), inset 0 1px 0 rgba(255, 215, 0, 0.4), 0 0 50px rgba(255, 140, 0, 0.3);">
                     <div class="flex items-center justify-center mb-3">
                         <div class="w-14 h-14 bg-gradient-to-br from-yellow-300/40 to-yellow-500/40 rounded-full flex items-center justify-center mr-3 border-2 border-yellow-200/50" style="filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));">
                             <span class="text-2xl icon-rotate" style="filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));">⭐</span>
@@ -2355,7 +2783,7 @@
                     <div class="text-sm lg:text-base text-white opacity-95 font-semibold" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);">المعلمة المتميزة اليوم</div>
                 </div>
                 
-                <div class="bg-gradient-to-br from-blue-500/40 via-indigo-400/35 to-purple-500/40 rounded-3xl p-6 lg:p-7 backdrop-filter backdrop-blur-xl border-2 border-blue-300/60 text-center shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card" style="box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+                <div class="bg-gradient-to-br from-green-600/40 via-blue-500/35 to-teal-500/40 rounded-3xl p-6 lg:p-7 backdrop-filter backdrop-blur-xl border-2 border-green-300/60 text-center shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card" style="box-shadow: 0 25px 50px rgba(0, 128, 0, 0.4), inset 0 1px 0 rgba(255, 215, 0, 0.4), 0 0 50px rgba(0, 206, 209, 0.3);">
                     <div class="flex items-center justify-center mb-3">
                         <div class="w-14 h-14 bg-gradient-to-br from-blue-300/40 to-blue-500/40 rounded-full flex items-center justify-center mr-3 border-2 border-blue-200/50" style="filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));">
                             <span class="text-2xl icon-bounce" style="filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));">🏆</span>
@@ -2366,7 +2794,7 @@
                     <div class="text-sm lg:text-base text-white opacity-95 font-semibold" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);">الصف الأكثر انضباطاً</div>
                 </div>
                 
-                <div class="bg-gradient-to-br from-pink-500/40 via-rose-400/35 to-red-500/40 rounded-3xl p-6 lg:p-7 backdrop-filter backdrop-blur-xl border-2 border-pink-300/60 text-center shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card" style="box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+                <div class="bg-gradient-to-br from-purple-600/40 via-indigo-500/35 to-blue-600/40 rounded-3xl p-6 lg:p-7 backdrop-filter backdrop-blur-xl border-2 border-purple-300/60 text-center shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card" style="box-shadow: 0 25px 50px rgba(138, 43, 226, 0.4), inset 0 1px 0 rgba(255, 215, 0, 0.4), 0 0 50px rgba(75, 0, 130, 0.3);">
                     <div class="flex items-center justify-center mb-3">
                         <div class="w-14 h-14 bg-gradient-to-br from-pink-300/40 to-pink-500/40 rounded-full flex items-center justify-center mr-3 border-2 border-pink-200/50" style="filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));">
                             <span class="text-2xl icon-pulse" style="filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));">👑</span>
@@ -2377,7 +2805,7 @@
                     <div class="text-sm lg:text-base text-white opacity-95 font-semibold" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);">المعلمة المثالية للشهر</div>
                 </div>
                 
-                <div class="bg-gradient-to-br from-green-500/40 via-emerald-400/35 to-teal-500/40 rounded-3xl p-6 lg:p-7 backdrop-filter backdrop-blur-xl border-2 border-green-300/60 text-center shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card" style="box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);">
+                <div class="bg-gradient-to-br from-emerald-600/40 via-green-500/35 to-lime-500/40 rounded-3xl p-6 lg:p-7 backdrop-filter backdrop-blur-xl border-2 border-emerald-300/60 text-center shadow-2xl transform hover:scale-105 transition-all duration-300 enhanced-card" style="box-shadow: 0 25px 50px rgba(34, 197, 94, 0.4), inset 0 1px 0 rgba(255, 215, 0, 0.4), 0 0 50px rgba(50, 205, 50, 0.3);">
                     <div class="flex items-center justify-center mb-3">
                         <div class="w-14 h-14 bg-gradient-to-br from-green-300/40 to-green-500/40 rounded-full flex items-center justify-center mr-3 border-2 border-green-200/50" style="filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));">
                             <span class="text-2xl icon-rotate" style="filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));">🎖️</span>
@@ -2419,22 +2847,22 @@
     <section id="attendance-section" class="container mx-auto px-4 py-8">
         <!-- Statistics -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(52, 211, 153, 0.9), rgba(16, 185, 129, 0.9), rgba(6, 182, 212, 0.9));">
+            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(0, 184, 148, 0.9), rgba(0, 206, 201, 0.9), rgba(85, 239, 196, 0.9));">
                 <div class="text-4xl mb-2 floating-icon">✅</div>
                 <div class="text-3xl font-bold" id="present-count">0</div>
                 <div class="text-sm">الحاضرات</div>
             </div>
-            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(251, 113, 133, 0.9), rgba(244, 63, 94, 0.9), rgba(236, 72, 153, 0.9));">
+            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(255, 107, 107, 0.9), rgba(255, 56, 56, 0.9), rgba(255, 71, 87, 0.9));">
                 <div class="text-4xl mb-2 floating-icon" style="animation-delay: 0.2s;">❌</div>
                 <div class="text-3xl font-bold" id="absent-count">0</div>
                 <div class="text-sm">الغائبات</div>
             </div>
-            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.9), rgba(124, 58, 237, 0.9), rgba(168, 85, 247, 0.9));">
+            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(162, 155, 254, 0.9), rgba(108, 92, 231, 0.9), rgba(116, 185, 255, 0.9));">
                 <div class="text-4xl mb-2 floating-icon" style="animation-delay: 0.4s;">⏳</div>
                 <div class="text-3xl font-bold" id="pending-count">0</div>
                 <div class="text-sm">لم يتم التسجيل</div>
             </div>
-            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(37, 99, 235, 0.9), rgba(79, 70, 229, 0.9));">
+            <div class="enhanced-card interactive-element glow-on-hover pulse-glow text-white p-6 rounded-lg text-center gradient-animation" style="background: linear-gradient(135deg, rgba(255, 159, 243, 0.9), rgba(243, 104, 224, 0.9), rgba(253, 121, 168, 0.9));">
                 <div class="text-4xl mb-2 floating-icon" style="animation-delay: 0.6s;">📊</div>
                 <div class="text-3xl font-bold" id="total-count">0</div>
                 <div class="text-sm">الإجمالي</div>
@@ -2507,34 +2935,52 @@
                 <h3 class="text-2xl font-bold mb-6">إدارة المعلمات</h3>
                 
                 <!-- Add Teacher Form -->
-                <div class="bg-gray-50 p-6 rounded-lg mb-6">
-                    <h4 class="text-lg font-semibold mb-4">إضافة معلمة جديدة</h4>
+                <div class="glass-card p-6 rounded-lg mb-6 enhanced-card">
+                    <h4 class="text-lg font-semibold mb-4 text-white flex items-center">
+                        <span class="text-2xl mr-3">👩‍🏫</span>
+                        إضافة معلمة جديدة
+                    </h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="text" id="teacher-name" placeholder="اسم المعلمة" class="border rounded-lg px-4 py-2">
-                        <input type="text" id="teacher-class" placeholder="الصف المشرفة عليه" class="border rounded-lg px-4 py-2">
+                        <input type="text" id="teacher-name" placeholder="اسم المعلمة" class="form-input">
+                        <input type="text" id="teacher-class" placeholder="الصف المشرفة عليه" class="form-input">
                     </div>
-                    <button onclick="addTeacher()" class="bg-blue-500 text-white px-6 py-2 rounded-lg mt-4 hover:bg-blue-600">إضافة المعلمة</button>
+                    <button onclick="addTeacher()" class="modern-button ripple-effect text-white px-6 py-3 rounded-lg mt-4 w-full">
+                        ✨ إضافة المعلمة
+                    </button>
                 </div>
 
                 <!-- Excel Upload -->
-                <div class="bg-gray-50 p-6 rounded-lg mb-6">
-                    <h4 class="text-lg font-semibold mb-4">رفع ملف Excel للمعلمات</h4>
-                    <input type="file" id="excel-file" accept=".xlsx,.xls" class="border rounded-lg px-4 py-2 mb-4">
-                    <button onclick="uploadExcel()" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">رفع ملف المعلمات</button>
+                <div class="glass-card p-6 rounded-lg mb-6 enhanced-card">
+                    <h4 class="text-lg font-semibold mb-4 text-white flex items-center">
+                        <span class="text-2xl mr-3">📊</span>
+                        رفع ملف Excel للمعلمات
+                    </h4>
+                    <input type="file" id="excel-file" accept=".xlsx,.xls" class="form-input mb-4 w-full">
+                    <button onclick="uploadExcel()" class="modern-button ripple-effect text-white px-6 py-3 rounded-lg w-full" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        📤 رفع ملف المعلمات
+                    </button>
                 </div>
 
                 <!-- Classes Excel Upload -->
-                <div class="bg-gray-50 p-6 rounded-lg mb-6">
-                    <h4 class="text-lg font-semibold mb-4">رفع ملف Excel للصفوف</h4>
-                    <p class="text-sm text-gray-600 mb-2">يجب أن يحتوي الملف على عمود واحد بأسماء الصفوف</p>
-                    <input type="file" id="classes-excel-file" accept=".xlsx,.xls" class="border rounded-lg px-4 py-2 mb-4">
-                    <button onclick="uploadClassesExcel()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">رفع ملف الصفوف</button>
+                <div class="glass-card p-6 rounded-lg mb-6 enhanced-card">
+                    <h4 class="text-lg font-semibold mb-4 text-white flex items-center">
+                        <span class="text-2xl mr-3">🏫</span>
+                        رفع ملف Excel للصفوف
+                    </h4>
+                    <p class="text-sm text-white/70 mb-4">يجب أن يحتوي الملف على عمود واحد بأسماء الصفوف</p>
+                    <input type="file" id="classes-excel-file" accept=".xlsx,.xls" class="form-input mb-4 w-full">
+                    <button onclick="uploadClassesExcel()" class="modern-button ripple-effect text-white px-6 py-3 rounded-lg w-full">
+                        📋 رفع ملف الصفوف
+                    </button>
                 </div>
 
                 <!-- Teachers List -->
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <h4 class="text-lg font-semibold mb-4">قائمة المعلمات</h4>
-                    <div id="teachers-list" class="space-y-2">
+                <div class="glass-card p-6 rounded-lg enhanced-card">
+                    <h4 class="text-lg font-semibold mb-4 text-white flex items-center">
+                        <span class="text-2xl mr-3">📝</span>
+                        قائمة المعلمات
+                    </h4>
+                    <div id="teachers-list" class="space-y-3">
                         <!-- Teachers list will be loaded here -->
                     </div>
                 </div>
@@ -2687,40 +3133,48 @@
 
     <!-- Camera Modal -->
     <div id="camera-modal" class="modal">
-        <div class="bg-white p-6 rounded-lg max-w-md w-full mx-4">
-            <h3 class="text-xl font-bold mb-4">تصوير الطابور</h3>
-            <video id="camera-video" width="100%" height="300" autoplay class="border rounded-lg mb-4"></video>
+        <div class="glass-card p-6 rounded-lg max-w-md w-full mx-4">
+            <h3 class="text-xl font-bold mb-4 text-white">📷 تصوير الطابور</h3>
+            <video id="camera-video" width="100%" height="300" autoplay class="border-2 border-white/20 rounded-lg mb-4 bg-black/20"></video>
             <canvas id="camera-canvas" style="display: none;"></canvas>
-            <div class="flex justify-between">
-                <button onclick="capturePhoto()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">التقاط الصورة</button>
-                <button onclick="closeCameraModal()" class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600">إغلاق</button>
+            <div class="flex justify-between space-x-4 space-x-reverse">
+                <button onclick="capturePhoto()" class="modern-button ripple-effect text-white px-6 py-3 rounded-lg flex-1">📸 التقاط الصورة</button>
+                <button onclick="closeCameraModal()" class="modern-button ripple-effect text-white px-6 py-3 rounded-lg flex-1" style="background: linear-gradient(135deg, #6b7280, #4b5563);">إغلاق</button>
             </div>
         </div>
     </div>
 
     <!-- Certificate Modal -->
     <div id="certificate-modal" class="modal">
-        <div class="bg-white p-6 rounded-lg max-w-2xl w-full mx-4">
+        <div class="glass-card p-6 rounded-lg max-w-2xl w-full mx-4">
             <div id="certificate-content" class="certificate">
                 <!-- Certificate content will be generated here -->
             </div>
             <div class="flex justify-center mt-6 space-x-4 space-x-reverse">
-                <button onclick="downloadCertificate()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">تحميل الشهادة</button>
-                <button onclick="closeCertificateModal()" class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600">إغلاق</button>
+                <button onclick="downloadCertificate()" class="modern-button ripple-effect text-white px-6 py-3 rounded-lg">📥 تحميل الشهادة</button>
+                <button onclick="closeCertificateModal()" class="modern-button ripple-effect text-white px-6 py-3 rounded-lg" style="background: linear-gradient(135deg, #6b7280, #4b5563);">إغلاق</button>
             </div>
         </div>
     </div>
 
     <!-- Password Modal -->
     <div id="password-modal" class="modal">
-        <div class="bg-white p-6 rounded-lg max-w-md w-full mx-4">
-            <h3 class="text-xl font-bold mb-4">كلمة مرور المدير</h3>
-            <input type="password" id="admin-password" placeholder="أدخل كلمة المرور" class="w-full border rounded-lg px-4 py-2 mb-4">
-            <div class="flex justify-between">
-                <button onclick="checkAdminPassword()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">دخول</button>
-                <button onclick="closePasswordModal()" class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600">إلغاء</button>
+        <div class="glass-card p-6 rounded-lg max-w-md w-full mx-4">
+            <h3 class="text-xl font-bold mb-4 text-white">كلمة مرور المدير</h3>
+            <input type="password" id="admin-password" placeholder="أدخل كلمة المرور" class="form-input w-full mb-4">
+            <div class="flex justify-between space-x-4 space-x-reverse">
+                <button onclick="checkAdminPassword()" class="modern-button ripple-effect text-white px-6 py-3 rounded-lg flex-1">دخول</button>
+                <button onclick="closePasswordModal()" class="modern-button ripple-effect text-white px-6 py-3 rounded-lg flex-1" style="background: linear-gradient(135deg, #6b7280, #4b5563);">إلغاء</button>
             </div>
         </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="notification-container"></div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
     </div>
 
     <script>
@@ -2747,6 +3201,10 @@
         };
         let currentTeacherForPhoto = null;
         let currentCertificateType = null;
+        
+        // Auto-sync variables
+        let lastDataHash = '';
+        let syncInterval = null;
 
         // Initialize System
         async function initSystem() {
@@ -2756,6 +3214,82 @@
             loadClasses();
             updateStatistics();
             loadStarSelections();
+            startAutoSync();
+        }
+        
+        // Auto-sync functions for real-time updates
+        function generateDataHash() {
+            const dataString = JSON.stringify({
+                teachers: teachers,
+                classes: classes,
+                attendance: attendance,
+                classPoints: classPoints,
+                stars: stars
+            });
+            return btoa(dataString).slice(0, 20); // Simple hash
+        }
+        
+        function startAutoSync() {
+            lastDataHash = generateDataHash();
+            
+            // Check for changes every 2 seconds
+            syncInterval = setInterval(() => {
+                checkForDataChanges();
+            }, 2000);
+            
+            // Listen for storage changes from other tabs/windows
+            window.addEventListener('storage', function(e) {
+                if (e.key && e.key.startsWith('schoolQueue_')) {
+                    setTimeout(() => {
+                        loadDataSilently();
+                    }, 100);
+                }
+            });
+        }
+        
+        async function loadDataSilently() {
+            try {
+                const savedData = localStorage.getItem('schoolQueue_data');
+                if (savedData) {
+                    const loadedData = JSON.parse(savedData);
+                    const newHash = btoa(JSON.stringify({
+                        teachers: loadedData.teachers || [],
+                        classes: loadedData.classes || [],
+                        attendance: loadedData.attendance || {},
+                        classPoints: loadedData.classPoints || {},
+                        stars: loadedData.stars || {}
+                    })).slice(0, 20);
+                    
+                    if (newHash !== lastDataHash) {
+                        teachers = loadedData.teachers || [];
+                        classes = loadedData.classes || [];
+                        attendance = loadedData.attendance || {};
+                        classPoints = loadedData.classPoints || {};
+                        stars = { ...stars, ...loadedData.stars };
+                        settings = { ...settings, ...loadedData.settings };
+                        
+                        lastDataHash = newHash;
+                        
+                        // Update UI
+                        loadTeachers();
+                        loadClasses();
+                        updateStatistics();
+                        loadStarSelections();
+                        updateLogosDisplay();
+                        updatePrincipalDisplay();
+                    }
+                }
+            } catch (error) {
+                console.log('Silent sync error:', error);
+            }
+        }
+        
+        function checkForDataChanges() {
+            const currentHash = generateDataHash();
+            if (currentHash !== lastDataHash) {
+                lastDataHash = currentHash;
+                saveData();
+            }
         }
 
         // Data Management
@@ -3114,38 +3648,68 @@
             const card = document.createElement('div');
             const status = attendance[teacher.id]?.status || 'pending';
             
-            let cardClass = 'bg-white card-hover';
-            if (status === 'present') cardClass = 'present-card';
-            else if (status === 'absent') cardClass = 'absent-card';
-            else if (status === 'late') cardClass = 'late-card';
-            else if (status === 'excuse') cardClass = 'excuse-card';
+            let cardClass = 'glass-card enhanced-card';
+            if (status === 'present') cardClass = 'present-card enhanced-card';
+            else if (status === 'absent') cardClass = 'absent-card enhanced-card';
+            else if (status === 'late') cardClass = 'late-card enhanced-card';
+            else if (status === 'excuse') cardClass = 'excuse-card enhanced-card';
 
-            card.className = `${cardClass} p-6 rounded-lg shadow-md`;
+            card.className = `${cardClass} p-6 rounded-xl shadow-lg transform transition-all duration-300`;
             
             const photoSrc = teacher.photo || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjUwIiBjeT0iMzUiIHI9IjE1IiBmaWxsPSIjOUI5QkEzIi8+CjxwYXRoIGQ9Ik0yMCA4MEM0MCA2MCA2MCA2MCA4MCA4MEgyMFoiIGZpbGw9IiM5QjlCQTMiLz4KPC9zdmc+';
 
+            const statusIcon = {
+                'present': '✅',
+                'absent': '❌', 
+                'late': '⏰',
+                'excuse': '📝',
+                'pending': '⏳'
+            };
+
             card.innerHTML = `
-                <div class="text-center">
-                    <img src="${photoSrc}" alt="${teacher.name}" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
-                    <h3 class="text-lg font-semibold mb-2">${teacher.class}</h3>
-                    <p class="text-sm opacity-75 mb-4">${teacher.name}</p>
+                <div class="text-center relative">
+                    <div class="absolute top-0 right-0 text-2xl">${statusIcon[status]}</div>
+                    <div class="relative mb-4">
+                        <img src="${photoSrc}" alt="${teacher.name}" class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-white/30 shadow-lg">
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                            <span class="text-xs font-semibold text-white">${teacher.class}</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">${teacher.name}</h3>
+                    <div class="text-sm opacity-90 mb-4 text-white/80">${teacher.class}</div>
                     
                     ${status === 'pending' ? `
-                        <div class="space-y-2">
-                            <button onclick="markAttendance(${teacher.id}, 'present')" class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600">تسجيل حضور</button>
-                            <button onclick="markAttendance(${teacher.id}, 'absent')" class="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600">تسجيل غياب</button>
-                            <button onclick="markAttendance(${teacher.id}, 'late')" class="w-full bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600">متأخرة</button>
-                            <button onclick="markAttendance(${teacher.id}, 'excuse')" class="w-full bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-600">عذر</button>
+                        <div class="space-y-3">
+                            <button onclick="markAttendance(${teacher.id}, 'present')" class="modern-button ripple-effect w-full text-white py-3 rounded-lg font-semibold" style="background: linear-gradient(135deg, #10b981, #059669);">
+                                ✅ تسجيل حضور
+                            </button>
+                            <button onclick="markAttendance(${teacher.id}, 'absent')" class="modern-button ripple-effect w-full text-white py-3 rounded-lg font-semibold" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
+                                ❌ تسجيل غياب
+                            </button>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="markAttendance(${teacher.id}, 'late')" class="modern-button ripple-effect text-white py-2 rounded-lg text-sm font-semibold" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                                    ⏰ متأخرة
+                                </button>
+                                <button onclick="markAttendance(${teacher.id}, 'excuse')" class="modern-button ripple-effect text-white py-2 rounded-lg text-sm font-semibold">
+                                    📝 عذر
+                                </button>
+                            </div>
                         </div>
                     ` : `
-                        <div class="space-y-2">
-                            <p class="text-sm">الحالة: ${getStatusText(status)}</p>
-                            ${attendance[teacher.id]?.time ? `<p class="text-xs">الوقت: ${attendance[teacher.id].time}</p>` : ''}
-                            <button onclick="resetAttendance(${teacher.id})" class="w-full bg-gray-500 text-white py-2 rounded-lg hover:bg-gray-600">إعادة تعيين</button>
+                        <div class="space-y-3">
+                            <div class="bg-white/20 backdrop-blur-sm rounded-lg p-3">
+                                <p class="text-sm font-semibold text-white mb-1">الحالة: ${getStatusText(status)}</p>
+                                ${attendance[teacher.id]?.time ? `<p class="text-xs text-white/80">الوقت: ${attendance[teacher.id].time}</p>` : ''}
+                            </div>
+                            <button onclick="resetAttendance(${teacher.id})" class="modern-button ripple-effect w-full text-white py-2 rounded-lg font-semibold" style="background: linear-gradient(135deg, #6b7280, #4b5563);">
+                                🔄 إعادة تعيين
+                            </button>
                         </div>
                     `}
                     
-                    <button onclick="openCamera(${teacher.id})" class="w-full bg-blue-500 text-white py-2 rounded-lg mt-2 hover:bg-blue-600">📷 تصوير الطابور</button>
+                    <button onclick="openCamera(${teacher.id})" class="modern-button ripple-effect w-full text-white py-3 rounded-lg mt-3 font-semibold">
+                        📷 تصوير الطابور
+                    </button>
                 </div>
             `;
 
@@ -3163,37 +3727,60 @@
         }
 
         function markAttendance(teacherId, status) {
-            const now = new Date();
-            attendance[teacherId] = {
-                status: status,
-                time: now.toLocaleTimeString('ar-SA')
-            };
-
-            // Set star of the day for first present teacher
-            if (status === 'present' && !stars.dayTeacher) {
+            showLoading();
+            
+            setTimeout(() => {
+                const now = new Date();
                 const teacher = teachers.find(t => t.id === teacherId);
-                stars.dayTeacher = teacher.name;
-                document.getElementById('star-of-day').textContent = teacher.name;
-                document.getElementById('star-of-day-header').textContent = teacher.name;
-            }
+                
+                attendance[teacherId] = {
+                    status: status,
+                    time: now.toLocaleTimeString('ar-SA')
+                };
 
-            saveData();
-            loadTeachers();
+                // Set star of the day for first present teacher
+                if (status === 'present' && !stars.dayTeacher) {
+                    stars.dayTeacher = teacher.name;
+                    document.getElementById('star-of-day').textContent = teacher.name;
+                    document.getElementById('star-of-day-header').textContent = teacher.name;
+                    showNotification(`🌟 تم اختيار "${teacher.name}" كنجمة اليوم!`, 'success');
+                }
+
+                saveData();
+                loadTeachers();
+                hideLoading();
+                
+                const statusMessages = {
+                    'present': `✅ تم تسجيل حضور "${teacher.name}"`,
+                    'absent': `❌ تم تسجيل غياب "${teacher.name}"`,
+                    'late': `⏰ تم تسجيل تأخير "${teacher.name}"`,
+                    'excuse': `📝 تم تسجيل عذر "${teacher.name}"`
+                };
+                
+                showNotification(statusMessages[status], status === 'present' ? 'success' : 
+                               status === 'absent' ? 'error' : 'warning');
+            }, 300);
         }
 
         function resetAttendance(teacherId) {
-            attendance[teacherId] = { status: 'pending', time: null };
+            showLoading();
             
-            // Reset star of the day if this was the star
-            const teacher = teachers.find(t => t.id === teacherId);
-            if (stars.dayTeacher === teacher.name) {
-                stars.dayTeacher = null;
-                document.getElementById('star-of-day').textContent = 'لم يتم اختيار نجمة اليوم بعد';
-                document.getElementById('star-of-day-header').textContent = 'لم يتم اختيار نجمة اليوم بعد';
-            }
+            setTimeout(() => {
+                const teacher = teachers.find(t => t.id === teacherId);
+                attendance[teacherId] = { status: 'pending', time: null };
+                
+                // Reset star of the day if this was the star
+                if (stars.dayTeacher === teacher.name) {
+                    stars.dayTeacher = null;
+                    document.getElementById('star-of-day').textContent = 'لم يتم اختيار نجمة اليوم بعد';
+                    document.getElementById('star-of-day-header').textContent = 'لم يتم اختيار نجمة اليوم بعد';
+                }
 
-            saveData();
-            loadTeachers();
+                saveData();
+                loadTeachers();
+                hideLoading();
+                showNotification(`🔄 تم إعادة تعيين حالة "${teacher.name}"`, 'info');
+            }, 300);
         }
 
         function updateStatistics() {
@@ -3316,37 +3903,72 @@
             const points = classPoints[cls.id] || { speed: 0, quiet: 0, cleanliness: 0 };
             const totalPoints = points.speed + points.quiet + points.cleanliness;
 
-            card.className = 'bg-white p-6 rounded-lg shadow-md card-hover';
+            // Determine card style based on points
+            let cardStyle = 'glass-card enhanced-card';
+            if (totalPoints >= 15) cardStyle += ' border-2 border-yellow-400/50';
+            else if (totalPoints >= 10) cardStyle += ' border-2 border-blue-400/50';
+            else if (totalPoints >= 5) cardStyle += ' border-2 border-green-400/50';
+
+            card.className = `${cardStyle} p-6 rounded-xl shadow-lg transform transition-all duration-300`;
+            
+            const getTrophyIcon = (points) => {
+                if (points >= 15) return '🏆';
+                if (points >= 10) return '🥇';
+                if (points >= 5) return '🥈';
+                return '📊';
+            };
+
             card.innerHTML = `
-                <div class="text-center">
-                    <h3 class="text-xl font-bold mb-2">${cls.name}</h3>
-                    <div class="text-3xl font-bold text-blue-600 mb-4">${totalPoints} نقطة</div>
+                <div class="text-center relative">
+                    <div class="absolute top-0 right-0 text-3xl">${getTrophyIcon(totalPoints)}</div>
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-bold mb-3 text-white">${cls.name}</h3>
+                        <div class="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-full py-3 px-6 mb-4">
+                            <div class="text-4xl font-black text-white mb-1">${totalPoints}</div>
+                            <div class="text-sm text-white/80 font-semibold">نقطة إجمالية</div>
+                        </div>
+                    </div>
                     
                     <div class="space-y-4">
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm">سرعة الاصطفاف</span>
-                            <div class="flex items-center space-x-2 space-x-reverse">
-                                <button onclick="updateClassPoints(${cls.id}, 'speed', -1)" class="bg-red-500 text-white w-8 h-8 rounded-full hover:bg-red-600">-</button>
-                                <span class="w-8 text-center font-bold">${points.speed}</span>
-                                <button onclick="updateClassPoints(${cls.id}, 'speed', 1)" class="bg-green-500 text-white w-8 h-8 rounded-full hover:bg-green-600">+</button>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-semibold text-white">🏃‍♀️ سرعة الاصطفاف</span>
+                                <div class="text-lg font-bold text-white">${points.speed}</div>
+                            </div>
+                            <div class="flex items-center justify-center space-x-3 space-x-reverse">
+                                <button onclick="updateClassPoints(${cls.id}, 'speed', -1)" class="modern-button ripple-effect w-10 h-10 rounded-full text-white font-bold" style="background: linear-gradient(135deg, #ef4444, #dc2626);">-</button>
+                                <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                    <span class="text-xl font-bold text-white">${points.speed}</span>
+                                </div>
+                                <button onclick="updateClassPoints(${cls.id}, 'speed', 1)" class="modern-button ripple-effect w-10 h-10 rounded-full text-white font-bold" style="background: linear-gradient(135deg, #10b981, #059669);">+</button>
                             </div>
                         </div>
                         
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm">الهدوء والنظام</span>
-                            <div class="flex items-center space-x-2 space-x-reverse">
-                                <button onclick="updateClassPoints(${cls.id}, 'quiet', -1)" class="bg-red-500 text-white w-8 h-8 rounded-full hover:bg-red-600">-</button>
-                                <span class="w-8 text-center font-bold">${points.quiet}</span>
-                                <button onclick="updateClassPoints(${cls.id}, 'quiet', 1)" class="bg-green-500 text-white w-8 h-8 rounded-full hover:bg-green-600">+</button>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-semibold text-white">🤫 الهدوء والنظام</span>
+                                <div class="text-lg font-bold text-white">${points.quiet}</div>
+                            </div>
+                            <div class="flex items-center justify-center space-x-3 space-x-reverse">
+                                <button onclick="updateClassPoints(${cls.id}, 'quiet', -1)" class="modern-button ripple-effect w-10 h-10 rounded-full text-white font-bold" style="background: linear-gradient(135deg, #ef4444, #dc2626);">-</button>
+                                <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                    <span class="text-xl font-bold text-white">${points.quiet}</span>
+                                </div>
+                                <button onclick="updateClassPoints(${cls.id}, 'quiet', 1)" class="modern-button ripple-effect w-10 h-10 rounded-full text-white font-bold" style="background: linear-gradient(135deg, #10b981, #059669);">+</button>
                             </div>
                         </div>
                         
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm">النظافة الشخصية</span>
-                            <div class="flex items-center space-x-2 space-x-reverse">
-                                <button onclick="updateClassPoints(${cls.id}, 'cleanliness', -1)" class="bg-red-500 text-white w-8 h-8 rounded-full hover:bg-red-600">-</button>
-                                <span class="w-8 text-center font-bold">${points.cleanliness}</span>
-                                <button onclick="updateClassPoints(${cls.id}, 'cleanliness', 1)" class="bg-green-500 text-white w-8 h-8 rounded-full hover:bg-green-600">+</button>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-semibold text-white">✨ النظافة الشخصية</span>
+                                <div class="text-lg font-bold text-white">${points.cleanliness}</div>
+                            </div>
+                            <div class="flex items-center justify-center space-x-3 space-x-reverse">
+                                <button onclick="updateClassPoints(${cls.id}, 'cleanliness', -1)" class="modern-button ripple-effect w-10 h-10 rounded-full text-white font-bold" style="background: linear-gradient(135deg, #ef4444, #dc2626);">-</button>
+                                <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                    <span class="text-xl font-bold text-white">${points.cleanliness}</span>
+                                </div>
+                                <button onclick="updateClassPoints(${cls.id}, 'cleanliness', 1)" class="modern-button ripple-effect w-10 h-10 rounded-full text-white font-bold" style="background: linear-gradient(135deg, #10b981, #059669);">+</button>
                             </div>
                         </div>
                     </div>
@@ -3415,39 +4037,85 @@
             currentTeacherForPhoto = null;
         }
 
+        // Advanced Notification System
+        function showNotification(message, type = 'info', duration = 3000) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <div class="flex items-center">
+                    <span class="text-2xl mr-3">
+                        ${type === 'success' ? '✅' : 
+                          type === 'error' ? '❌' : 
+                          type === 'warning' ? '⚠️' : 'ℹ️'}
+                    </span>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            const container = document.getElementById('notification-container') || document.body;
+            container.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => notification.classList.add('show'), 100);
+            
+            // Animate out and remove
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 500);
+            }, duration);
+        }
+        
+        // Loading Overlay Functions
+        function showLoading() {
+            document.getElementById('loading-overlay').classList.add('show');
+        }
+        
+        function hideLoading() {
+            document.getElementById('loading-overlay').classList.remove('show');
+        }
+
         // Admin Functions
         function addTeacher() {
             const name = document.getElementById('teacher-name').value.trim();
             const className = document.getElementById('teacher-class').value.trim();
             
             if (!name || !className) {
-                alert('يرجى إدخال جميع البيانات');
+                showNotification('يرجى إدخال جميع البيانات', 'warning');
                 return;
             }
             
-            const newId = Math.max(...teachers.map(t => t.id), 0) + 1;
-            const newTeacher = {
-                id: newId,
-                name: name,
-                class: className,
-                photo: null
-            };
+            showLoading();
             
-            teachers.push(newTeacher);
-            attendance[newId] = { status: 'pending', time: null };
-            
-            // Extract classes from updated teachers data
-            extractClassesFromTeachers();
-            
-            saveData();
-            loadTeachers();
-            loadClasses();
-            loadTeachersList();
-            
-            document.getElementById('teacher-name').value = '';
-            document.getElementById('teacher-class').value = '';
-            
-            alert('تم إضافة المعلمة بنجاح');
+            setTimeout(() => {
+                const newId = Math.max(...teachers.map(t => t.id), 0) + 1;
+                const newTeacher = {
+                    id: newId,
+                    name: name,
+                    class: className,
+                    photo: null
+                };
+                
+                teachers.push(newTeacher);
+                attendance[newId] = { status: 'pending', time: null };
+                
+                // Extract classes from updated teachers data
+                extractClassesFromTeachers();
+                
+                saveData();
+                loadTeachers();
+                loadClasses();
+                loadTeachersList();
+                
+                document.getElementById('teacher-name').value = '';
+                document.getElementById('teacher-class').value = '';
+                
+                hideLoading();
+                showNotification(`تم إضافة المعلمة "${name}" بنجاح`, 'success');
+            }, 500);
         }
 
         function uploadExcel() {
@@ -4400,16 +5068,22 @@
             }
         }
 
-        // Enhanced Mouse Trail Effect
+        // Enhanced Mouse Trail Effect - Optimized
         let mouseTrails = [];
         let colorZone = null;
+        let lastMouseMove = 0;
         
         document.addEventListener('mousemove', function(e) {
+            // Throttle mouse trail creation for better performance
+            const now = Date.now();
+            if (now - lastMouseMove < 50) return; // Only create trail every 50ms
+            lastMouseMove = now;
+            
             // Create enhanced trail element
             const trail = document.createElement('div');
             trail.className = 'mouse-trail';
-            trail.style.left = (e.clientX - 12) + 'px';
-            trail.style.top = (e.clientY - 12) + 'px';
+            trail.style.left = (e.clientX - 15) + 'px';
+            trail.style.top = (e.clientY - 15) + 'px';
             
             document.body.appendChild(trail);
             mouseTrails.push(trail);
@@ -4430,10 +5104,10 @@
                     trail.parentNode.removeChild(trail);
                 }
                 mouseTrails = mouseTrails.filter(t => t !== trail);
-            }, 1200);
+            }, 1500); // Enhanced duration for modern effect
             
-            // Limit number of trails
-            if (mouseTrails.length > 8) {
+            // Limit number of trails for better performance
+            if (mouseTrails.length > 3) {
                 const oldTrail = mouseTrails.shift();
                 if (oldTrail.parentNode) {
                     oldTrail.parentNode.removeChild(oldTrail);
@@ -4441,26 +5115,22 @@
             }
         });
 
-        // Enhanced Click Ripple Effect
+        // Enhanced Click Ripple Effect - Optimized
         document.addEventListener('click', function(e) {
-            // Create multiple ripple elements for enhanced effect
-            for (let i = 0; i < 3; i++) {
-                setTimeout(() => {
-                    const ripple = document.createElement('div');
-                    ripple.className = 'click-ripple';
-                    ripple.style.left = (e.clientX - 200) + 'px';
-                    ripple.style.top = (e.clientY - 200) + 'px';
-                    
-                    document.body.appendChild(ripple);
-                    
-                    // Remove ripple after animation
-                    setTimeout(() => {
-                        if (ripple.parentNode) {
-                            ripple.parentNode.removeChild(ripple);
-                        }
-                    }, 1200);
-                }, i * 100);
-            }
+            // Create single ripple element for better performance
+            const ripple = document.createElement('div');
+            ripple.className = 'click-ripple';
+            ripple.style.left = (e.clientX - 200) + 'px';
+            ripple.style.top = (e.clientY - 200) + 'px';
+            
+            document.body.appendChild(ripple);
+            
+            // Remove ripple after animation
+            setTimeout(() => {
+                if (ripple.parentNode) {
+                    ripple.parentNode.removeChild(ripple);
+                }
+            }, 800); // Reduced duration
         });
 
         // Enhanced date and time update function
@@ -4585,5 +5255,5 @@
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97e95b55c3331276',t:'MTc1Nzc4NDQ2Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97e9dce9e0fa127a',t:'MTc1Nzc4OTc2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
